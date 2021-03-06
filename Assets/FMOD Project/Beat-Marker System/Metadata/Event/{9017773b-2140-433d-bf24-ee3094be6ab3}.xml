@@ -32,6 +32,9 @@
 		<relationship name="timeline">
 			<destination>{caccfcd1-d31f-43e3-950c-756f43cabdea}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{e937d1da-7acd-4ca1-b3f3-e943932342ae}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{ec074f10-a88e-450c-bfd0-176042c14cfb}</destination>
 		</relationship>
@@ -90,6 +93,12 @@
 			<destination>{e5481746-8a10-4d5c-a588-5be0fb7cc50f}</destination>
 			<destination>{2ecacdaa-21b1-4ac2-969f-8c2bc0a139e1}</destination>
 			<destination>{b5eef5c8-98b7-4372-aea1-1b546d59d68f}</destination>
+			<destination>{61ac0e71-efd1-4153-8a72-26b40d7c9aa2}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{e937d1da-7acd-4ca1-b3f3-e943932342ae}">
+		<relationship name="preset">
+			<destination>{7c4a7bad-b117-4494-827a-f34319ca3869}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{08406a2f-0939-47b8-b0bd-7330289f2485}">
@@ -122,7 +131,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{9d2bf98b-9c88-40de-9706-43c58cfe0799}">
 		<property name="name">
-			<value>Audio 2</value>
+			<value>Audio 1</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{9273dff5-d3b0-41f5-8612-0e49c312058b}</destination>
@@ -170,7 +179,7 @@
 			<value>0.19999999999999996</value>
 		</property>
 		<property name="name">
-			<value>1-A</value>
+			<value>A</value>
 		</property>
 		<property name="looping">
 			<value>0</value>
@@ -190,7 +199,7 @@
 			<value>0.20000000000000029</value>
 		</property>
 		<property name="name">
-			<value>1-B</value>
+			<value>B</value>
 		</property>
 		<property name="looping">
 			<value>0</value>
@@ -204,13 +213,13 @@
 	</object>
 	<object class="LoopRegion" id="{f486cc73-933a-47fd-893d-e38691ae56a0}">
 		<property name="position">
-			<value>2.3000000000000003</value>
+			<value>2.4000000000000004</value>
 		</property>
 		<property name="length">
 			<value>0.19999999999999984</value>
 		</property>
 		<property name="name">
-			<value>1-C</value>
+			<value>AB</value>
 		</property>
 		<property name="looping">
 			<value>0</value>
@@ -454,6 +463,20 @@
 		</property>
 		<property name="looping">
 			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{caccfcd1-d31f-43e3-950c-756f43cabdea}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{dc845209-db15-4e42-9cb3-d75c6d13e02e}</destination>
+		</relationship>
+	</object>
+	<object class="NamedMarker" id="{61ac0e71-efd1-4153-8a72-26b40d7c9aa2}">
+		<property name="position">
+			<value>0.70000000000000007</value>
+		</property>
+		<property name="name">
+			<value>Marker A</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{caccfcd1-d31f-43e3-950c-756f43cabdea}</destination>

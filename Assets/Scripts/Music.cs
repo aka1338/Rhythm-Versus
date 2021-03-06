@@ -7,6 +7,8 @@ public class Music : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     private BeatSystem bS;
 
+    public int timelinePosition = 0; 
+
     void Start()
     {
         bS = GetComponent<BeatSystem>();     
@@ -32,5 +34,6 @@ public class Music : MonoBehaviour
         {
             bS.StopAndClear(instance);
         }
+
     }
 }

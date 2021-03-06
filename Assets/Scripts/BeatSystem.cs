@@ -9,6 +9,7 @@ class BeatSystem : MonoBehaviour
     {
         public int currentMusicBeat = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
+        public int timelinePosition = 0; 
     }
 
     TimelineInfo timelineInfo;
@@ -21,6 +22,10 @@ class BeatSystem : MonoBehaviour
 
     // marker is a string that returns most recent marker passed. 
     public static string marker;
+
+    // A float that returns the song's position in seconds. 
+    public static float timelinePostition;
+
 
     public void AssignBeatEvent(FMOD.Studio.EventInstance instance)
     { 
@@ -51,19 +56,26 @@ class BeatSystem : MonoBehaviour
         {
             Debug.LogError("Timeline Callback error: " + result);
         }
+
         else if (timelineInfoPtr != IntPtr.Zero)
         {
             // Get the object to store beat and marker details
             GCHandle timelineHandle = GCHandle.FromIntPtr(timelineInfoPtr);
             TimelineInfo timelineInfo = (TimelineInfo)timelineHandle.Target;
 
+
             switch (type)
             {
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT:
                     {
-                        var parameter = (FMOD.Studio.TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_BEAT_PROPERTIES));
+                        var parameter = (FMOD.Studio.TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_BEAT_PROPERTIES));                   
                         timelineInfo.currentMusicBeat = parameter.beat;
                         beat = timelineInfo.currentMusicBeat;
+
+                        // TODO this should probably be broken out into it's own case. 
+                        timelinePostition = parameter.position / 1000f;    
+
+                        // TODO Event firing for GameManager
                     }
                     break;
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER:
@@ -71,9 +83,12 @@ class BeatSystem : MonoBehaviour
                         var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
                         timelineInfo.lastMarker = parameter.name;
                         marker = timelineInfo.lastMarker;
+
+                        // TODO Event firing for GameManager
                     }
-                    break;
+                    break;            
             }
+
         }
         return FMOD.RESULT.OK;
     }
