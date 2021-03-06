@@ -267,7 +267,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD Project/Beat-Marker System/Beat-Marker System.fspro
+  sourceProjectPath: Assets/FMOD Project/Beat-Marker System/RhythmVersus.fspro
   sourceBankPath: Assets\FMOD Project\Beat-Marker System\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1

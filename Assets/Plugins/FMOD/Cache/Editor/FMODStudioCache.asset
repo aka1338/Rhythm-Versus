@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637478854581474099
+  lastModified: 637505600034821725
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -59,13 +59,37 @@ MonoBehaviour:
   - {fileID: -6997776824138028954}
   EditorEvents:
   - {fileID: -5863057622616210947}
+  - {fileID: 548532804626554394}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6997776824138028954}
   StringsBanks:
   - {fileID: 9016018448889426325}
-  stringsBankWriteTime: 637478854581679138
+  stringsBankWriteTime: 637505600034886737
   cacheVersion: 6
+--- !u!114 &548532804626554394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/calibrationmusic1
+  m_EditorClassIdentifier: 
+  Path: event:/calibrationmusic1
+  guid: 3b77179040213d43bf24ee3094be6ab3
+  Banks:
+  - {fileID: -6997776824138028954}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12800
 --- !u!114 &9016018448889426325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,9 +105,9 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637478854581679138
+  lastModified: 637505600034886737
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 742
+    Value: 802
   Exists: 1
