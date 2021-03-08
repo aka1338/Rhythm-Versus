@@ -7,11 +7,9 @@ public class Music : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     private BeatSystem bS;
 
-    public int timelinePosition = 0; 
-
     void Start()
     {
-        bS = GetComponent<BeatSystem>();     
+        bS = GetComponent<BeatSystem>();
     }
 
     void Update()
