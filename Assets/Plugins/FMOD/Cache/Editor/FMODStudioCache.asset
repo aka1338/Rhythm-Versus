@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637507856660000000
+  lastModified: 637508059430000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -62,6 +62,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 81531
+--- !u!114 &-2734065279341488827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SongPosition
+  m_EditorClassIdentifier: 
+  Name: SongPosition
+  Min: 0
+  Max: 90
+  Default: 0
+  ID:
+    data1: 20643210
+    data2: 4023434563
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,16 +99,39 @@ MonoBehaviour:
   - {fileID: -6997776824138028954}
   EditorEvents:
   - {fileID: -5863057622616210947}
-  - {fileID: 548532804626554394}
+  - {fileID: 7333660787716848035}
   EditorParameters:
-  - {fileID: -7971516584592993094}
+  - {fileID: -2734065279341488827}
   MasterBanks:
   - {fileID: -6997776824138028954}
   StringsBanks:
   - {fileID: 9016018448889426325}
-  stringsBankWriteTime: 637507856660000000
+  stringsBankWriteTime: 637508059430000000
   cacheVersion: 6
 --- !u!114 &548532804626554394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/calibrationmusic1
+  m_EditorClassIdentifier: 
+  Path: event:/calibrationmusic1
+  guid: 3b77179040213d43bf24ee3094be6ab3
+  Banks:
+  - {fileID: -6997776824138028954}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12800
+--- !u!114 &7333660787716848035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +169,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637507856660000000
+  lastModified: 637508059430000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
