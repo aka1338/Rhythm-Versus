@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{6a75857d-2cae-4259-8963-271687880272}">
+		<property name="name">
+			<value>SongPosition</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cb3bb98e-6ca4-42e7-afd0-55145080cdb7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7c4a7bad-b117-4494-827a-f34319ca3869}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7c4a7bad-b117-4494-827a-f34319ca3869}">
+		<property name="maximum">
+			<value>90</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

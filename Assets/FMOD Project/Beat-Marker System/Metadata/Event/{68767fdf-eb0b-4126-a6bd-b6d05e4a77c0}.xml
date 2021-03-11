@@ -125,6 +125,9 @@
 			<destination>{f643626e-d6af-4447-bebf-a2e495b4e7f4}</destination>
 			<destination>{85a40dd8-fdae-4d1e-86fc-7be7801a2340}</destination>
 			<destination>{b7a25c50-538a-4d4a-8ea8-1bd005066644}</destination>
+			<destination>{fc5ca3c8-75bb-4a5e-b1e9-aefd07212bb8}</destination>
+			<destination>{f7cf16d3-34a5-4a5c-96c2-8126246b93fe}</destination>
+			<destination>{1a76babb-6a03-4355-82cf-0cbe0d399853}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{7597bb2b-2e65-41aa-ba07-fdb45f4bfad7}">
@@ -408,6 +411,66 @@
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{9f2417c6-96e1-424a-b485-70b8297ff36a}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{fc5ca3c8-75bb-4a5e-b1e9-aefd07212bb8}">
+		<property name="position">
+			<value>1.6981132075471699</value>
+		</property>
+		<property name="length">
+			<value>0.56603773584905648</value>
+		</property>
+		<property name="name">
+			<value>A-Early</value>
+		</property>
+		<property name="looping">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{65a8d0f5-00bd-4b3b-a5ca-b3175177077b}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{917f872d-ce91-4f1c-826b-8d2756433184}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{f7cf16d3-34a5-4a5c-96c2-8126246b93fe}">
+		<property name="position">
+			<value>2.8301886792452828</value>
+		</property>
+		<property name="length">
+			<value>0.56603773584905692</value>
+		</property>
+		<property name="name">
+			<value>A-Late</value>
+		</property>
+		<property name="looping">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{65a8d0f5-00bd-4b3b-a5ca-b3175177077b}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{917f872d-ce91-4f1c-826b-8d2756433184}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{1a76babb-6a03-4355-82cf-0cbe0d399853}">
+		<property name="position">
+			<value>2.2551019758073707</value>
+		</property>
+		<property name="length">
+			<value>0.56603773584905648</value>
+		</property>
+		<property name="name">
+			<value>A-P</value>
+		</property>
+		<property name="looping">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{65a8d0f5-00bd-4b3b-a5ca-b3175177077b}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{917f872d-ce91-4f1c-826b-8d2756433184}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{aaa57c60-b530-41be-a6fd-d8d517cb9061}">

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{29fdcd1b-a585-4c85-ad53-f1ba663f75ed}">
+		<property name="assetPath">
+			<value>the_shop_in_the_sky.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.800000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{39de1c58-2d2b-4cf3-bdc2-61c581f6217a}</destination>
+		</relationship>
+	</object>
+</objects>

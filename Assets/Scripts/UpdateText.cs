@@ -6,11 +6,13 @@ using TMPro;
 public class UpdateText : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text beat, marker;
+    private TMP_Text beat, marker, position, positionInSeconds;
 
     void Update()
     {
         beat.SetText("Beat: " + BeatSystem.beat);
-        marker.SetText("Marker: " + BeatSystem.marker);        
+        marker.SetText("Marker: " + BeatSystem.marker);
+        position.SetText("Position: " + BeatSystem.timelinePosition);
+        positionInSeconds.SetText("Position (Seconds): " + BeatSystem.time); 
     }
 }
