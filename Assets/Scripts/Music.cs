@@ -9,7 +9,7 @@ public class Music : MonoBehaviour
 
     void Start()
     {
-        bS = GetComponent<BeatSystem>();
+        bS = GetComponent<BeatSystem>();     
     }
 
     void Update()

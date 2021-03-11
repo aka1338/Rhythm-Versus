@@ -4,14 +4,18 @@ using UnityEngine;
 
 class BeatSystem : MonoBehaviour
 {
-    // I'm not sure if we need this. We may be able to eliminate this, and directly assign the instance variables held within BeatSystem. 
+    // I'm not sure if we need this. We may be able to eliminate this, and directly assign the instance variables held within BeatSyste
     [StructLayout(LayoutKind.Sequential)]
     class TimelineInfo
     {
         public int currentMusicBeat = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
-        public int timelinePosition = 0;
+
+        // TODO fix structure departure 
+        //public int timelinePosition = 0;
+
         public float time { get { return timelinePosition / 1000f; } }
+        public static float bpm; 
     }
 
     TimelineInfo timelineInfo;
@@ -28,12 +32,21 @@ class BeatSystem : MonoBehaviour
     // A float that returns the song's position in seconds. 
     public static int timelinePosition;
 
+    // A float that returns the song's bpm. 
+    public static float bpm; 
+
+    // A float that returns the song's seconds per beat. 
+    public static float secPerBeat;
+
+    // A float that return's the song's position in beats. 
+    public static float songPosInBeats;
+
     public static FMOD.Studio.EventInstance _instance;
 
     public static float time { get { return timelinePosition / 1000f; } }
 
     public void AssignBeatEvent(FMOD.Studio.EventInstance instance)
-    {
+    { 
         _instance = instance; 
         timelineInfo = new TimelineInfo();
         timelineHandle = GCHandle.Alloc(timelineInfo, GCHandleType.Pinned);
@@ -52,7 +65,10 @@ class BeatSystem : MonoBehaviour
 
     private void Update()
     {
+
         _instance.getTimelinePosition(out timelinePosition);
+        //timelinePosition = timelineInfo.timelinePosition;
+        songPosInBeats = time/secPerBeat;
     }
 
 
@@ -80,8 +96,11 @@ class BeatSystem : MonoBehaviour
                     {
                         var parameter = (FMOD.Studio.TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_BEAT_PROPERTIES));                   
                         timelineInfo.currentMusicBeat = parameter.beat;
-                        beat = timelineInfo.currentMusicBeat;  
+                        beat = timelineInfo.currentMusicBeat;
+                        bpm = parameter.tempo;
+                        secPerBeat = 60f / bpm;
 
+                
                         // TODO Event firing for GameManager
                         // For example, we can push out an event that fires off every beat. When a listener hears that the event is fired, it can play a premade animation.
                     }
@@ -94,8 +113,10 @@ class BeatSystem : MonoBehaviour
 
                         // TODO Event firing for GameManager
                         // For example, we can push out an event that fires with every marker. Each marker will have an ID that will also be passed, and all other classes will listen for specific IDs. 
+                    
                     }
-                    break;            
+                    break;
+          
             }
 
         }
