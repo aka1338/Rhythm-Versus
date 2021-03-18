@@ -41,8 +41,13 @@ class BeatSystem : MonoBehaviour
     // A float that return's the song's position in beats. 
     public static float songPosInBeats;
 
+    public static float markerTime; 
+
     public static FMOD.Studio.EventInstance _instance;
 
+    /// <summary>
+    ///  Returns the current playhead time in seconds. 
+    /// </summary>
     public static float time { get { return timelinePosition / 1000f; } }
 
     public void AssignBeatEvent(FMOD.Studio.EventInstance instance)
@@ -111,6 +116,8 @@ class BeatSystem : MonoBehaviour
                         timelineInfo.lastMarker = parameter.name;
                         marker = timelineInfo.lastMarker;
 
+                        markerTime = time;
+                        Debug.Log(markerTime); 
                         // TODO Event firing for GameManager
                         // For example, we can push out an event that fires with every marker. Each marker will have an ID that will also be passed, and all other classes will listen for specific IDs. 
                     
