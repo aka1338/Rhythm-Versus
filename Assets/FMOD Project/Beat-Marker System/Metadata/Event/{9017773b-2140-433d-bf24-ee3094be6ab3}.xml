@@ -108,7 +108,6 @@
 			<destination>{bea65d0c-d133-43b7-81ab-bba81c10787b}</destination>
 			<destination>{c4fb276e-6dd8-4d8d-9409-a8c202f1b76d}</destination>
 			<destination>{81140ced-272e-484a-8a91-511e9260ac03}</destination>
-			<destination>{8da61c27-e89b-4d77-9f8a-bccc7ebdab2f}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{e937d1da-7acd-4ca1-b3f3-e943932342ae}">
@@ -612,20 +611,6 @@
 		</property>
 		<property name="name">
 			<value>Marker AC</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{caccfcd1-d31f-43e3-950c-756f43cabdea}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{dc845209-db15-4e42-9cb3-d75c6d13e02e}</destination>
-		</relationship>
-	</object>
-	<object class="NamedMarker" id="{8da61c27-e89b-4d77-9f8a-bccc7ebdab2f}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="name">
-			<value>Marker A</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{caccfcd1-d31f-43e3-950c-756f43cabdea}</destination>

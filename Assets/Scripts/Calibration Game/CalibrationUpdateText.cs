@@ -10,7 +10,7 @@ public class CalibrationUpdateText : MonoBehaviour
 
     void Update()
     {
-        markerTime.SetText("Marker Time: " + BeatSystem.markerTime + "ms");
+        markerTime.SetText("Marker Time: " + BeatSystem.markerTimeLinePosition + "ms");
        
         
         average.SetText("Audio Latency: " + CalibrationTest.offset + "ms");

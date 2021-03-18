@@ -42,7 +42,7 @@ class BeatSystem : MonoBehaviour
     public static float songPosInBeats;
 
     // Returns the most recent marker passed in miliseconds. 
-    public static float markerTime; 
+    public static float markerTimeLinePosition; 
 
     public static FMOD.Studio.EventInstance _instance;
 
@@ -117,8 +117,8 @@ class BeatSystem : MonoBehaviour
                         timelineInfo.lastMarker = parameter.name;
                         marker = timelineInfo.lastMarker;
 
-                        
-                        markerTime = timelinePosition;
+
+                        markerTimeLinePosition = timelinePosition;
                         // TODO Event firing for GameManager
                         // For example, we can push out an event that fires with every marker. Each marker will have an ID that will also be passed, and all other classes will listen for specific IDs. 
                     

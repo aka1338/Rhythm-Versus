@@ -11,11 +11,11 @@ public class InputController : MonoBehaviour
         if (Event.current.Equals(Event.KeyboardEvent("f")))
         {
             keyDownTime = BeatSystem.time;
-            Debug.Log("F Pressed at " + keyDownTime + "  " + "Current markerTime: " + BeatSystem.markerTime);
+            Debug.Log("F Pressed at " + keyDownTime + "  " + "Current markerTime: " + BeatSystem.markerTimeLinePosition);
 
         }
 
-        if (keyDownTime >= BeatSystem.markerTime - offset && keyDownTime <= BeatSystem.markerTime + offset && BeatSystem.markerTime != 0)
+        if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
         {
             Debug.Log("On time!");
         }
