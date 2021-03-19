@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-  
-    // Update is called once per frame
-    void Update()
+    private float keyDownTime;
+    private float offset; 
+    void OnGUI()
     {
-        if (Input.GetKeyDown(KeyCode.F)) {
-            Debug.Log("F Pressed at + " + BeatSystem.time);
+        if (Event.current.Equals(Event.KeyboardEvent("f")))
+        {
+            keyDownTime = BeatSystem.time;
+            Debug.Log("F Pressed at " + keyDownTime + "  " + "Current markerTime: " + BeatSystem.markerTimeLinePosition);
+
         }
+
+        if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+        {
+            Debug.Log("On time!");
+        }
+        else
+        {
+            Debug.Log("Off time!");
+        }
+
     }
 }
