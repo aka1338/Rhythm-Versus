@@ -19,7 +19,9 @@ class BeatSystem : MonoBehaviour
     }
 
     public delegate void BeatAction();
-    public static event BeatAction onBeat; 
+    public static event BeatAction onBeat;
+
+    public static event BeatAction onOffBeat;
 
     TimelineInfo timelineInfo;
     GCHandle timelineHandle;
@@ -109,15 +111,23 @@ class BeatSystem : MonoBehaviour
                         bpm = parameter.tempo;
                         secPerBeat = 60f / bpm;
 
-                        Debug.Log("Beat callback"); 
-                          
-                        // TODO Event firing for GameManager
-                        // For example, we can push out an event that fires off every beat. When a listener hears that the event is fired, it can play a premade animation.
+                        //Debug.Log("Beat callback.");
 
+                        // Event firing for GameManager
+                        // Calls every event subscribed to onBeat. 
                         if(onBeat != null)
                         {
                             onBeat(); 
                         }
+
+                        if (beat % 2 != 0)
+                        {
+                            if(onOffBeat != null)
+                            {
+                                onOffBeat(); 
+                            }
+                        }
+
                     }
                     break;
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER:

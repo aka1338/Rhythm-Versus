@@ -7,44 +7,70 @@ public class SimpleCubeAnimation : MonoBehaviour
 {
 
     public Transform cubeTransform;
+    public Material cubeMaterial;
+
     private BeatSystem bS;
     private FMOD.Studio.EventInstance instance;
 
 
     private float animDuration = BeatSystem.secPerBeat;
     public Ease animEase;
+
     private bool hasSwitched = false;
+    private bool hasSwitchedAlt = false;
 
     private void Start()
     {
         bS = GetComponent<BeatSystem>();
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/animationtest");
         bS.AssignBeatEvent(instance);
-        Debug.Log("Should assign cube here."); 
-        BeatSystem.onBeat += BumpCube;
         instance.start();
+
+        Debug.Log(BeatSystem.secPerBeat);
+
+        cubeMaterial.DOColor(Color.white, 1);
+
+        BeatSystem.onBeat += ChangeMaterial;
+        BeatSystem.onOffBeat += BumpCube; 
     }
 
     private void OnDisable()
     {
-        BeatSystem.onBeat += BumpCube; 
+        BeatSystem.onBeat -= ChangeMaterial;
+        BeatSystem.onOffBeat -= BumpCube; 
     }
 
     void BumpCube()
     {
-        Debug.Log("Callback Triggered!"); 
+        Debug.Log("BumpCube()");
         if (hasSwitched)
         {
             cubeTransform
-           .DOMoveX(3f, animDuration)
+           .DOMoveX(6, .5f)
            .SetEase(animEase);
+            hasSwitched = false;
         }
         else
         {
-            hasSwitched = true; 
             cubeTransform
-           .DOMoveX(-3f, animDuration)
+           .DOMoveX(-6, .5f)
            .SetEase(animEase);
+            hasSwitched = true;
+
+        }
+    }
+
+    void ChangeMaterial()
+    {
+        if (hasSwitchedAlt)
+        {
+            hasSwitchedAlt = false;
+            cubeMaterial.DOColor(Color.green, .2f);
+        }
+        else
+        {
+            hasSwitchedAlt = true;
+            cubeMaterial.DOColor(Color.red, .2f);
         }
     }
 }
