@@ -9,14 +9,15 @@ public class Music : MonoBehaviour
 
     void Start()
     {
-        bS = GetComponent<BeatSystem>();     
+        bS = GetComponent<BeatSystem>();
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/calibrationmusic1");
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            instance = FMODUnity.RuntimeManager.CreateInstance("event:/calibrationmusic1");
             instance.start();
             bS.AssignBeatEvent(instance);
         }
