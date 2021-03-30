@@ -40,9 +40,9 @@ public class SimpleCubeAnimation : MonoBehaviour
         BeatSystem.onOffBeat -= BumpCube; 
     }
 
+    // Bumps the cube either left or right. 
     void BumpCube()
     {
-        Debug.Log("BumpCube()");
         if (hasSwitched)
         {
             cubeTransform
@@ -60,6 +60,7 @@ public class SimpleCubeAnimation : MonoBehaviour
         }
     }
 
+    // Changes the cube's material to either red or green. 
     void ChangeMaterial()
     {
         if (hasSwitchedAlt)
