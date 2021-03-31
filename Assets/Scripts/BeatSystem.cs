@@ -112,6 +112,17 @@ class BeatSystem : MonoBehaviour
         timelineHandle.Free();
     }
 
+    public void Pause(FMOD.Studio.EventInstance instance) 
+    {
+        instance.setPaused(true); 
+    }
+
+    public void Resume(FMOD.Studio.EventInstance instance)
+    {
+        instance.setPaused(false);
+    }
+
+
     private void Update()
     {
         _instance.getTimelinePosition(out timelinePosition);

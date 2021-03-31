@@ -7,34 +7,40 @@ public class GameManager : MonoBehaviour
     //TODO: Events that fire off based on how well timed a player's input was checked against the BeatSystem. 
     //The events are: PerfectHit, EarlyHit, LateHit, and Missed.  
 
-    // This class should only be responsible for firing off events to other classes, as well as handling things that have to do with gamestate. 
+    // This class should only be responsible for firing off events to other classes, as well as handling things that have to do with gamestate.
+    // It should call upon UIManager and pause whatever it needs to, and will switch screens by calling upon UIManager enums. 
+    // Also, this class should know what minigame is being played when, and listen for certain callback markers to trigger events in game. 
+    // Responsible for initializing Conductor with the correct song. 
     // F.e., if the UI needs to know when a note has been successfully hit, they can subscribe to the events denoted within this class.  
-
-    // This class is also in charge of telling the Player.cs script when a point needs to be added to which Player ID. 
 
     public static float keyDownTime;
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
     public static float offset;
 
+    // Just for the sake of testing, we're only putting one song here. 
+    [FMODUnity.EventRef]
+    public string song;
+
     public delegate void NoteTiming();
     public static event NoteTiming ValidHit;
     public static event NoteTiming EarlyHit;
     public static event NoteTiming LateHit;
 
+    public bool isPaused = false; 
 
     private void Start()
     {
         InputController.ActionOnePressed += CheckForValidHit;
         InputController.ActionTwoPressed += CheckForValidHit;
-        InputController.pausePressed += PauseMenu; 
+        InputController.pausePressed += PauseGame; 
     }
 
     private void OnDisable()
     {
         InputController.ActionOnePressed -= CheckForValidHit;
         InputController.ActionTwoPressed -= CheckForValidHit;
-        InputController.pausePressed -= PauseMenu;
+        InputController.pausePressed -= PauseGame;
     }
 
     public void CheckForValidHit()
@@ -49,8 +55,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PauseMenu()
+    public void PauseGame()
     {
-        Debug.Log("Opened a pause menu.");
+        if (!isPaused) 
+        {
+            UIManager.SwitchScreen(UIManager.Screens.Pause);
+            isPaused = true;
+            Conductor.PauseMusic();
+        }
+
+    }   
+    public void ResumeGame()
+    {
+        if (isPaused) 
+        {
+            UIManager.SwitchScreen(UIManager.Screens.Game);
+            isPaused = false;
+            Conductor.ResumeMusic();
+        }
+    }
+
+    public void StartMinigame() 
+    {
+        Conductor.CreateBeatInstance(song);
+        Conductor.StartMusic();
     }
 }
