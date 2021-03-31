@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Conductor : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance instance;
+    private BeatSystem bS;
+
     // Start is called before the first frame update
     void Start()
     {
