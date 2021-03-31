@@ -18,10 +18,11 @@ class BeatSystem : MonoBehaviour
     TimelineInfo timelineInfo;
     GCHandle timelineHandle;
 
+    public delegate void BeatAction();
+
     /// <summary>
     /// Subscribable event that fires every beat. 
     /// </summary>
-    public delegate void BeatAction();
     public static event BeatAction OnBeat;
 
     /// <summary>
@@ -29,10 +30,12 @@ class BeatSystem : MonoBehaviour
     /// </summary>
     public static event BeatAction OnOtherBeat;
 
+  
+    public delegate void MarkerAction();
+
     /// <summary>
     /// Subscribable event that fires every time a marker is passed. 
     /// </summary>
-    public delegate void MarkerAction();
     public static event MarkerAction OnMarker;
 
     /// <summary>

@@ -708,7 +708,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548ae79b09fc8c14ca7c3811f3dd1256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 200
+  actionOne: 102
+  actionTwo: 106
+  pause: 27
 --- !u!1 &1842818819
 GameObject:
   m_ObjectHideFlags: 0
