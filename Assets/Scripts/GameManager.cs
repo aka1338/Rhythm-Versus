@@ -59,24 +59,23 @@ public class GameManager : MonoBehaviour
     {
         if (!isPaused) 
         {
-            UIManager.SwitchScreen(UIManager.Screens.Pause);
+            ViewManager.Show<PauseMenuView>(); 
             isPaused = true;
             Conductor.PauseMusic();
         }
-
     }   
     public void ResumeGame()
     {
         if (isPaused) 
         {
-            UIManager.SwitchScreen(UIManager.Screens.Game);
+            ViewManager.Show<MinigameView>();
             isPaused = false;
             Conductor.ResumeMusic();
         }
     }
 
     public void StartMinigame() 
-    {
+    {       
         Conductor.CreateBeatInstance(song);
         Conductor.StartMusic();
     }

@@ -77,4 +77,5 @@ public class SimpleCubeAnimation : MonoBehaviour
             cubeMaterial.DOColor(Color.red, .2f);
         }
     }
+
 }

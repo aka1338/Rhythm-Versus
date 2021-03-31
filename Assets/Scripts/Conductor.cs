@@ -8,7 +8,7 @@ public class Conductor : MonoBehaviour
     // We don't need oneshot timeline info data. 
     // This class dictates whatever should be playing at whatever time, reguardless of it being a oneshot or background music/ambient noise.  
 
-    private static FMOD.Studio.EventInstance instance;
+    private static FMOD.Studio.EventInstance _instance;
     private static BeatSystem bS;
 
     // Start is called before the first frame update
@@ -19,27 +19,27 @@ public class Conductor : MonoBehaviour
 
     public static void CreateBeatInstance(string minigameSong)  
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance(minigameSong); 
+        _instance = FMODUnity.RuntimeManager.CreateInstance(minigameSong);
     }
 
     public static void StartMusic()
     {
-        instance.start();
-        bS.AssignBeatEvent(instance);
+        _instance.start();
+        bS.AssignBeatEvent(_instance);
     }
 
     public static void StopAndClear() 
     {
-        bS.StopAndClear(instance);
+        bS.StopAndClear(_instance);
     }
 
     public static void PauseMusic() 
     {
-        bS.Pause(instance); 
+        bS.Pause(_instance); 
     }
 
     public static void ResumeMusic() 
     {
-        bS.Resume(instance); 
+        bS.Resume(_instance); 
     }
 }
