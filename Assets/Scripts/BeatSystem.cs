@@ -30,7 +30,6 @@ class BeatSystem : MonoBehaviour
     /// </summary>
     public static event BeatAction OnOtherBeat;
 
-  
     public delegate void MarkerAction();
 
     /// <summary>
