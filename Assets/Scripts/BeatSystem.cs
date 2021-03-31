@@ -4,34 +4,41 @@ using UnityEngine;
 
 class BeatSystem : MonoBehaviour
 {
-
-    // I'm not sure if we need this. We may be able to eliminate this, and directly assign the instance variables held within BeatSyste
+    /// <summary>
+    /// Used to parse data recieved from FMOD BeatEventCallback. 
+    /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     class TimelineInfo
     {
         public int currentMusicBeat = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
-
-        // TODO fix structure departure 
-        //public int timelinePosition = 0;
-
-        public float time { get { return timelinePosition / 1000f; } }
         public static float bpm;
     }
 
     TimelineInfo timelineInfo;
     GCHandle timelineHandle;
 
+    /// <summary>
+    /// Subscribable event that fires every beat. 
+    /// </summary>
     public delegate void BeatAction();
     public static event BeatAction OnBeat;
 
-    public static event BeatAction OnOffBeat;
+    /// <summary>
+    /// Subscribable event that fires every other beat. 
+    /// </summary>
+    public static event BeatAction OnOtherBeat;
 
+    /// <summary>
+    /// Subscribable event that fires every time a marker is passed. 
+    /// </summary>
     public delegate void MarkerAction();
     public static event MarkerAction OnMarker;
 
-
-    FMOD.Studio.EVENT_CALLBACK beatCallback;
+    /// <summary>
+    /// Beat event callback that fires every beat. 
+    /// </summary>
+    private FMOD.Studio.EVENT_CALLBACK beatCallback;
 
     /// <summary>
     ///  Returns the current beat in the song.  
@@ -76,6 +83,10 @@ class BeatSystem : MonoBehaviour
     /// </summary>
     public static float time { get { return timelinePosition / 1000f; } }
 
+    /// <summary>
+    /// Assigns an FMOD.Studio.EventInstance Beat Event to BeatSystem. 
+    /// </summary>
+    /// <param name="instance"> And FMOD.Studio.EventInstance.</param>
     public void AssignBeatEvent(FMOD.Studio.EventInstance instance)
     {
         _instance = instance;
@@ -86,6 +97,7 @@ class BeatSystem : MonoBehaviour
         instance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
     }
 
+   
     /// <summary>
     ///  Stops the instance from playing any more sound, and releases the instance from the timelineHandle. 
     /// </summary>
@@ -133,18 +145,18 @@ class BeatSystem : MonoBehaviour
                         secPerBeat = 60f / bpm;
 
 
-                        // TODO Event firing for GameManager
-                        // For example, we can push out an event that fires off every beat. When a listener hears that the event is fired, it can play a premade animation.
+                        // Event firing for on beat events. 
                         if (OnBeat != null)
                         {
                             OnBeat();
                         }
 
+                        // Event firing for every other beat. 
                         if (beat % 2 != 0)
                         {
-                            if (OnOffBeat != null)
+                            if (OnOtherBeat != null)
                             {
-                                OnOffBeat();
+                                OnOtherBeat();
                             }
                         }
                     }
@@ -158,8 +170,8 @@ class BeatSystem : MonoBehaviour
 
 
                         markerTimeLinePosition = timelinePosition;
-                        // TODO Event firing for GameManager
-                        // For example, we can push out an event that fires with every marker. Each marker will have an ID that will also be passed, and all other classes will listen for specific IDs. 
+
+                        // Event firing for OnMarker events. 
                         if (OnMarker != null)
                         {
                             OnMarker();

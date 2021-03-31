@@ -32,13 +32,13 @@ public class SimpleCubeAnimation : MonoBehaviour
         cubeMaterial.DOColor(Color.white, 1);
 
         BeatSystem.OnBeat += ChangeMaterial;
-        BeatSystem.OnOffBeat += BumpCube; 
+        BeatSystem.OnOtherBeat += BumpCube; 
     }
 
     private void OnDisable()
     {
         BeatSystem.OnBeat -= ChangeMaterial;
-        BeatSystem.OnOffBeat -= BumpCube; 
+        BeatSystem.OnOtherBeat -= BumpCube; 
     }
 
     // Bumps the cube either left or right. 
