@@ -9,11 +9,12 @@ public class SimpleCubeAnimation : MonoBehaviour
     public Transform cubeTransform;
     public Material cubeMaterial;
 
-    private BeatSystem bS;
     private FMOD.Studio.EventInstance instance;
 
+    private BeatSystem bS;
 
-    private float animDuration = BeatSystem.secPerBeat;
+
+    private float animDuration = 0;
     public Ease animEase;
 
     private bool hasSwitched = false;
@@ -23,37 +24,39 @@ public class SimpleCubeAnimation : MonoBehaviour
     {
         bS = GetComponent<BeatSystem>();
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/animationtest");
-        bS.AssignBeatEvent(instance);
-        instance.start();
 
-        Debug.Log(BeatSystem.secPerBeat);
+        bS.AssignBeatEvent(instance);
+     
+        instance.start();
 
         cubeMaterial.DOColor(Color.white, 1);
 
-        BeatSystem.onBeat += ChangeMaterial;
-        BeatSystem.onOffBeat += BumpCube; 
+        BeatSystem.OnBeat += ChangeMaterial;
+        BeatSystem.OnOffBeat += BumpCube; 
     }
 
     private void OnDisable()
     {
-        BeatSystem.onBeat -= ChangeMaterial;
-        BeatSystem.onOffBeat -= BumpCube; 
+        BeatSystem.OnBeat -= ChangeMaterial;
+        BeatSystem.OnOffBeat -= BumpCube; 
     }
 
     // Bumps the cube either left or right. 
     void BumpCube()
     {
+        animDuration = BeatSystem.secPerBeat; 
+
         if (hasSwitched)
         {
             cubeTransform
-           .DOMoveX(6, .5f)
+           .DOMoveX(6, animDuration)
            .SetEase(animEase);
             hasSwitched = false;
         }
         else
         {
             cubeTransform
-           .DOMoveX(-6, .5f)
+           .DOMoveX(-6, animDuration)
            .SetEase(animEase);
             hasSwitched = true;
 

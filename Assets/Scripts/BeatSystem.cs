@@ -4,6 +4,7 @@ using UnityEngine;
 
 class BeatSystem : MonoBehaviour
 {
+
     // I'm not sure if we need this. We may be able to eliminate this, and directly assign the instance variables held within BeatSyste
     [StructLayout(LayoutKind.Sequential)]
     class TimelineInfo
@@ -22,12 +23,12 @@ class BeatSystem : MonoBehaviour
     GCHandle timelineHandle;
 
     public delegate void BeatAction();
-    public static event BeatAction onBeat;
+    public static event BeatAction OnBeat;
 
-    public static event BeatAction onOffBeat;
+    public static event BeatAction OnOffBeat;
 
     public delegate void MarkerAction();
-    public static event MarkerAction onMarker;
+    public static event MarkerAction OnMarker;
 
 
     FMOD.Studio.EVENT_CALLBACK beatCallback;
@@ -85,6 +86,9 @@ class BeatSystem : MonoBehaviour
         instance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
     }
 
+    /// <summary>
+    ///  Stops the instance from playing any more sound, and releases the instance from the timelineHandle. 
+    /// </summary>
     public void StopAndClear(FMOD.Studio.EventInstance instance)
     {
         instance.setUserData(IntPtr.Zero);
@@ -95,9 +99,7 @@ class BeatSystem : MonoBehaviour
 
     private void Update()
     {
-
         _instance.getTimelinePosition(out timelinePosition);
-        //timelinePosition = timelineInfo.timelinePosition;
         songPosInBeats = time / secPerBeat;
     }
 
@@ -133,20 +135,21 @@ class BeatSystem : MonoBehaviour
 
                         // TODO Event firing for GameManager
                         // For example, we can push out an event that fires off every beat. When a listener hears that the event is fired, it can play a premade animation.
-                        if (onBeat != null)
+                        if (OnBeat != null)
                         {
-                            onBeat();
+                            OnBeat();
                         }
 
                         if (beat % 2 != 0)
                         {
-                            if (onOffBeat != null)
+                            if (OnOffBeat != null)
                             {
-                                onOffBeat();
+                                OnOffBeat();
                             }
                         }
                     }
                     break;
+
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER:
                     {
                         var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
@@ -157,9 +160,9 @@ class BeatSystem : MonoBehaviour
                         markerTimeLinePosition = timelinePosition;
                         // TODO Event firing for GameManager
                         // For example, we can push out an event that fires with every marker. Each marker will have an ID that will also be passed, and all other classes will listen for specific IDs. 
-                        if (onMarker != null)
+                        if (OnMarker != null)
                         {
-                            onMarker();
+                            OnMarker();
                         }
                     }
                     break;

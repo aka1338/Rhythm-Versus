@@ -5,25 +5,42 @@ using UnityEngine;
 public class InputController : MonoBehaviour
 {
     private float keyDownTime;
-    public float offset; 
+    public float offset;
+
+    public KeyCode actionOne;
+    public KeyCode actionTwo;
+    public KeyCode pause;
+
+    public delegate void PlayerInput();
+    public static event PlayerInput ActionOnePressed;
+    public static event PlayerInput ActionTwoPressed;
+    public static event PlayerInput pausePressed;
+
+    // TODO: Prevent key holding for multiple input. 
     void OnGUI()
     {
-        if (Event.current.Equals(Event.KeyboardEvent("f")))
+        if (anonymousKeyDown(actionOne))
         {
-            keyDownTime = BeatSystem.timelinePosition;
-            Debug.Log("F Pressed at " + BeatSystem.timelinePosition + "  " + "Current markerTime: " + BeatSystem.markerTimeLinePosition + " With offset " + (offset + BeatSystem.markerTimeLinePosition));
-
-            if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
-            {
-                Debug.Log("On time!");
-            }
-            else
-            {
-                Debug.Log("Off time!");
-            }
+            ActionOnePressed?.Invoke();
         }
 
-      
+        if (anonymousKeyDown(actionTwo))
+        {
+            ActionTwoPressed?.Invoke();
+        }
 
+        if (anonymousKeyDown(pause))
+        {
+            pausePressed?.Invoke();
+        }
+
+    }
+
+    // helper function (Since OnGui sends both a keycode and char event, not using this results in two events firing instead of one. 
+    private bool anonymousKeyDown(KeyCode key)
+    {
+        if (Event.current.type == EventType.KeyDown)
+         return (Event.current.keyCode == key);
+        return false;
     }
 }
