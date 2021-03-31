@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637516802638568515
+  lastModified: 637527269627516022
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -62,6 +62,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 81531
+--- !u!114 &-4360516179465427813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/animationtest
+  m_EditorClassIdentifier: 
+  Path: event:/animationtest
+  guid: a88d9abbc49efd4bb5df701cd28f0d50
+  Banks:
+  - {fileID: -6997776824138028954}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12800
 --- !u!114 &-2734065279341488827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +105,29 @@ MonoBehaviour:
     data1: 20643210
     data2: 4023434563
   Exists: 1
+--- !u!114 &-404400368807769845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/animation
+  m_EditorClassIdentifier: 
+  Path: event:/animation
+  guid: d6b5e918919a7e4f917e19f58d535015
+  Banks:
+  - {fileID: -6997776824138028954}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12763
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,13 +146,15 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -5863057622616210947}
   - {fileID: 7333660787716848035}
+  - {fileID: -4360516179465427813}
+  - {fileID: -404400368807769845}
   EditorParameters:
   - {fileID: -2734065279341488827}
   MasterBanks:
   - {fileID: -6997776824138028954}
   StringsBanks:
   - {fileID: 9016018448889426325}
-  stringsBankWriteTime: 637516802638628527
+  stringsBankWriteTime: 637527269627586029
   cacheVersion: 6
 --- !u!114 &548532804626554394
 MonoBehaviour:
@@ -169,9 +217,9 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637516802638628527
+  lastModified: 637527269627586029
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 856
+    Value: 942
   Exists: 1
