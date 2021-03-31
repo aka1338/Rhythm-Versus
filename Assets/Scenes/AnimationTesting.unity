@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeTransform: {fileID: 2122641926}
   cubeMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  animEase: 3
+  animEase: 2
 --- !u!114 &2122641928
 MonoBehaviour:
   m_ObjectHideFlags: 0

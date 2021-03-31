@@ -24,7 +24,7 @@ public class Music : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            instance = FMODUnity.RuntimeManager.CreateInstance("event:/test");
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/music");
             instance.start();
             bS.AssignBeatEvent(instance);
         }
