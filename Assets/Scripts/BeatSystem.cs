@@ -172,10 +172,7 @@ class BeatSystem : MonoBehaviour
                         markerTimeLinePosition = timelinePosition;
 
                         // Event firing for OnMarker events. 
-                        if (OnMarker != null)
-                        {
-                            OnMarker();
-                        }
+                        OnMarker?.Invoke();
                     }
                     break;
 

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    private float keyDownTime;
-    public float offset;
-
     public KeyCode actionOne;
     public KeyCode actionTwo;
     public KeyCode pause;

@@ -13,8 +13,8 @@ public class CalibrationUpdateText : MonoBehaviour
         markerTime.SetText("Marker Time: " + BeatSystem.markerTimeLinePosition + "ms");
        
         
-        average.SetText("Audio Latency: " + CalibrationTest.offset + "ms");
-        difference.SetText("Calculated Difference: " + CalibrationTest.calculation + "ms");
+        average.SetText("Audio Latency: " + GameManager.offset + "ms");
+        difference.SetText("Calculated Difference: " + (GameManager.keyDownTime) + "ms");
     }
 
     void OnGUI()
