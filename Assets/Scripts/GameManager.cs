@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public static float keyDownTime;
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
-    public static float offset;
+    public static float offset = 130;
 
     // Just for the sake of testing, we're only putting one song here. 
     [FMODUnity.EventRef]
@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public delegate void NoteTiming();
     public static event NoteTiming ValidHit;
+    public static event NoteTiming MissedHit;
+
     public static event NoteTiming EarlyHit;
     public static event NoteTiming LateHit;
 
@@ -45,14 +47,19 @@ public class GameManager : MonoBehaviour
 
     public void CheckForValidHit()
     {
-        Debug.Log("Checking for valid hit");
         keyDownTime = BeatSystem.timelinePosition;
-        Debug.Log("F Pressed at " + keyDownTime + "  " + "Current markerTime: " + BeatSystem.markerTimeLinePosition);
 
-        if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0) 
+        if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
         {
-            ValidHit?.Invoke(); 
+            Debug.Log("On beat!");
+            ValidHit?.Invoke();
         }
+        else 
+        {
+            Debug.Log("Off beat!");
+            MissedHit.Invoke(); 
+        }
+        
     }
 
     public void PauseGame()
