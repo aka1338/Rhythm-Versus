@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  // This script will house all the player's data, like their username, as well as their score during a minigame, and overall minigames won while playing in a lobby. 
+  // Note that this is different from player persistent data, like options. 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

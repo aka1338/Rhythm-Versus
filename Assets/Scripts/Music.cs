@@ -33,6 +33,5 @@ public class Music : MonoBehaviour
         {
             bS.StopAndClear(instance);
         }
-
     }
 }
