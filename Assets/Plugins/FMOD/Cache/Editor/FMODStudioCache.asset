@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637528004216669219
+  lastModified: 637528261009412372
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
   - {fileID: -6997776824138028954}
   StringsBanks:
   - {fileID: 9016018448889426325}
-  stringsBankWriteTime: 637528004216674177
+  stringsBankWriteTime: 637528261009422372
   cacheVersion: 6
 --- !u!114 &548532804626554394
 MonoBehaviour:
@@ -216,7 +216,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637528004216674177
+  lastModified: 637528261009422372
   LoadResult: 0
   FileSizes:
   - Name: Desktop
