@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637528790857060579
+  lastModified: 637528809094355382
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -53,8 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Debugging/calibrationmusic1
   guid: 3b77179040213d43bf24ee3094be6ab3
-  Banks:
-  - {fileID: -6997776824138028954}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -232,17 +231,17 @@ MonoBehaviour:
   - {fileID: 9016018448889426325}
   - {fileID: -6997776824138028954}
   EditorEvents:
-  - {fileID: -6592453836200579115}
   - {fileID: -1079897663101786475}
   - {fileID: -2780010080221490909}
   - {fileID: 7132170811799952694}
+  - {fileID: 8119036178829699108}
   EditorParameters:
   - {fileID: -4890675379463158339}
   MasterBanks:
   - {fileID: -6997776824138028954}
   StringsBanks:
   - {fileID: 9016018448889426325}
-  stringsBankWriteTime: 637528790857130596
+  stringsBankWriteTime: 637528809094420392
   cacheVersion: 6
 --- !u!114 &548532804626554394
 MonoBehaviour:
@@ -336,6 +335,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 25600
+--- !u!114 &8119036178829699108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Calibration/calibrationmusic
+  m_EditorClassIdentifier: 
+  Path: event:/Calibration/calibrationmusic
+  guid: 3b77179040213d43bf24ee3094be6ab3
+  Banks:
+  - {fileID: -6997776824138028954}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 25600
 --- !u!114 &8500616435197790885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,9 +396,9 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637528790857130596
+  lastModified: 637528809094420392
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 992
+    Value: 1004
   Exists: 1
