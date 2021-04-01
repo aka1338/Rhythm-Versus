@@ -11,7 +11,7 @@ public class InputController : MonoBehaviour
     public delegate void PlayerInput();
     public static event PlayerInput ActionOnePressed;
     public static event PlayerInput ActionTwoPressed;
-    public static event PlayerInput pausePressed;
+    public static event PlayerInput PausePressed;
 
     // TODO: Prevent key holding for multiple input. 
     void OnGUI()
@@ -20,15 +20,13 @@ public class InputController : MonoBehaviour
         {
             ActionOnePressed?.Invoke();
         }
-
         if (anonymousKeyDown(actionTwo))
         {
             ActionTwoPressed?.Invoke();
         }
-
         if (anonymousKeyDown(pause))
         {
-            pausePressed?.Invoke();
+            PausePressed?.Invoke();
         }
 
     }
