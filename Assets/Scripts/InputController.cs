@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
@@ -35,7 +33,7 @@ public class InputController : MonoBehaviour
     private bool anonymousKeyDown(KeyCode key)
     {
         if (Event.current.type == EventType.KeyDown)
-         return (Event.current.keyCode == key);
+            return (Event.current.keyCode == key);
         return false;
     }
 }

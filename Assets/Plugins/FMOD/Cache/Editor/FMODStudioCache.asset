@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637528272792690627
+  lastModified: 637528790857060579
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -84,6 +84,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 81531
+--- !u!114 &-4890675379463158339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SongPosition
+  m_EditorClassIdentifier: 
+  Name: SongPosition
+  Min: 0
+  Max: 90
+  Default: 0
+  ID:
+    data1: 20643210
+    data2: 4023434563
+  Exists: 1
 --- !u!114 &-4360516179465427813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,12 +236,13 @@ MonoBehaviour:
   - {fileID: -1079897663101786475}
   - {fileID: -2780010080221490909}
   - {fileID: 7132170811799952694}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: -4890675379463158339}
   MasterBanks:
   - {fileID: -6997776824138028954}
   StringsBanks:
   - {fileID: 9016018448889426325}
-  stringsBankWriteTime: 637528272792705624
+  stringsBankWriteTime: 637528790857130596
   cacheVersion: 6
 --- !u!114 &548532804626554394
 MonoBehaviour:
@@ -353,7 +374,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637528272792705624
+  lastModified: 637528790857130596
   LoadResult: 0
   FileSizes:
   - Name: Desktop

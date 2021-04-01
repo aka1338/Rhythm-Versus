@@ -625,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 2473544310656381808, guid: d1ef580932710c241a17b026d37bcb9e,
         type: 3}
       propertyPath: song
-      value: event:/Minigames/MinigameSample/MinigameSample
+      value: event:/Debugging/calibrationmusic1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ef580932710c241a17b026d37bcb9e, type: 3}
@@ -649,6 +649,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 854571038}
+    - target: {fileID: 5801483855243595329, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5801483856335208194, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

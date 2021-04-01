@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +14,7 @@ public class GameManager : MonoBehaviour
     public static float keyDownTime;
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
-    public static float offset = 150;
+    public static float offset;
 
     // Just for the sake of testing, we're only putting one song here. 
     [FMODUnity.EventRef]
@@ -29,13 +27,13 @@ public class GameManager : MonoBehaviour
     public static event NoteTiming EarlyHit;
     public static event NoteTiming LateHit;
 
-    public bool isPaused = false; 
+    public bool isPaused = false;
 
     private void Start()
     {
         InputController.ActionOnePressed += CheckForValidHit;
         InputController.ActionTwoPressed += CheckForValidHit;
-        InputController.PausePressed += PauseGame; 
+        InputController.PausePressed += PauseGame;
     }
 
     private void OnDisable()
@@ -45,34 +43,35 @@ public class GameManager : MonoBehaviour
         InputController.PausePressed -= PauseGame;
     }
 
+    // Due to the nature of our GameManager, this actually calls during the Calibration Minigame. It's not that important, though. 
     public void CheckForValidHit()
     {
         keyDownTime = BeatSystem.timelinePosition;
 
         if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
         {
-            Debug.Log("On beat!");
+            //Debug.Log("On beat!");
             ValidHit?.Invoke();
         }
-        else 
+        else
         {
-            Debug.Log("Off beat!");
-            MissedHit.Invoke(); 
-        }      
+            //Debug.Log("Off beat!"); 
+            MissedHit?.Invoke();
+        }
     }
 
     public void PauseGame()
     {
-        if (!isPaused) 
+        if (!isPaused)
         {
-            ViewManager.Show<PauseMenuView>(); 
+            ViewManager.Show<PauseMenuView>();
             isPaused = true;
             Conductor.PauseMusic();
         }
-    }   
+    }
     public void ResumeGame()
     {
-        if (isPaused) 
+        if (isPaused)
         {
             ViewManager.Show<MinigameView>();
             isPaused = false;
@@ -81,8 +80,8 @@ public class GameManager : MonoBehaviour
     }
 
     //TODO: This should take a parameter [FMODUnity.EventRef] public string song. 
-    public void StartMinigame() 
-    {       
+    public void StartMinigame()
+    {
         Conductor.CreateBeatInstance(song);
         Conductor.StartMusic();
     }

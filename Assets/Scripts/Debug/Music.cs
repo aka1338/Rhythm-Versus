@@ -9,9 +9,7 @@ public class Music : MonoBehaviour
 
     void Start()
     {
-        bS = GetComponent<BeatSystem>();
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/calibrationmusic1");
-
+        
     }
 
     void Update()

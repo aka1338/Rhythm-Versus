@@ -99,7 +99,7 @@ class BeatSystem : MonoBehaviour
         instance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
     }
 
-   
+
     /// <summary>
     ///  Stops the instance from playing any more sound, and releases the instance from the timelineHandle. 
     /// </summary>
@@ -111,9 +111,9 @@ class BeatSystem : MonoBehaviour
         timelineHandle.Free();
     }
 
-    public void Pause(FMOD.Studio.EventInstance instance) 
+    public void Pause(FMOD.Studio.EventInstance instance)
     {
-        instance.setPaused(true); 
+        instance.setPaused(true);
     }
 
     public void Resume(FMOD.Studio.EventInstance instance)
