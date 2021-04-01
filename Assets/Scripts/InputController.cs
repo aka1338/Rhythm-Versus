@@ -20,12 +20,10 @@ public class InputController : MonoBehaviour
         {
             ActionOnePressed?.Invoke();
         }
-
         if (anonymousKeyDown(actionTwo))
         {
             ActionTwoPressed?.Invoke();
         }
-
         if (anonymousKeyDown(pause))
         {
             pausePressed?.Invoke();

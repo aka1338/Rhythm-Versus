@@ -58,8 +58,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Off beat!");
             MissedHit.Invoke(); 
-        }
-        
+        }      
     }
 
     public void PauseGame()
@@ -81,9 +80,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //TODO: This should take a parameter [FMODUnity.EventRef] public string song;
     public void StartMinigame() 
     {       
         Conductor.CreateBeatInstance(song);
         Conductor.StartMusic();
     }
+
 }
