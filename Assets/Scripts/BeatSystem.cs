@@ -83,7 +83,7 @@ class BeatSystem : MonoBehaviour
     /// <summary>
     ///  Returns the current playhead time in seconds. 
     /// </summary>
-    public static float time { get { return timelinePosition / 1000f; } }
+    public static float Time { get { return timelinePosition / 1000f; } }
 
     /// <summary>
     /// Assigns an FMOD.Studio.EventInstance Beat Event to BeatSystem. 
@@ -125,7 +125,7 @@ class BeatSystem : MonoBehaviour
     private void Update()
     {
         _instance.getTimelinePosition(out timelinePosition);
-        songPosInBeats = time / secPerBeat;
+        songPosInBeats = Time / secPerBeat;
     }
 
 
