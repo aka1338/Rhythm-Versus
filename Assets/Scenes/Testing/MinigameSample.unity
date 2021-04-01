@@ -636,16 +636,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 835330130, guid: 7b5a17fccf4fea247b8834613cc43858, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 854571038}
+    - target: {fileID: 1796163362, guid: 7b5a17fccf4fea247b8834613cc43858, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ac0035e22fae654d9fea1249e142533, type: 2}
     - target: {fileID: 5801483854594841201, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 854571038}
-    - target: {fileID: 5801483855243595329, guid: 7b5a17fccf4fea247b8834613cc43858,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5801483856335208194, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
