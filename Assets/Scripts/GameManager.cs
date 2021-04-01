@@ -35,14 +35,14 @@ public class GameManager : MonoBehaviour
     {
         InputController.ActionOnePressed += CheckForValidHit;
         InputController.ActionTwoPressed += CheckForValidHit;
-        InputController.pausePressed += PauseGame; 
+        InputController.PausePressed += PauseGame; 
     }
 
     private void OnDisable()
     {
         InputController.ActionOnePressed -= CheckForValidHit;
         InputController.ActionTwoPressed -= CheckForValidHit;
-        InputController.pausePressed -= PauseGame;
+        InputController.PausePressed -= PauseGame;
     }
 
     public void CheckForValidHit()
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //TODO: This should take a parameter [FMODUnity.EventRef] public string song;
+    //TODO: This should take a parameter [FMODUnity.EventRef] public string song. 
     public void StartMinigame() 
     {       
         Conductor.CreateBeatInstance(song);

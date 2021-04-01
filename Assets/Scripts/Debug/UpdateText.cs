@@ -13,7 +13,7 @@ public class UpdateText : MonoBehaviour
         beat.SetText("Beat: " + BeatSystem.beat);
         marker.SetText("Marker: " + BeatSystem.marker);
         position.SetText("Position: " + BeatSystem.timelinePosition);
-        positionInSeconds.SetText("Position (Seconds): " + BeatSystem.time);
+        positionInSeconds.SetText("Position (Seconds): " + BeatSystem.Time);
         positionInBeats.SetText("Pos: " + BeatSystem.songPosInBeats); 
     }
 }
