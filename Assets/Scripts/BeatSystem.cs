@@ -38,7 +38,7 @@ class BeatSystem : MonoBehaviour
     public static event MarkerAction OnMarker;
 
     /// <summary>
-    /// Beat event callback that fires every beat. 
+    /// FMOD event callback that fires every beat. Used within the class to gather data about the track assigned to the BeatSystem. 
     /// </summary>
     private FMOD.Studio.EVENT_CALLBACK beatCallback;
 
