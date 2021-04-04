@@ -1,16 +1,16 @@
 #FMOD Plugin
-Beat-Marker System/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
-Beat-Marker System/Assets/Plugins/FMOD/Cache/fmod_register_static_plugins.cpp
+Beat-Marker-System/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+Beat-Marker-System/Assets/Plugins/FMOD/Cache/fmod_register_static_plugins.cpp
 fmod.log
 fmod_editor.log
 
 # FMOD Project
-Beat-Marker System/.user/
-Beat-Marker System/.unsaved/
-Beat-Marker System/.cache/
-Beat-Marker System/.restore/
-Beat-Marker System/user/
-Beat-Marker System/unsaved/
-Beat-Marker System/restore/
-Beat-Marker System/fmod.log
-Beat-Marker System/fmod_editor.log
+Beat-Marker-System/.user/
+Beat-Marker-System/.unsaved/
+Beat-Marker-System/.cache/
+Beat-Marker-System/.restore/
+Beat-Marker-System/user/
+Beat-Marker-System/unsaved/
+Beat-Marker-System/restore/
+Beat-Marker-System/fmod.log
+Beat-Marker-System/fmod_editor.log
