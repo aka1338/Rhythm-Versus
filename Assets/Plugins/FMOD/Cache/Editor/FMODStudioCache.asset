@@ -39,6 +39,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6748378187367744719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/SFX/SFX_Cutter_Chop
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/SFX/SFX_Cutter_Chop
+  guid: 6e3fd890c882b74d8e77b7d807783a5f
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 420
 --- !u!114 &-6592453836200579115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +215,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 25600
+--- !u!114 &-1822721009823961267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/SFX/SFX_Cutter_Miss
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/SFX/SFX_Cutter_Miss
+  guid: aeff3dfe04c52940b8ffb2fbd4c08e04
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-1079897663101786475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,17 +300,24 @@ MonoBehaviour:
   - {fileID: 8359356829047311654}
   - {fileID: 399053811755175083}
   EditorEvents:
-  - {fileID: -2420796871674299871}
   - {fileID: 8992153267280026878}
   - {fileID: 7849090578325621791}
   - {fileID: 1626406560156158232}
+  - {fileID: 481814795684613852}
+  - {fileID: 4060149396988959870}
+  - {fileID: -6748378187367744719}
+  - {fileID: 3497443065043978901}
+  - {fileID: -1822721009823961267}
+  - {fileID: 4799194656191264172}
+  - {fileID: 2077657085151072265}
+  - {fileID: 7657661144699950623}
   EditorParameters:
   - {fileID: 7803229111580854287}
   MasterBanks:
   - {fileID: 399053811755175083}
   StringsBanks:
   - {fileID: 8359356829047311654}
-  stringsBankWriteTime: 637531396274851134
+  stringsBankWriteTime: 637531415409911796
   cacheVersion: 6
 --- !u!114 &399053811755175083
 MonoBehaviour:
@@ -281,10 +334,33 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637531396274576085
+  lastModified: 637531415409846787
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &481814795684613852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
+  guid: 32629dcc7ee3f543b16f14dc1bf58a4f
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 522
 --- !u!114 &548532804626554394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +407,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 81531
+--- !u!114 &2077657085151072265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/SFX/SFX_Cutter_Swing
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/SFX/SFX_Cutter_Swing
+  guid: da696e8b7e9f9f41a81a4231a3ba296b
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 399
 --- !u!114 &3079491562986977938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +453,75 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 81531
+--- !u!114 &3497443065043978901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/SFX/SFX_Cutter_Mince
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/SFX/SFX_Cutter_Mince
+  guid: 9439b5a818d5b74892d859fff815b86c
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &4060149396988959870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Debugging/calibrationmusic1
+  m_EditorClassIdentifier: 
+  Path: event:/Debugging/calibrationmusic1
+  guid: 3b77179040213d43bf24ee3094be6ab3
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 25600
+--- !u!114 &4799194656191264172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/SFX/SFX_Cutter_Mince_Oneshot
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/SFX/SFX_Cutter_Mince_Oneshot
+  guid: ca3dd3264e095344bcb59f2e40f790bd
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &7132170811799952694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +568,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 25600
+--- !u!114 &7657661144699950623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/Ambience/AMB_Cutter
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/Ambience/AMB_Cutter
+  guid: e09a89db5091354780aa2654a08dd017
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 60000
 --- !u!114 &7803229111580854287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,11 +672,11 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637531396274851134
+  lastModified: 637531415409911796
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1004
+    Value: 1340
   Exists: 1
 --- !u!114 &8500616435197790885
 MonoBehaviour:
