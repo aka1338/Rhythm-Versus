@@ -34,7 +34,6 @@ public class Conductor : MonoBehaviour
     {
         _instance = FMODUnity.RuntimeManager.CreateInstance(minigameSong);
         _instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(bS.transform));
-
     }
 
     public static void CreateSFXInstance(string sfx)

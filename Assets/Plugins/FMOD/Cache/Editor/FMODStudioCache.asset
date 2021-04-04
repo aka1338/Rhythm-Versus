@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8023636432243008418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/Music/ninjaDemo_160BPM
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/Music/ninjaDemo_160BPM
+  guid: 3f8d917a45bfa6489dc089b76e4b5ef6
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25678
 --- !u!114 &-7971516584592993094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +84,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 420
+  Length: 389
 --- !u!114 &-6592453836200579115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,13 +334,14 @@ MonoBehaviour:
   - {fileID: 4799194656191264172}
   - {fileID: 2077657085151072265}
   - {fileID: 7657661144699950623}
+  - {fileID: -8023636432243008418}
   EditorParameters:
   - {fileID: 7803229111580854287}
   MasterBanks:
   - {fileID: 399053811755175083}
   StringsBanks:
   - {fileID: 8359356829047311654}
-  stringsBankWriteTime: 637531415409911796
+  stringsBankWriteTime: 637531429986254792
   cacheVersion: 6
 --- !u!114 &399053811755175083
 MonoBehaviour:
@@ -334,7 +358,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637531415409846787
+  lastModified: 637531429986199785
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -672,11 +696,11 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637531415409911796
+  lastModified: 637531429986254792
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1340
+    Value: 1394
   Exists: 1
 --- !u!114 &8500616435197790885
 MonoBehaviour:
