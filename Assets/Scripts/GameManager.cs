@@ -48,15 +48,19 @@ public class GameManager : MonoBehaviour
     {
         keyDownTime = BeatSystem.timelinePosition;
 
-        if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
-        {
-            //Debug.Log("On beat!");
-            ValidHit?.Invoke();
-        }
-        else
-        {
-            //Debug.Log("Off beat!"); 
-            MissedHit?.Invoke();
+        // if marker is a note, then we can check for it's validity. 
+        if (BeatSystem.marker.Substring(0,5).Equals("note-"))  
+        { 
+            // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
+            if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+            {
+                ValidHit?.Invoke();
+            }
+            else
+            {
+                //Debug.Log("Off beat!"); 
+                MissedHit?.Invoke();
+            }
         }
     }
 
