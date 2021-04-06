@@ -775,8 +775,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1934236474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d225060229589439083f1bfb61ad28, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b0ccf4a91049c44f9d1d8cc0be5692e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5044293386422538541, guid: 0c363e5579fb6ce468171c8f14e8ab81, type: 3}
-  sfx: 
+  sfx:
+  - event:/Minigames/AirCutter/SFX/SFX_Cutter_Chop
+  - event:/Minigames/AirCutter/SFX/SFX_Cutter_Mince
+  - 
+  - 
+  - 

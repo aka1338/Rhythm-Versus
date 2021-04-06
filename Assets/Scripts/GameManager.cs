@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
     [FMODUnity.EventRef]
     public string song;
 
-
-
     public delegate void NoteTiming();
     public static event NoteTiming ValidHit;
     public static event NoteTiming MissedHit;
