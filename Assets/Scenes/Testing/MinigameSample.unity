@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 37636935}
   ListenerNumber: -1
 --- !u!1 &80132874
 GameObject:
@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5044293386422538541, guid: 0c363e5579fb6ce468171c8f14e8ab81, type: 3}
+  sfx: event:/Minigames/AirCutter/SFX/SFX_Cutter_Chop
 --- !u!1 &1536612667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2473544309845676058, guid: d1ef580932710c241a17b026d37bcb9e,
@@ -625,7 +626,7 @@ PrefabInstance:
     - target: {fileID: 2473544310656381808, guid: d1ef580932710c241a17b026d37bcb9e,
         type: 3}
       propertyPath: song
-      value: event:/Minigames/MinigameSample/MinigameSample
+      value: event:/Minigames/AirCutter/Music/ninjaDemo_160BPM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ef580932710c241a17b026d37bcb9e, type: 3}
