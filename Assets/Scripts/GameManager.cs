@@ -26,8 +26,9 @@ public class GameManager : MonoBehaviour
     public static event NoteTiming ValidHit;
     public static event NoteTiming MissedHit;
 
-    public static event NoteTiming EarlyHit;
-    public static event NoteTiming LateHit;
+    // For cool stuff later 
+    //public static event NoteTiming EarlyHit;
+    //public static event NoteTiming LateHit;
 
     // Pausing is disabled in multiplayer 
     public bool isPaused = false;
