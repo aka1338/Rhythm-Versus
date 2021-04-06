@@ -7,17 +7,21 @@ public class MinigameSample : MonoBehaviour
 {
     public Transform prefab;
     public static float animationDuration;
-    // Start is called before the first frame update
+
+    [FMODUnity.EventRef]
+    public string sfx;
+
     void Start()
     {
         BeatSystem.OnBeat += SpawnNote;
+        InputController.ActionOnePressed += PlaySwish; 
     }
-
-
 
     private void OnDisable()
     {
         BeatSystem.OnBeat -= SpawnNote;
+        InputController.ActionOnePressed -= PlaySwish;
+
     }
 
     private void SpawnNote()
@@ -26,4 +30,8 @@ public class MinigameSample : MonoBehaviour
         Instantiate(prefab, new Vector3(-9, 0, 0), Quaternion.identity);
     }
 
+    private void PlaySwish()
+    {
+        Conductor.PlaySFX(sfx); 
+    }
 }
