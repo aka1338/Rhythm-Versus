@@ -655,18 +655,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1202475538}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1202475541 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5801483854594841201, guid: 7b5a17fccf4fea247b8834613cc43858,
-    type: 3}
-  m_PrefabInstance: {fileID: 1202475538}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1202475542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,10 +664,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202475540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2a10ad629ffdda40b3ea5049d89578e, type: 3}
+  m_Script: {fileID: 11500000, guid: 57c1b29cdc9aee846abd9c2166b84bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playButton: {fileID: 1202475541}
+  _playButton: {fileID: 1950153362}
   _exitButton: {fileID: 1202475539}
 --- !u!114 &1553343713 stripped
 MonoBehaviour:
@@ -825,8 +813,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1934236474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e064eaea7b006d4e9852fdb054f433b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b0ccf4a91049c44f9d1d8cc0be5692e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1139206299447070057, guid: b04b7d2d14b91144286fcd9184117061, type: 3}
-  sfx: event:/Minigames/AirCutter/SFX/SFX_Cutter_Mince
+  prefab:
+  - {fileID: 1139206299447070057, guid: 7d4de924cfb6be847805aa2c4891bfb2, type: 3}
+  - {fileID: 1139206299447070057, guid: 7d4de924cfb6be847805aa2c4891bfb2, type: 3}
+  - {fileID: 1139206299447070057, guid: 7d4de924cfb6be847805aa2c4891bfb2, type: 3}
+  sfx: event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
+--- !u!114 &1950153362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 835330130, guid: 7b5a17fccf4fea247b8834613cc43858,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202475538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

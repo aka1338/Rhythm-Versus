@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirSlicer : MonoBehaviour
 {
-    public Transform prefab;
+    public Transform[] prefab;
     public static float animationDuration;
 
     [FMODUnity.EventRef]
@@ -24,11 +24,26 @@ public class AirSlicer : MonoBehaviour
 
     private void SpawnNote()
     {
-        //if (BeatSystem.marker.Substring(0, 5).Equals("note-")) 
-        //{ 
-        animationDuration = BeatSystem.secPerBeat;
-        Instantiate(prefab, new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
-        //}
+        animationDuration = BeatSystem.secPerBeat; 
+        if (BeatSystem.marker.Equals("Onion") || BeatSystem.marker.Equals("Carrot") || BeatSystem.marker.Equals("Potato")) 
+        {
+            Conductor.PlaySFX(sfx); 
+            Invoke("Spawn" + BeatSystem.marker, animationDuration/2); 
+        }
+    }
+
+    private void SpawnOnion() 
+    {
+        Instantiate(prefab[0], new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
+    }
+    private void SpawnCarrot()
+    {
+        Instantiate(prefab[1], new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
+    }
+
+    private void SpawnPotato()
+    {
+        Instantiate(prefab[2], new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
     }
 
     private void PlaySwish()

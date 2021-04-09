@@ -65,6 +65,6 @@ public class MoveVeggieNote : MonoBehaviour
     IEnumerator DeleteNote()
     {
         yield return new WaitForSeconds(1);
-        Destroy(gameObject);
+        Destroy(note);
     }
 }

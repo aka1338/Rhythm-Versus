@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139206299447070060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.32, y: -6.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1139206299447070060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a657278583de84468662850eea719f5, type: 3}
+  m_Script: {fileID: 11500000, guid: d673fa39322f5164aab8a4362dfcf5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cubeTransform: {fileID: 1139206299447070057}
@@ -113,9 +113,9 @@ MonoBehaviour:
   - {x: -5.32, y: -6.03, z: 0}
   - {x: -4.9, y: -5.03, z: 0}
   - {x: -3.5, y: -1.99, z: 0}
-  - {x: -2, y: 0.01, z: 0}
-  - {x: 0, y: 0.97, z: 0}
-  - {x: 2, y: 0.01, z: 0}
-  - {x: 3.5, y: -1.99, z: 0}
+  - {x: -2, y: -1.99, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   - {x: 4.9, y: -5.03, z: 0}
   - {x: 5.32, y: -6.03, z: 0}
