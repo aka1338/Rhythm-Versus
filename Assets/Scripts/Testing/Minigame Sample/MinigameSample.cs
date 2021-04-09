@@ -26,11 +26,11 @@ public class MinigameSample : MonoBehaviour
 
     private void SpawnNote()
     {
-        if (BeatSystem.marker.Substring(0, 5).Equals("note-")) 
-        { 
+        //if (BeatSystem.marker.Substring(0, 5).Equals("note-")) 
+        //{ 
             animationDuration = BeatSystem.secPerBeat;
             Instantiate(prefab, new Vector3(-9, 0, 0), Quaternion.identity);
-        }
+        //}
     }
 
     private void PlaySwish()

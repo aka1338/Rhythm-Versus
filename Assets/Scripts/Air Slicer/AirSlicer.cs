@@ -4,20 +4,35 @@ using UnityEngine;
 
 public class AirSlicer : MonoBehaviour
 {
-
+    public Transform prefab;
+    public static float animationDuration;
 
     [FMODUnity.EventRef]
-    public string[] sfx;
+    public string sfx;
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        BeatSystem.OnMarker += SpawnNote;
+        InputController.ActionOnePressed += PlaySwish;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        BeatSystem.OnMarker -= SpawnNote;
+        InputController.ActionOnePressed -= PlaySwish;
+    }
+
+    private void SpawnNote()
+    {
+        //if (BeatSystem.marker.Substring(0, 5).Equals("note-")) 
+        //{ 
+        animationDuration = BeatSystem.secPerBeat;
+        Instantiate(prefab, new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
+        //}
+    }
+
+    private void PlaySwish()
+    {
+        Conductor.PlaySFX(sfx);
     }
 }
