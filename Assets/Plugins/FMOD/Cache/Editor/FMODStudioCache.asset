@@ -22,7 +22,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 25654
+  Length: 25678
 --- !u!114 &-7971516584592993094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 389
+  Length: 357
 --- !u!114 &-6592453836200579115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   - {fileID: 399053811755175083}
   StringsBanks:
   - {fileID: 8359356829047311654}
-  stringsBankWriteTime: 637535816455259039
+  stringsBankWriteTime: 637535836092621115
   cacheVersion: 6
 --- !u!114 &399053811755175083
 MonoBehaviour:
@@ -358,7 +358,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637535816455184011
+  lastModified: 637535836092551105
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -384,7 +384,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 522
+  Length: 428
 --- !u!114 &548532804626554394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637535816455259039
+  lastModified: 637535836092621115
   LoadResult: 0
   FileSizes:
   - Name: Desktop

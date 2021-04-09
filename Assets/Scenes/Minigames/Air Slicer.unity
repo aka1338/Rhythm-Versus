@@ -820,7 +820,9 @@ MonoBehaviour:
   - {fileID: 1139206299447070057, guid: 7d4de924cfb6be847805aa2c4891bfb2, type: 3}
   - {fileID: 1139206299447070057, guid: 7d4de924cfb6be847805aa2c4891bfb2, type: 3}
   - {fileID: 1139206299447070057, guid: 7d4de924cfb6be847805aa2c4891bfb2, type: 3}
-  sfx: event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
+  sfx:
+  - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
+  - event:/Minigames/AirCutter/SFX/SFX_Cutter_Chop
 --- !u!114 &1950153362 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 835330130, guid: 7b5a17fccf4fea247b8834613cc43858,

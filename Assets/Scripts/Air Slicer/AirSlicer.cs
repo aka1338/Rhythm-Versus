@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AirSlicer : MonoBehaviour
 {
@@ -8,11 +6,12 @@ public class AirSlicer : MonoBehaviour
     public static float animationDuration;
 
     [FMODUnity.EventRef]
-    public string sfx;
+    public string[] sfx;
 
     void Start()
     {
         BeatSystem.OnMarker += SpawnNote;
+
         InputController.ActionOnePressed += PlaySwish;
     }
 
@@ -20,19 +19,22 @@ public class AirSlicer : MonoBehaviour
     {
         BeatSystem.OnMarker -= SpawnNote;
         InputController.ActionOnePressed -= PlaySwish;
+
     }
 
     private void SpawnNote()
     {
-        animationDuration = BeatSystem.secPerBeat; 
-        if (BeatSystem.marker.Equals("Onion") || BeatSystem.marker.Equals("Carrot") || BeatSystem.marker.Equals("Potato")) 
+        animationDuration = BeatSystem.secPerBeat;
+        Debug.Log(animationDuration); 
+        if (BeatSystem.marker.Equals("Onion") || BeatSystem.marker.Equals("Carrot") || BeatSystem.marker.Equals("Potato"))
         {
-            Conductor.PlaySFX(sfx); 
-            Invoke("Spawn" + BeatSystem.marker, animationDuration/2); 
+            Conductor.PlaySFX(sfx[0]);
+            Invoke("Spawn" + BeatSystem.marker, animationDuration * 1.5f);
+            animationDuration = BeatSystem.secPerBeat;
         }
     }
 
-    private void SpawnOnion() 
+    private void SpawnOnion()
     {
         Instantiate(prefab[0], new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
     }
@@ -48,6 +50,6 @@ public class AirSlicer : MonoBehaviour
 
     private void PlaySwish()
     {
-        Conductor.PlaySFX(sfx);
+        Conductor.PlaySFX(sfx[1]);
     }
 }
