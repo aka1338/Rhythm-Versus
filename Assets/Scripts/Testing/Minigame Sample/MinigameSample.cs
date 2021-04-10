@@ -13,21 +13,24 @@ public class MinigameSample : MonoBehaviour
 
     void Start()
     {
-        BeatSystem.OnBeat += SpawnNote;
+        BeatSystem.OnMarker += SpawnNote;
         InputController.ActionOnePressed += PlaySwish; 
     }
 
     private void OnDisable()
     {
-        BeatSystem.OnBeat -= SpawnNote;
+        BeatSystem.OnMarker -= SpawnNote;
         InputController.ActionOnePressed -= PlaySwish;
 
     }
 
     private void SpawnNote()
     {
-        animationDuration = BeatSystem.secPerBeat;
-        Instantiate(prefab, new Vector3(-9, 0, 0), Quaternion.identity);
+        //if (BeatSystem.marker.Substring(0, 5).Equals("note-")) 
+        //{ 
+            animationDuration = BeatSystem.secPerBeat;
+            Instantiate(prefab, new Vector3(-9, 0, 0), Quaternion.identity);
+        //}
     }
 
     private void PlaySwish()

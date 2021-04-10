@@ -19,8 +19,7 @@ public class MoveNote : MonoBehaviour
         GameManager.ValidHit += SuccessfulHit;
         GameManager.MissedHit += UnSuccessfulHit;
         cubeMaterial.DOColor(Color.white, 1);
-        cubeTransform
-       .DOMoveX(9, MinigameSample.animationDuration); 
+        cubeTransform.DOMoveX(9, MinigameSample.animationDuration); 
     }
 
     private void UnSuccessfulHit()

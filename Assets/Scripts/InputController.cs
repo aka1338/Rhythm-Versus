@@ -26,7 +26,6 @@ public class InputController : MonoBehaviour
         {
             PausePressed?.Invoke();
         }
-
     }
 
     // helper function (Since OnGui sends both a keycode and char event, not using this results in two events firing instead of one. 
