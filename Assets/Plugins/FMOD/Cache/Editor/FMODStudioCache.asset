@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8814065129800400281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Debugging/Monkey Watch - Rhythm Heaven Fever
+  m_EditorClassIdentifier: 
+  Path: event:/Debugging/Monkey Watch - Rhythm Heaven Fever
+  guid: 9d797083e680f04892af25fe6ac54f19
+  Banks:
+  - {fileID: 399053811755175083}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101235
 --- !u!114 &-8023636432243008418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +107,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 389
+  Length: 357
 --- !u!114 &-6592453836200579115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +348,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 8992153267280026878}
   - {fileID: 7849090578325621791}
-  - {fileID: 1626406560156158232}
   - {fileID: 481814795684613852}
   - {fileID: 4060149396988959870}
   - {fileID: -6748378187367744719}
@@ -335,13 +357,15 @@ MonoBehaviour:
   - {fileID: 2077657085151072265}
   - {fileID: 7657661144699950623}
   - {fileID: -8023636432243008418}
+  - {fileID: -8814065129800400281}
+  - {fileID: 3237603056617127955}
   EditorParameters:
   - {fileID: 7803229111580854287}
   MasterBanks:
   - {fileID: 399053811755175083}
   StringsBanks:
   - {fileID: 8359356829047311654}
-  stringsBankWriteTime: 637531429986254792
+  stringsBankWriteTime: 637535879733908182
   cacheVersion: 6
 --- !u!114 &399053811755175083
 MonoBehaviour:
@@ -358,7 +382,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637531429986199785
+  lastModified: 637535879733848136
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -384,7 +408,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 522
+  Length: 428
 --- !u!114 &548532804626554394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +494,29 @@ MonoBehaviour:
   guid: df7f76680beb2641a6bdb6d05e4a77c0
   Banks:
   - {fileID: -6997776824138028954}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 81531
+--- !u!114 &3237603056617127955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Debugging/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Debugging/Music
+  guid: df7f76680beb2641a6bdb6d05e4a77c0
+  Banks:
+  - {fileID: 399053811755175083}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -696,11 +743,11 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637531429986254792
+  lastModified: 637535879733908182
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1394
+    Value: 1470
   Exists: 1
 --- !u!114 &8500616435197790885
 MonoBehaviour:

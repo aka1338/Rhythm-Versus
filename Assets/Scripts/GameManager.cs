@@ -24,9 +24,11 @@ public class GameManager : MonoBehaviour
     public static event NoteTiming ValidHit;
     public static event NoteTiming MissedHit;
 
-    public static event NoteTiming EarlyHit;
-    public static event NoteTiming LateHit;
+    // For cool stuff later 
+    //public static event NoteTiming EarlyHit;
+    //public static event NoteTiming LateHit;
 
+    // Pausing is disabled in multiplayer 
     public bool isPaused = false;
 
     private void Start()
@@ -48,16 +50,20 @@ public class GameManager : MonoBehaviour
     {
         keyDownTime = BeatSystem.timelinePosition;
 
-        if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
-        {
-            //Debug.Log("On beat!");
-            ValidHit?.Invoke();
-        }
-        else
-        {
-            //Debug.Log("Off beat!"); 
-            MissedHit?.Invoke();
-        }
+        // if marker is a note, then we can check for it's validity. 
+        //if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
+        //{
+            // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
+            if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+            {
+                ValidHit?.Invoke();
+            }
+            else
+            {
+                //Debug.Log("Off beat!"); 
+                MissedHit?.Invoke();
+            }
+        //}
     }
 
     public void PauseGame()
@@ -86,4 +92,8 @@ public class GameManager : MonoBehaviour
         Conductor.StartMusic();
     }
 
+    public void EndMinigame() 
+    {
+        Debug.Log("Minigame over!"); 
+    } 
 }
