@@ -26,10 +26,10 @@ public class AirSlicer : MonoBehaviour
     {
         animationDuration = BeatSystem.secPerBeat;
         Debug.Log(animationDuration); 
-        if (BeatSystem.marker.Equals("Onion") || BeatSystem.marker.Equals("Carrot") || BeatSystem.marker.Equals("Potato"))
+        if (BeatSystem.marker.Substring(0,5).Equals("Onion") || BeatSystem.marker.Substring(0,4).Equals("Carrot") || BeatSystem.marker.Substring(0,4).Equals("Potato"))
         {
             Conductor.PlaySFX(sfx[0]);
-            Invoke("Spawn" + BeatSystem.marker, animationDuration * 1.5f);
+            Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * 0f);
             animationDuration = BeatSystem.secPerBeat;
         }
     }
