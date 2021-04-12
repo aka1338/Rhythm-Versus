@@ -44,4 +44,12 @@ public class ClientHandle : MonoBehaviour
         GameManager.players[_id].transform.rotation = _rotation; 
     }
 
+    //Read score from the package from server
+    public static void PlayerScore(Packet _packet)
+    {
+        int _id = _packet.ReadInt();
+        int _score = _packet.ReadInt();
+
+        GameManager.players[_id].score = _score;
+    }
 }

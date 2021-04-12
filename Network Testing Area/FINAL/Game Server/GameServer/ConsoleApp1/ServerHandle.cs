@@ -34,5 +34,16 @@ namespace GameServer
 
             Server.clients[_fromClient].player.SetInput(_inputs, _rotation); 
         }
+
+        //For Rythem vs
+        //getting the score information from client
+        public static void PlayerScore(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+            int _score = _packet.ReadInt();
+
+            Console.WriteLine($"Player \"{_username}\" (ID: {_fromClient}) get point");
+            Server.clients[_fromClient].player.AddScore(_score);
+        }
     }
 }

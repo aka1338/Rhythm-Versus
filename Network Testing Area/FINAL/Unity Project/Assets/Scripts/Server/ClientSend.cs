@@ -43,6 +43,17 @@ public class ClientSend : MonoBehaviour
         }
     }
 
+    //Send packet to server to add score 
+    public static void AddScore()
+    {
+        using (Packet _packet = new Packet((int)ClientPackets.playerScore))
+        {
+            _packet.Write(Client.instance.myId);
+            _packet.Write(Client.instance.score);
+
+            SendUDPData(_packet);
+        }
+    }
     #endregion
 
 }

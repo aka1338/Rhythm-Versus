@@ -110,6 +110,19 @@ namespace GameServer
                 SendUDPDataToAll(_packet); 
             }
         }
+
+        //For Rythem vs
+        //send score packet to client
+        public static void PlayerScore(Player _player)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.playerScore))
+            {
+                _packet.Write(_player.id);
+                _packet.Write(_player.score);
+
+                SendUDPDataToAll(_packet);
+            }
+        }
         #endregion
     }
 }

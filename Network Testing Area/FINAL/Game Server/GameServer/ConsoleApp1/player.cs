@@ -12,17 +12,21 @@ namespace GameServer
         public int id;
         public string username;
 
+        //For Rythem vs
+        public int score = 0;
+
         public Vector3 position;
         public Quaternion rotation;
 
         private float moveSpeed = 5f / Constants.TICKS_PER_SEC;
         private bool[] inputs; 
-        public Player(int _id, string _username, Vector3 _spawnPosition)
+        public Player(int _id, string _username, Vector3 _spawnPosition, int score)
         {
             id = _id;
             username = _username;
             position = _spawnPosition;
             rotation = Quaternion.Identity;
+            score = _score;
 
             inputs = new bool[4]; 
         }
@@ -30,6 +34,10 @@ namespace GameServer
         public void Update()
         {
             Vector2 _inputDirection = Vector2.Zero;
+
+            //Maybe TODO:something about the score
+            //int _score = 
+
             if (inputs[0])
             {
                 _inputDirection.Y += 1;
@@ -46,8 +54,14 @@ namespace GameServer
             {
                 _inputDirection.X -= 1;
             }
-
+            if (inputs[4])//not sure how this work
+            {
+                _score ++;
+            }
             Move(_inputDirection);
+
+            //call the AddScore function to add score and send the information
+            AddScore();
         }
 
         private void Move(Vector2 _inputDirection)
@@ -66,6 +80,13 @@ namespace GameServer
         {
             inputs = _inputs;
             rotation = _rotation; 
+        }
+
+        //For Rythem vs
+        public void AddScore()//something should be here
+        {
+            score = _score;
+            ServerSend.PlayerScore(this);
         }
     }
 }

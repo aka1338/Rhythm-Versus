@@ -13,6 +13,10 @@ public class Client : MonoBehaviour
     public string ip = "127.0.0.1";
     public int port = 26950;
     public int myId = 0;
+
+    //For game to add score;
+    public int score = 0;
+
     public TCP tcp;
     public UDP udp;
 
@@ -280,7 +284,8 @@ public class Client : MonoBehaviour
             { (int)ServerPackets.spawnPlayer, ClientHandle.SpawnPlayer},            
             { (int)ServerPackets.playerPosition, ClientHandle.PlayerPosition},
             { (int)ServerPackets.playerRotation, ClientHandle.PlayerRotation},
-
+            //Initialize the score;
+            { (int)ServerPackets.playerScore, ClientHandle.PlayerScore}
         };
 
         Debug.Log("Initialized packets.");

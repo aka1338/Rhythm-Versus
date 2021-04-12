@@ -122,6 +122,9 @@ namespace GameServer
             {
                 {(int)ClientPackets.welcomeReceived, ServerHandle.WelcomeRecieved },
                 {(int)ClientPackets.playerMovement, ServerHandle.PlayerMovement },
+
+                //For Rythem vs
+                {(int)ClientPackets.playerScore, ServerHandle.PlayerScore },
             };
             Console.WriteLine("Initialized packets."); 
         }
