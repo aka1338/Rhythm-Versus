@@ -11,6 +11,8 @@ public class MoveVeggieNote : MonoBehaviour
 
     public Vector3[] wayPoints;
 
+    public GameObject cutVeggie; 
+
     void Start()
     {
         // static DOTween.Init(bool recycleAllByDefault = false, bool useSafeMode = true, LogBehaviour = LogBehaviour.ErrorsOnly)
@@ -32,12 +34,12 @@ public class MoveVeggieNote : MonoBehaviour
         GameManager.ValidHit += SuccessfulHit;
         GameManager.MissedHit += UnSuccessfulHit;
         cubeMaterial.DOColor(Color.white, 1);
-        cubeTransform.DOPath(wayPoints, AirSlicer.animationDuration*2, PathType.CatmullRom);
+        cubeTransform.DOPath(wayPoints, AirSlicer.animationDuration*4f, PathType.CatmullRom);
     }
 
     void Update()
     {
-        if (cubeTransform.position.x == 5.32 && note != null)
+        if (cubeTransform.position.x > 4 && note != null)
         {
             StartCoroutine("DeleteNote");
         }
@@ -52,7 +54,12 @@ public class MoveVeggieNote : MonoBehaviour
     private void SuccessfulHit()
     {
         if (note != null)
+        {
+            DOTween.Kill(gameObject); 
             cubeMaterial.DOColor(Color.green, 1);
+            Instantiate(cutVeggie, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);
+            Destroy(gameObject); 
+        }
     }
 
     private void UnSuccessfulHit()
