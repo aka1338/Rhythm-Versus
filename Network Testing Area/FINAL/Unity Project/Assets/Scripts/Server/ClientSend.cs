@@ -44,7 +44,7 @@ public class ClientSend : MonoBehaviour
     }
 
     //Send packet to server to add score 
-    public static void AddScore()
+    public static void AddScore(int score)
     {
         using (Packet _packet = new Packet((int)ClientPackets.playerScore))
         {

@@ -20,7 +20,7 @@ namespace GameServer
 
         private float moveSpeed = 5f / Constants.TICKS_PER_SEC;
         private bool[] inputs; 
-        public Player(int _id, string _username, Vector3 _spawnPosition, int score)
+        public Player(int _id, string _username, Vector3 _spawnPosition, int _score)
         {
             id = _id;
             username = _username;
@@ -35,8 +35,6 @@ namespace GameServer
         {
             Vector2 _inputDirection = Vector2.Zero;
 
-            //Maybe TODO:something about the score
-            //int _score = 
 
             if (inputs[0])
             {
@@ -54,14 +52,10 @@ namespace GameServer
             {
                 _inputDirection.X -= 1;
             }
-            if (inputs[4])//not sure how this work
-            {
-                _score ++;
-            }
+
+
             Move(_inputDirection);
 
-            //call the AddScore function to add score and send the information
-            AddScore();
         }
 
         private void Move(Vector2 _inputDirection)
@@ -83,10 +77,12 @@ namespace GameServer
         }
 
         //For Rythem vs
-        public void AddScore()//something should be here
+        public void AddScore(int _score)//something should be here
         {
-            score = _score;
+            score = _score + 1;
+            Console.WriteLine("Score added : " + _score);
             ServerSend.PlayerScore(this);
+            
         }
     }
 }

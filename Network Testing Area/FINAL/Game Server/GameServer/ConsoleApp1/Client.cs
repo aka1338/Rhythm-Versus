@@ -12,7 +12,11 @@ namespace GameServer
         public static int dataBufferSize = 4096;
 
         public int id;
-        public Player player; 
+        public Player player;
+
+        //rythem vs
+        public int score;
+
         public TCP tcp;
         public UDP udp; 
 
@@ -193,7 +197,7 @@ namespace GameServer
 
         public void SendIntoGame(string _playerName)
         {
-            player = new Player(id, _playerName, new Vector3(0, 0, 0));
+            player = new Player(id, _playerName, new Vector3(0, 0, 0), score);
 
             foreach (Client _client in Server.clients.Values)
             {

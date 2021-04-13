@@ -49,7 +49,8 @@ public class ClientHandle : MonoBehaviour
     {
         int _id = _packet.ReadInt();
         int _score = _packet.ReadInt();
-
+        //PlayerManager.AddScore();
+        
         GameManager.players[_id].score = _score;
     }
 }

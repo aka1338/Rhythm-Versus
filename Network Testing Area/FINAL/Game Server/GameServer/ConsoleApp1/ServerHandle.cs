@@ -42,7 +42,7 @@ namespace GameServer
             int _clientIdCheck = _packet.ReadInt();
             int _score = _packet.ReadInt();
 
-            Console.WriteLine($"Player \"{_username}\" (ID: {_fromClient}) get point");
+            Console.WriteLine($"(ID: {_fromClient}) get point");
             Server.clients[_fromClient].player.AddScore(_score);
         }
     }

@@ -41,4 +41,5 @@ public class FPSInput : MonoBehaviour
         ClientSend.PlayerMovement(_inputs); 
     
     }
+
 }
