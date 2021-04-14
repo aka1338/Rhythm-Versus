@@ -8,16 +8,14 @@ public class MoveVeggieNote : MonoBehaviour
     public Transform cubeTransform;
     public Material cubeMaterial;
     public GameObject note;
-
-    public Vector3[] wayPoints;
-
-    public GameObject cutVeggie; 
+    public GameObject cutVeggie;
+    public Vector3[] wayPoints; 
 
     void Start()
     {
         // static DOTween.Init(bool recycleAllByDefault = false, bool useSafeMode = true, LogBehaviour = LogBehaviour.ErrorsOnly)
         // initializes DOTween
-        DOTween.Init(false, true, LogBehaviour.ErrorsOnly);
+        DOTween.Init(false, true, LogBehaviour.Default);
 
         //wayPoints = new Vector3[9];
         // set the positions for each index for path that veggieObject will travel
@@ -39,7 +37,7 @@ public class MoveVeggieNote : MonoBehaviour
 
     void Update()
     {
-        if (cubeTransform.position.x > 4 && note != null)
+        if (cubeTransform.position.x > -0.85 && note != null)
         {
             StartCoroutine("DeleteNote");
         }
@@ -55,23 +53,37 @@ public class MoveVeggieNote : MonoBehaviour
     {
         if (note != null)
         {
-            DOTween.Kill(gameObject); 
+            
             cubeMaterial.DOColor(Color.green, 1);
-            Instantiate(cutVeggie, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);
-            Destroy(gameObject); 
+            GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
+            Destroy(Instantiate(cutVeggie, new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity), 1f);
+            
+            DOTween.Kill(currentVeggieNote); 
+            Destroy(currentVeggieNote);
+            Debug.Log("This should have removed the oldest clone");
+
+            //Debug.Log("Making a function call to DestroyVeggieNote()");
+            //AirSlicer.DestroyVeggieNote();
+            //Destroy(Instantiate(this.cutVeggie, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity), 2f);
+            //Instantiate(cutVeggie, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);     
         }
     }
 
     private void UnSuccessfulHit()
     {
         if (note != null)
+        {
             cubeMaterial.DOColor(Color.red, 1);
+            GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
+            //Instantiate(cutVeggie, new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity);
+            Destroy(currentVeggieNote);
+        }
     }
 
     // Waits a bit to ensure cube has reached it's final destination before being deleted, otherwise generates DOTween warnings. 
     IEnumerator DeleteNote()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         Destroy(note);
     }
 }
