@@ -23,7 +23,6 @@ public class SimpleCubeAnimation : MonoBehaviour
     private void Start()
     {
         bS = GetComponent<BeatSystem>();
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/animationtest");
 
         bS.AssignBeatEvent(instance);
      
