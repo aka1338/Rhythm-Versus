@@ -32,12 +32,12 @@ public class MoveVeggieNote : MonoBehaviour
         GameManager.ValidHit += SuccessfulHit;
         GameManager.MissedHit += UnSuccessfulHit;
         cubeMaterial.DOColor(Color.white, 1);
-        cubeTransform.DOPath(wayPoints, AirSlicer.animationDuration*4f, PathType.CatmullRom);
+        cubeTransform.DOPath(wayPoints, AirSlicer.animationDuration*3.5f, PathType.CatmullRom);
     }
 
     void Update()
     {
-        if (cubeTransform.position.x > -0.85 && note != null)
+        if (cubeTransform.position.y > 0.95 && note != null)
         {
             StartCoroutine("DeleteNote");
         }

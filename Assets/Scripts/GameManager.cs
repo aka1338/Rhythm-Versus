@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public static float keyDownTime;
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
-    public static float offset = 185;
+    public static float offset = 120;
 
     // Just for the sake of testing, we're only putting one song here. 
     [FMODUnity.EventRef]

@@ -32,7 +32,7 @@ public class AirSlicer : MonoBehaviour
         Debug.Log(animationDuration); 
         if (BeatSystem.marker.Substring(0,5).Equals("Onion") || BeatSystem.marker.Substring(0,4).Equals("Carrot") || BeatSystem.marker.Substring(0,4).Equals("Potato"))
         {
-            Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * .5f);
+            Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * .3f);
             animationDuration = BeatSystem.secPerBeat;
         }
     }
