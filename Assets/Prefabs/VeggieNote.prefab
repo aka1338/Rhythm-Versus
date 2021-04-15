@@ -109,8 +109,9 @@ MonoBehaviour:
   cubeTransform: {fileID: 1139206299447070057}
   cubeMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   note: {fileID: 1139206299447070060}
+  cutVeggie: {fileID: 7788358228957707468, guid: 75777eadc8a4be94ca68d45ccf81a0c1,
+    type: 3}
   wayPoints:
-  - {x: -5.32, y: -6.03, z: 0}
   - {x: -4.9, y: -5.03, z: 0}
   - {x: -3.5, y: -1.99, z: 0}
   - {x: -2, y: 0.01, z: 0}
