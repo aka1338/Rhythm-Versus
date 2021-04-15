@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
             isPaused = true;
             Conductor.PauseMusic();
         }
+        else
+            ResumeGame(); 
     }
     public void ResumeGame()
     {

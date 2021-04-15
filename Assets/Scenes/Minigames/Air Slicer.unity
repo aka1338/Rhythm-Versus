@@ -365,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 2473544310656381808, guid: d1ef580932710c241a17b026d37bcb9e,
         type: 3}
       propertyPath: song
-      value: event:/Debugging/Monkey Watch - Rhythm Heaven Fever
+      value: event:/Debugging/Monkey Watch - Rhythm Heaven Fever 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ef580932710c241a17b026d37bcb9e, type: 3}
@@ -498,18 +498,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1430929362 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5801483855657332749, guid: 7b5a17fccf4fea247b8834613cc43858,
-    type: 3}
-  m_PrefabInstance: {fileID: 2142389831}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726af341ed9023945832baad255e50a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1899234698
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +642,7 @@ MonoBehaviour:
   - {fileID: 1139206299447070060, guid: c363568461d2235489dc5999886e1cfe, type: 3}
   - {fileID: 1139206299447070060, guid: c363568461d2235489dc5999886e1cfe, type: 3}
   - {fileID: 1139206299447070060, guid: c363568461d2235489dc5999886e1cfe, type: 3}
-  - {fileID: 7788358228957707468, guid: 11e6db74917c4014ea15e4ff6a3a60d6, type: 3}
+  - {fileID: 7788358228957707468, guid: b81f664c2727d044ab1a925bf5aa0edd, type: 3}
   sfx:
   - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
   - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
@@ -699,16 +687,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 959987747}
-    - target: {fileID: 5801483854817751036, guid: 7b5a17fccf4fea247b8834613cc43858,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5801483855657332751, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5801483856335208194, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 959987747}
     - target: {fileID: 7827589755640918053, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_Name
@@ -769,10 +757,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8996043408294106699, guid: 7b5a17fccf4fea247b8834613cc43858,
-        type: 3}
-      propertyPath: _startingView
-      value: 
-      objectReference: {fileID: 1430929362}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b5a17fccf4fea247b8834613cc43858, type: 3}
