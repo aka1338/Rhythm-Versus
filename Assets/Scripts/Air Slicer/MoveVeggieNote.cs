@@ -7,8 +7,8 @@ public class MoveVeggieNote : MonoBehaviour
 {
     public Transform cubeTransform;
     public Material cubeMaterial;
-    public GameObject note;
-    public GameObject cutVeggie;
+    //public GameObject note;
+    //public GameObject cutVeggie;
     public Vector3[] wayPoints; 
 
     void Start()
@@ -29,26 +29,26 @@ public class MoveVeggieNote : MonoBehaviour
         wayPoints.SetValue((4.9f, -5.03f, 0f), 7);
         wayPoints.SetValue((5.32f, -6.03f, 0f), 8); */
 
-        GameManager.ValidHit += SuccessfulHit;
-        GameManager.MissedHit += UnSuccessfulHit;
+        // GameManager.ValidHit += SuccessfulHit;
+        // GameManager.MissedHit += UnSuccessfulHit;
         cubeMaterial.DOColor(Color.white, 1);
         cubeTransform.DOPath(wayPoints, AirSlicer.animationDuration*3.5f, PathType.CatmullRom);
     }
 
     void Update()
     {
-        if (cubeTransform.position.y > 0.95 && note != null)
-        {
-            StartCoroutine("DeleteNote");
-        }
+        //if (cubeTransform.position.y > 0.95 && note != null)
+        //{
+          //  StartCoroutine("DeleteNote");
+        //}
     }
 
-    private void OnDisable()
-    {
-        GameManager.ValidHit -= SuccessfulHit;
-        GameManager.MissedHit -= UnSuccessfulHit;
-    }
-
+    //private void OnDisable()
+    //{
+        //GameManager.ValidHit -= SuccessfulHit;
+        //GameManager.MissedHit -= UnSuccessfulHit;
+    //}
+    /*
     private void SuccessfulHit()
     {
         if (note != null)
@@ -79,11 +79,12 @@ public class MoveVeggieNote : MonoBehaviour
             Destroy(currentVeggieNote);
         }
     }
+    */
 
     // Waits a bit to ensure cube has reached it's final destination before being deleted, otherwise generates DOTween warnings. 
-    IEnumerator DeleteNote()
-    {
-        yield return new WaitForSeconds(0.1f);
-        Destroy(note);
-    }
+    //IEnumerator DeleteNote()
+   // {
+     //   yield return new WaitForSeconds(0.1f);
+     //   Destroy(note);
+   // }
 }
