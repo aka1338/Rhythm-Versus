@@ -1227,7 +1227,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &706763392857388033
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068464203958641560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 890c2cce457e1d24982f5be1eb6b113d, type: 3}
+  m_Script: {fileID: 11500000, guid: e0cd3828d68fedf499e9cad55349d484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _VolumeUpButton: {fileID: 2961664699678943699}
@@ -1541,7 +1541,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1831561429106087908
@@ -1710,7 +1710,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2518309910681012670
@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2518309910681012670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913b543a9916bea4dbb9fbd6eeb7f9b3, type: 3}
+  m_Script: {fileID: 11500000, guid: debec9326cdd2d7459d798651a092299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _onlineButton: {fileID: 5793683683443018222}
@@ -2044,7 +2044,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3638547362339711999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed2789c0cf1decf4ba49620393c1427a, type: 3}
+  m_Script: {fileID: 11500000, guid: c87b1ca3974c75945b1e463414aa101a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _airSlicerButton: {fileID: 33290742907045196}
@@ -2361,7 +2361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5724075428083753964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cabd1532a56a51459290255c88cf06e, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a1835b5884a2749aee7f3f92eb4fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _createLobbyButton: {fileID: 5034402836398579318}
@@ -2837,7 +2837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5801483855657332750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6580890436927268759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29be5a21f0ef9004b8a8ebd975ada62c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfe075e1fe85fa4d8b54afcb0a425a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _yesButton: {fileID: 6853768113006013067}
@@ -3282,7 +3282,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7827589755640918053
@@ -3395,7 +3395,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8503715540414850418
