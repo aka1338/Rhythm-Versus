@@ -57,7 +57,7 @@ public class AirSlicer : MonoBehaviour
     }
     private void SpawnCarrot()
     {
-        Instantiate(prefab[1], new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
+        Instantiate(prefab[1], new Vector3(4.9f, -6.03f, 0f), Quaternion.identity);
     }
 
     private void SpawnPotato()
@@ -72,9 +72,9 @@ public class AirSlicer : MonoBehaviour
         {
             cubeMaterial.DOColor(Color.green, 1);
             GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
-            currentVeggieNote.SetActive(false); 
+            currentVeggieNote.SetActive(false);
+            DeleteDelay(currentVeggieNote);
             Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity), 1f);
-            DeleteDelay(currentVeggieNote); 
         }
     }
 

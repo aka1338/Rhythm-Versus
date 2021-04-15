@@ -8,7 +8,7 @@
 			<value>SFX_Cutter_Mince_Oneshot</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{98746688-f3aa-492b-908e-6981243b4e58}</destination>
@@ -75,6 +75,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{da188660-3dec-480a-9131-b000b977c8b4}">
+		<property name="volume">
+			<value>10</value>
+		</property>
+		<property name="pitch">
+			<value>-14</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{c0ae88b2-07dc-4582-877c-c267f37034a4}</destination>
 		</relationship>
@@ -93,7 +99,10 @@
 	<object class="MixerBusPanner" id="{98600b37-d757-4a84-ba7c-cf3494cc5a3c}" />
 	<object class="SingleSound" id="{987990c6-6af5-4467-aead-392f5042cd0e}">
 		<property name="length">
-			<value>0.5</value>
+			<value>0.4921875</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.0078125</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{ab980c11-9eec-4735-a85d-6015318fcbb3}</destination>
@@ -116,10 +125,18 @@
 	<object class="MixerBusEffectChain" id="{c0ae88b2-07dc-4582-877c-c267f37034a4}">
 		<relationship name="effects">
 			<destination>{8314e6ba-9f65-41db-9d88-f848062f70cd}</destination>
-			<destination>{025dab01-f593-4545-9a1a-bc363834a895}</destination>
+			<destination>{955ec8e3-a619-4a46-8bee-fc10cd463d82}</destination>
+			<destination>{80078a2f-2476-437a-be90-472170e7daaf}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{9f3b3077-0d10-475b-9b74-50cbfc6e69a1}" />
+	<object class="MixerBusPanner" id="{9f3b3077-0d10-475b-9b74-50cbfc6e69a1}">
+		<property name="surroundPanDirection">
+			<value>-135</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>309.563965</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{4465e878-9852-49db-803c-aadfb9557f1d}" />
 	<object class="MixerBusEffectChain" id="{019c13b6-d7bf-433c-acd3-5c49e465a084}">
 		<relationship name="effects">
@@ -128,6 +145,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{5528d553-345c-49ef-b395-a35455194833}" />
 	<object class="MixerBusFader" id="{8314e6ba-9f65-41db-9d88-f848062f70cd}" />
-	<object class="SpatialiserEffect" id="{025dab01-f593-4545-9a1a-bc363834a895}" />
+	<object class="PitchShifterEffect" id="{955ec8e3-a619-4a46-8bee-fc10cd463d82}">
+		<property name="pitch">
+			<value>2</value>
+		</property>
+		<property name="fftSize">
+			<value>256</value>
+		</property>
+		<property name="overlap">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="PannerEffect" id="{80078a2f-2476-437a-be90-472170e7daaf}" />
 	<object class="MixerBusFader" id="{816574f9-5273-4a74-b05e-424620a61f30}" />
 </objects>
