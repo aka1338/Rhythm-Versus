@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &34556204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 884516002, guid: 7b5a17fccf4fea247b8834613cc43858,
+    type: 3}
+  m_PrefabInstance: {fileID: 2143731850}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c1b29cdc9aee846abd9c2166b84bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &421264192
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,18 +536,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1513199838 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5801483854817751034, guid: 7b5a17fccf4fea247b8834613cc43858,
-    type: 3}
-  m_PrefabInstance: {fileID: 2143731850}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34b5ae961a68cce42838c0497e3bbef3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1899234698
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +720,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 835330130, guid: 7b5a17fccf4fea247b8834613cc43858, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796163363, guid: 7b5a17fccf4fea247b8834613cc43858, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 384255047101795269, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 504903227495814655, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728030565110650666, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417710773845877311, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5801483854594841201, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -760,10 +788,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu View
       objectReference: {fileID: 0}
+    - target: {fileID: 7702064591182011424, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7827589755640918053, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
       propertyPath: m_Name
       value: Views
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092836325485778232, guid: 7b5a17fccf4fea247b8834613cc43858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8674871484169088111, guid: 7b5a17fccf4fea247b8834613cc43858,
         type: 3}
@@ -824,6 +862,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _startingView
       value: 
-      objectReference: {fileID: 1513199838}
+      objectReference: {fileID: 34556204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b5a17fccf4fea247b8834613cc43858, type: 3}
