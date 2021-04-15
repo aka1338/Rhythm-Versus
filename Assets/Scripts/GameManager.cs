@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -51,20 +52,28 @@ public class GameManager : MonoBehaviour
         keyDownTime = BeatSystem.timelinePosition;
 
         // if marker is a note, then we can check for it's validity. 
-        if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
+        if (BeatSystem.marker.Length > 5)
         {
-            // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
-            if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+            if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
             {
-                ValidHit?.Invoke();
-            }
-            else
-            {
-                MissedHit?.Invoke();
+                // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
+                if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+                {
+                    ValidHit?.Invoke();
+                }
+                else
+                {
+                    MissedHit?.Invoke();
+                }
             }
         }
     }
 
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     public void PauseGame()
     {
         if (!isPaused)
@@ -74,7 +83,7 @@ public class GameManager : MonoBehaviour
             Conductor.PauseMusic();
         }
         else
-            ResumeGame(); 
+            ResumeGame();
     }
     public void ResumeGame()
     {
@@ -86,6 +95,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void SetOffset(float _offset) 
+    {
+        offset = _offset;         
+    }
     //TODO: This should take a parameter [FMODUnity.EventRef] public string song. 
     public void StartMinigame()
     {
@@ -93,8 +106,23 @@ public class GameManager : MonoBehaviour
         Conductor.StartMusic();
     }
 
-    public void EndMinigame() 
+    public void EndMinigame()
     {
-        Debug.Log("Minigame over!"); 
-    } 
+        Debug.Log("Minigame over!");
+        Conductor.StopAndClear();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void SwitchGame()
+    {
+
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else 
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 }

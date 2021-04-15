@@ -99,11 +99,12 @@
 	<object class="MixerBusPanner" id="{98600b37-d757-4a84-ba7c-cf3494cc5a3c}" />
 	<object class="SingleSound" id="{987990c6-6af5-4467-aead-392f5042cd0e}">
 		<property name="length">
-			<value>0.4921875</value>
+			<value>0.4765625</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.0078125</value>
+			<value>0.023437499999999997</value>
 		</property>
+		<property name="name" />
 		<relationship name="audioFile">
 			<destination>{ab980c11-9eec-4735-a85d-6015318fcbb3}</destination>
 		</relationship>
@@ -141,6 +142,9 @@
 	<object class="MixerBusEffectChain" id="{019c13b6-d7bf-433c-acd3-5c49e465a084}">
 		<relationship name="effects">
 			<destination>{816574f9-5273-4a74-b05e-424620a61f30}</destination>
+			<destination>{292e9897-4649-4562-9509-5b8c024f3be4}</destination>
+			<destination>{f582d61c-4ad6-4955-a2aa-47d3928acae4}</destination>
+			<destination>{1288f984-3c25-4b0b-91ad-fb151810f7e1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{5528d553-345c-49ef-b395-a35455194833}" />
@@ -158,4 +162,31 @@
 	</object>
 	<object class="PannerEffect" id="{80078a2f-2476-437a-be90-472170e7daaf}" />
 	<object class="MixerBusFader" id="{816574f9-5273-4a74-b05e-424620a61f30}" />
+	<object class="PitchShifterEffect" id="{292e9897-4649-4562-9509-5b8c024f3be4}">
+		<property name="pitch">
+			<value>1.39999998</value>
+		</property>
+		<property name="fftSize">
+			<value>256</value>
+		</property>
+		<property name="overlap">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="ChorusEffect" id="{f582d61c-4ad6-4955-a2aa-47d3928acae4}">
+		<property name="rate">
+			<value>20</value>
+		</property>
+		<property name="depth">
+			<value>10.5</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{1288f984-3c25-4b0b-91ad-fb151810f7e1}">
+		<property name="lowGain">
+			<value>-13</value>
+		</property>
+		<property name="midGain">
+			<value>-0.5</value>
+		</property>
+	</object>
 </objects>

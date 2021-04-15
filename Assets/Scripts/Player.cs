@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int score = 0;
+    public static int score = 1;
 
-    private void Start()
-    {
-        GameManager.ValidHit += AddScore; 
-    }
-
-    private void OnDisable()
-    {
-        GameManager.ValidHit -= AddScore;
-    }
-
-    public void AddScore() 
+    public static void AddScore() 
     {
         score++;
     }

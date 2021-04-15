@@ -70,6 +70,7 @@ public class AirSlicer : MonoBehaviour
         // I don't know if this does anything lmfao 
         if (this != null)
         {
+            Player.AddScore(); 
             cubeMaterial.DOColor(Color.green, 1);
             GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
             currentVeggieNote.SetActive(false);
@@ -98,7 +99,7 @@ public class AirSlicer : MonoBehaviour
     // Waits a bit to ensure cube has reached it's final destination before being deleted, otherwise generates DOTween warnings. 
     IEnumerator DeleteDelay(Collider other)
      {
-       yield return new WaitForSeconds(.5f);
+       yield return new WaitForSeconds(.4f);
         if (other != null) 
         {
             Debug.Log(other.gameObject.name);
