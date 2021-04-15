@@ -8,8 +8,11 @@ public class AirSlicer : MonoBehaviour
     public Transform cubeTransform;
     public Material cubeMaterial;
     public GameObject[] prefab;
+    public Collision collisionbox;
+
     //public GameObject currentVeggieNote;
     public static float animationDuration;
+
 
     [FMODUnity.EventRef]
     public string[] sfx;
@@ -64,46 +67,54 @@ public class AirSlicer : MonoBehaviour
 
     private void SuccessfulHit()
     {
-        //if (note != null)
-        //{
-        cubeMaterial.DOColor(Color.green, 1);
-        GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
-        Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity), 1f);
-        DOTween.Kill(currentVeggieNote);
-        Destroy(currentVeggieNote);
-
-            //Destroy(currentVeggieNote);
-        Debug.Log("This should have removed the oldest clone");
-
-            //Debug.Log("Making a function call to DestroyVeggieNote()");
-            //AirSlicer.DestroyVeggieNote();
-            //Destroy(Instantiate(this.cutVeggie, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity), 2f);
-            //Instantiate(cutVeggie, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);     
-       // }
+        // I don't know if this does anything lmfao 
+        if (this != null)
+        {
+            cubeMaterial.DOColor(Color.green, 1);
+            GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
+            currentVeggieNote.SetActive(false); 
+            Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity), 1f);
+            DeleteDelay(currentVeggieNote); 
+        }
     }
 
     private void UnSuccessfulHit()
     {
-        //if (note != null)
-        //{
+        if (this != null)
+        {
             cubeMaterial.DOColor(Color.red, 1);
-            GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
-            //Instantiate(cutVeggie, new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity);
-            Destroy(currentVeggieNote);
-       // }
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision!!!!");
-        DOTween.Kill(other.gameObject);
-        Destroy(other.gameObject);
+        if(other != null)
+        {
+            StartCoroutine(DeleteDelay(other));
+        }
+ 
     }
 
     // Waits a bit to ensure cube has reached it's final destination before being deleted, otherwise generates DOTween warnings. 
-    IEnumerator DeleteNote()
+    IEnumerator DeleteDelay(Collider other)
      {
-       yield return new WaitForSeconds(0.1f);
-       //Destroy(note);
-     }
+       yield return new WaitForSeconds(.5f);
+        if (other != null) 
+        {
+            Debug.Log(other.gameObject.name);
+            DOTween.Kill(other.gameObject);
+            Destroy(other.gameObject);
+        }
+    }
+
+    IEnumerator DeleteDelay(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(.5f);
+        if (gameObject != null)
+        {
+            Debug.Log(gameObject.name);
+            DOTween.Kill(gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
