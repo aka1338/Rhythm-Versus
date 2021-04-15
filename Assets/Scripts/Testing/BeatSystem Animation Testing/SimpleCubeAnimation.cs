@@ -9,11 +9,6 @@ public class SimpleCubeAnimation : MonoBehaviour
     public Transform cubeTransform;
     public Material cubeMaterial;
 
-    private FMOD.Studio.EventInstance instance;
-
-    private BeatSystem bS;
-
-
     private float animDuration = 0;
     public Ease animEase;
 
@@ -22,13 +17,6 @@ public class SimpleCubeAnimation : MonoBehaviour
 
     private void Start()
     {
-        bS = GetComponent<BeatSystem>();
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/animationtest");
-
-        bS.AssignBeatEvent(instance);
-     
-        instance.start();
-
         cubeMaterial.DOColor(Color.white, 1);
 
         BeatSystem.OnBeat += ChangeMaterial;
