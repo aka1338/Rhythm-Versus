@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 1381871161778933355}
   - component: {fileID: 1902342269946915520}
   m_Layer: 5
-  m_Name: Setting Menu
+  m_Name: Setting Menu View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 8006694847110177680}
   - component: {fileID: 9086392365519888114}
   m_Layer: 5
-  m_Name: online/local Menu
+  m_Name: online/local Menu View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,6 +1824,7 @@ MonoBehaviour:
   - {fileID: 1902342269946915520}
   - {fileID: 8581384222688954481}
   - {fileID: 9086392365519888114}
+  - {fileID: 1173987241880270508}
 --- !u!1 &2845143655751613130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,7 +2012,7 @@ GameObject:
   - component: {fileID: 912007063559595678}
   - component: {fileID: 7464971220940457561}
   m_Layer: 5
-  m_Name: MinigameSelect Menu
+  m_Name: Minigame Select Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2141,56 +2142,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &4047449912742078951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2183615330494631331}
-  - component: {fileID: 3999496018634383626}
-  m_Layer: 5
-  m_Name: ConfirmQuitView
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2183615330494631331
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4047449912742078951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5801483855243595329}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3999496018634383626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4047449912742078951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53fa40d368b7a194dabbfb226d78fe28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _yesButton: {fileID: 0}
-  _noButton: {fileID: 0}
 --- !u!1 &4575282471611945089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,7 +2329,7 @@ GameObject:
   - component: {fileID: 6093584813219542559}
   - component: {fileID: 8581384222688954481}
   m_Layer: 5
-  m_Name: LobbySelectView
+  m_Name: Lobby Select View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2806,7 +2757,6 @@ RectTransform:
   - {fileID: 1108204877458333021}
   - {fileID: 912007063559595678}
   - {fileID: 884516001}
-  - {fileID: 2183615330494631331}
   m_Father: {fileID: 8674871484169088111}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2886,7 +2836,7 @@ GameObject:
   - component: {fileID: 5801483855657332750}
   - component: {fileID: 5801483855657332749}
   m_Layer: 5
-  m_Name: Pause Menu
+  m_Name: Pause Menu View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3205,12 +3155,12 @@ GameObject:
   - component: {fileID: 1108204877458333021}
   - component: {fileID: 1173987241880270508}
   m_Layer: 5
-  m_Name: quitConformation
+  m_Name: Quit Conformation View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1108204877458333021
 RectTransform:
   m_ObjectHideFlags: 0
