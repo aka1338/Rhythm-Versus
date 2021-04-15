@@ -8,7 +8,7 @@ public class PlayMenuView : View
     [SerializeField] private Button _playButton, _exitButton;
     public override void Initialize()
     {
-        _playButton.onClick.AddListener(() => ViewManager.Show<MinigameView>());
+        _playButton.onClick.AddListener(() => ViewManager.Show<localVSonlineSelectorView>());
         _exitButton.onClick.AddListener(() => Application.Quit());
     }
 
