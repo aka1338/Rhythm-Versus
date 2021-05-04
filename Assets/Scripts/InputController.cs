@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour
     // TODO: Prevent key holding for multiple input. 
     void OnGUI()
     {
+        // Event handling input
         if (anonymousKeyDown(actionOne))
         {
             ActionOnePressed?.Invoke();
@@ -25,6 +26,20 @@ public class InputController : MonoBehaviour
         if (anonymousKeyDown(pause))
         {
             PausePressed?.Invoke();
+        }
+
+        // Method calling input 
+        if (Input.GetKeyDown(actionOne))
+        {
+            // Send to the minigame to check for correct action key pressed. 
+        }
+        if (Input.GetKeyDown(actionTwo))
+        {
+            // Send to the minigame to check for correct action key pressed. 
+        }
+        if (Input.GetKeyDown(pause))
+        {
+            GameManager.PauseGame();
         }
     }
 

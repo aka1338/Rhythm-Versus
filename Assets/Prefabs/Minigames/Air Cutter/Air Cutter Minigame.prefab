@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6343180511521193014}
   - component: {fileID: 6343180511521193013}
   - component: {fileID: 6343180511521193012}
-  - component: {fileID: 6343180511521193019}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6343180511521193019
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343180511521193018}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6343180512336036870
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,14 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0ccf4a91049c44f9d1d8cc0be5692e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 1139206299447070057, guid: 4e070d379111f0c499631e34b6e1151b,
-    type: 3}
+  cubeTransform: {fileID: 6343180511521193014}
   cubeMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   prefab:
   - {fileID: 1139206299447070060, guid: 4e070d379111f0c499631e34b6e1151b, type: 3}
   - {fileID: 1139206299447070060, guid: 4e070d379111f0c499631e34b6e1151b, type: 3}
   - {fileID: 1139206299447070060, guid: 4e070d379111f0c499631e34b6e1151b, type: 3}
   - {fileID: 7788358228957707468, guid: 023a6218b43a74846be299fc631474a9, type: 3}
+  offsetx: 10
+  offsety: 10
   sfx:
   - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
   - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
