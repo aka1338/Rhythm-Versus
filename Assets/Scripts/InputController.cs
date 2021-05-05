@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour
     // TODO: Prevent key holding for multiple input. 
     void OnGUI()
     {
+        // Event handling input
         if (anonymousKeyDown(actionOne))
         {
             ActionOnePressed?.Invoke();
@@ -29,6 +30,7 @@ public class InputController : MonoBehaviour
     }
 
     // helper function (Since OnGui sends both a keycode and char event, not using this results in two events firing instead of one. 
+    // does not prevent someone from holding a key down to make infinite checks. 
     private bool anonymousKeyDown(KeyCode key)
     {
         if (Event.current.type == EventType.KeyDown)

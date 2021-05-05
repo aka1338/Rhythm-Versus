@@ -10,6 +10,8 @@ public class AirSlicer : MonoBehaviour
     public GameObject[] prefab;
     public Collision collisionbox;
 
+    public float offsetx = 10;
+    public float offsety = 10; 
     //public GameObject currentVeggieNote;
     public static float animationDuration;
 
@@ -53,7 +55,7 @@ public class AirSlicer : MonoBehaviour
 
     private void SpawnOnion()
     {
-        Instantiate(prefab[0], new Vector3(-4.9f, -5.03f, 0f), Quaternion.identity);
+        Instantiate(prefab[0], new Vector3(cubeTransform.localPosition.x - offsetx, cubeTransform.localPosition.y - offsety, 0f), Quaternion.identity, cubeTransform);
     }
     private void SpawnCarrot()
     {
@@ -70,12 +72,11 @@ public class AirSlicer : MonoBehaviour
         // I don't know if this does anything lmfao 
         if (this != null)
         {
-            Player.AddScore(); 
             cubeMaterial.DOColor(Color.green, 1);
             GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
             currentVeggieNote.SetActive(false);
             DeleteDelay(currentVeggieNote);
-            Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity), 1f);
+            Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, cubeTransform), 1f);
         }
     }
 
