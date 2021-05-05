@@ -27,23 +27,10 @@ public class InputController : MonoBehaviour
         {
             PausePressed?.Invoke();
         }
-
-        // Method calling input 
-        if (Input.GetKeyDown(actionOne))
-        {
-            // Send to the minigame to check for correct action key pressed. 
-        }
-        if (Input.GetKeyDown(actionTwo))
-        {
-            // Send to the minigame to check for correct action key pressed. 
-        }
-        if (Input.GetKeyDown(pause))
-        {
-            GameManager.PauseGame();
-        }
     }
 
     // helper function (Since OnGui sends both a keycode and char event, not using this results in two events firing instead of one. 
+    // does not prevent someone from holding a key down to make infinite checks. 
     private bool anonymousKeyDown(KeyCode key)
     {
         if (Event.current.type == EventType.KeyDown)
