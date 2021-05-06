@@ -133,6 +133,7 @@ public class GameManager : MonoBehaviour
         // by setEmptyPlayer. 
 
         // Then, we start the game! 
+        ViewManager.Show<MinigameView>();
         Conductor.CreateBeatInstance(song);
         Conductor.StartMusic();
 
