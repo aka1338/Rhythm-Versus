@@ -122,21 +122,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 6343180512336036870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0ccf4a91049c44f9d1d8cc0be5692e, type: 3}
+  m_Script: {fileID: 11500000, guid: c070e6b94119a8645b1b5d2c6b56c30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cubeTransform: {fileID: 6343180511521193014}
   cubeMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   prefab:
-  - {fileID: 1139206299447070060, guid: 4e070d379111f0c499631e34b6e1151b, type: 3}
-  - {fileID: 1139206299447070060, guid: 4e070d379111f0c499631e34b6e1151b, type: 3}
-  - {fileID: 1139206299447070060, guid: 4e070d379111f0c499631e34b6e1151b, type: 3}
-  - {fileID: 7788358228957707468, guid: 023a6218b43a74846be299fc631474a9, type: 3}
+  - {fileID: 1139206299447070060, guid: 245ea47e343cc1647b64db239ce90c97, type: 3}
+  - {fileID: 1139206299447070060, guid: 245ea47e343cc1647b64db239ce90c97, type: 3}
+  - {fileID: 1139206299447070060, guid: 245ea47e343cc1647b64db239ce90c97, type: 3}
+  - {fileID: 7788358228957707468, guid: 1695d21138e003048b61c306345b8ca8, type: 3}
   offsetx: 10
   offsety: 10
   sfx:
   - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
-  - event:/Minigames/AirCutter/SFX/SFX_Cutter_Toss
+  - event:/Minigames/AirCutter/SFX/SFX_Cutter_Chop
 --- !u!65 &6343180512336036865
 BoxCollider:
   m_ObjectHideFlags: 0
