@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1252427-79eb-4d9b-a7f2-5d3e8479c744" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Prefabs/GameController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../../Prefabs/GameController.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Prefabs/Views.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../../Prefabs/Views.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Scenes/Minigames/Air Slicer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scenes/Minigames/Air Slicer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LobbySelectMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LobbySelectMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinigameSelectView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MinigameSelectView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localVSonlineSelectorView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/localVSonlineSelectorView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Menu Views.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Menu Views.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
       <workItem from="1620328377372" duration="1253000" />
       <workItem from="1620335393330" duration="505000" />
       <workItem from="1620335943271" duration="56000" />
-      <workItem from="1620336029928" duration="1718000" />
+      <workItem from="1620336029928" duration="3492000" />
     </task>
     <servers />
   </component>
