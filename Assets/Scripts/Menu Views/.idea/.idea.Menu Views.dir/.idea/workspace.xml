@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1252427-79eb-4d9b-a7f2-5d3e8479c744" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Prefabs/Views.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../../Prefabs/Views.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfirmQuitView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/ConfirmQuitView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LobbySelectMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LobbySelectMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LobbySelectMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/LobbySelectMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinigameSelectView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MinigameSelectView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinigameSelectView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MinigameSelectView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayMenuView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/PlayMenuView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SettingsView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/SettingsView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/View.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViewManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/ViewManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localVSonlineSelectorView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/localVSonlineSelectorView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localVSonlineSelectorView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/localVSonlineSelectorView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Library/StateCache/SceneView/d6/d6910f943fe755dee2a1071c7a658d49.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Library/StateCache/SceneView/d6/d6910f943fe755dee2a1071c7a658d49.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Menu Views.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Menu Views.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
