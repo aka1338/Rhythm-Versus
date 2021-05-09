@@ -48,6 +48,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Debug\SoundEvent.cs" />
+     <Compile Include="Assets\Scripts\Menu Views\HostLobbyWaitingView.cs" />
+     <Compile Include="Assets\Scripts\Menu Views\JoinLobbyWaitingView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\Scripts\Menu Views\localVSonlineSelectorView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
