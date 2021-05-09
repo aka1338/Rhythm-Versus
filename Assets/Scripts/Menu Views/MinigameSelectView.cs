@@ -9,7 +9,7 @@ public class MinigameSelectView : View
     public override void Initialize()
     {
         _backScreenButton.onClick.AddListener(() => ViewManager.Show<LobbySelectMenu>());
-        _airSlicerButton.onClick.AddListener(() => ViewManager.Show<MinigameView>());
-        _batterUpButton.onClick.AddListener(() => ViewManager.Show<MinigameView>());
+        _airSlicerButton.onClick.AddListener(() => ViewManager.Show<CalibrationMenuView>());
+        _batterUpButton.onClick.AddListener(() => ViewManager.Show<CalibrationMenuView>());
     }
 }
