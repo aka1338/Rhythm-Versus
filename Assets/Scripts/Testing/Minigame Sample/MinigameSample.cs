@@ -6,35 +6,28 @@ using UnityEngine;
 public class MinigameSample : MonoBehaviour
 {
     public Transform prefab;
-    public static float animationDuration;
+    public Transform spawnPosition;
 
-    [FMODUnity.EventRef]
-    public string sfx;
+    public static float animationDuration;
 
     void Start()
     {
         BeatSystem.OnMarker += SpawnNote;
-        InputController.ActionOnePressed += PlaySwish; 
     }
 
     private void OnDisable()
     {
         BeatSystem.OnMarker -= SpawnNote;
-        InputController.ActionOnePressed -= PlaySwish;
-
     }
 
     private void SpawnNote()
     {
         //if (BeatSystem.marker.Substring(0, 5).Equals("note-")) 
         //{ 
+            Instantiate(prefab);
+            prefab.transform.position = new Vector3(spawnPosition.position.x - 9,0,0); 
             animationDuration = BeatSystem.secPerBeat;
-            Instantiate(prefab, new Vector3(-9, 0, 0), Quaternion.identity);
         //}
     }
 
-    private void PlaySwish()
-    {
-        Conductor.PlaySFX(sfx); 
-    }
 }

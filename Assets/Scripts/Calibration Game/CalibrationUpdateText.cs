@@ -27,7 +27,7 @@ public class CalibrationUpdateText : MonoBehaviour
         // Unsubscribes from input events, so that text is not changed when the test has been completed. 
         if (CalibrationTest.finalOffset != 0f) 
         {
-            InputController.ActionOnePressed -= UpdateText;
+            InputController.ActionOnePressed += UpdateText;
         }
         finalOffset.SetText("Estimated Offset: " + CalibrationTest.finalOffset.ToString("F0") + "ms");
     }

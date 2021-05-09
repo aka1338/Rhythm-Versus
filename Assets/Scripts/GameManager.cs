@@ -25,12 +25,11 @@ public class GameManager : MonoBehaviour
     public static event NoteTiming ValidHit;
     public static event NoteTiming MissedHit;
 
-    public Player[] player;
+    // For cool stuff later 
+    //public static event NoteTiming EarlyHit;
+    //public static event NoteTiming LateHit;
 
-    // For testing purposes 
-    public int playerCount; 
-
-    // Pausing is disabled in online multiplayer 
+    // Pausing is disabled in multiplayer 
     public static bool isPaused = false;
 
     private void Start()
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Due to the nature of our GameManager, this actually calls during the Calibration Minigame. It's not that important, though. 
-    public void CheckForValidHit()
+    public static void CheckForValidHit()
     {
         keyDownTime = BeatSystem.timelinePosition;
 
@@ -61,29 +60,6 @@ public class GameManager : MonoBehaviour
                 if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
                 {
                     ValidHit?.Invoke();
-                }
-                else
-                {
-                    MissedHit?.Invoke();
-                }
-            }
-        }
-    }
-
-    public void CheckForValidHit(int id)
-    {
-        keyDownTime = BeatSystem.timelinePosition;
-
-        // if marker is a note, then we can check for it's validity. 
-        if (BeatSystem.marker.Length > 5)
-        {
-            if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
-            {
-                // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
-                if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
-                {
-                    ValidHit?.Invoke();
-                    player[id].AddScore(); 
                 }
                 else
                 {
@@ -125,18 +101,8 @@ public class GameManager : MonoBehaviour
     //TODO: This should take a parameter [FMODUnity.EventRef] public string song. 
     public void StartMinigame()
     {
-        // Initialize the correct amount of players playing the game, and set their windows. 
-
-        // For players in players, if player.isActive = true, spawn player. If false, call setEmptyPlayer. 
-        // Based on the PlayerCount, each player is assigned KeyCodes that are defined by the playerPreferences.
-        // Players that are inactive have all of their values set to null. 
-        // by setEmptyPlayer. 
-
-        // Then, we start the game! 
-        ViewManager.Show<MinigameView>();
         Conductor.CreateBeatInstance(song);
         Conductor.StartMusic();
-
     }
 
     public void EndMinigame()

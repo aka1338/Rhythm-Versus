@@ -14,8 +14,9 @@ public class CalibrationTest : MonoBehaviour
 
     private void OnDisable()
     {
-        InputController.ActionOnePressed -= CalculateAudioLatency;
+        InputController.ActionOnePressed += CalculateAudioLatency;
     }
+
     private void CalculateAudioLatency()
     {
         if (i < indexLength)

@@ -8,18 +8,20 @@ public class MoveNote : MonoBehaviour
     public Transform cubeTransform;
     public Material cubeMaterial;
     public GameObject note;
-    private void OnDisable()
-    {
-        GameManager.ValidHit -= SuccessfulHit;
-        GameManager.MissedHit -= UnSuccessfulHit;
-    }
+
+    // Each minigame needs to have a referene to the player playing the game. 
 
     private void Start()
     {
-        GameManager.ValidHit += SuccessfulHit;
-        GameManager.MissedHit += UnSuccessfulHit;
         cubeMaterial.DOColor(Color.white, 1);
-        cubeTransform.DOMoveX(9, MinigameSample.animationDuration); 
+        cubeTransform.DOMoveX(transform.localPosition.x+18, MinigameSample.animationDuration);
+        BeatSystem.OnMarker += CheckHit;
+    }
+
+    private void OnDisable()
+    {
+        BeatSystem.OnMarker -= CheckHit;
+
     }
 
     private void UnSuccessfulHit()
@@ -37,7 +39,7 @@ public class MoveNote : MonoBehaviour
 
     private void Update()
     {
-        if (cubeTransform.position.x == 9 && note != null) 
+        if (cubeTransform.localPosition.x >= 9 && note != null) 
         {
             StartCoroutine("DeleteNote"); 
         }
@@ -47,5 +49,18 @@ public class MoveNote : MonoBehaviour
     {
         if (note != null)
         cubeMaterial.DOColor(Color.green, 1);
+    }
+
+    private void CheckHit()
+    {
+        if (InputController.CheckForValidHit(KeyCode.F))
+        {
+            SuccessfulHit();
+        }
+        else
+        {
+            UnSuccessfulHit(); 
+        }
+
     }
 }
