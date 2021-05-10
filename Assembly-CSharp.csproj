@@ -48,8 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Debug\SoundEvent.cs" />
-     <Compile Include="Assets\Scripts\Menu Views\HostLobbyWaitingView.cs" />
-     <Compile Include="Assets\Scripts\Menu Views\JoinLobbyWaitingView.cs" />
+     <Compile Include="Assets\Scripts\Menu Views\CalibrationMenuView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\Scripts\Menu Views\localVSonlineSelectorView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -59,6 +58,9 @@
      <Compile Include="Assets\Scripts\Calibration Game\CalibrationTest.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\UIManager2.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\UIManager.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\Menu Views\PlayMenuView.cs" />
      <Compile Include="Assets\Scripts\Menu Views\SettingsView.cs" />
      <Compile Include="Assets\Scripts\Menu Views\MainMenuView.cs" />
@@ -68,11 +70,14 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Scripts\Air Slicer\CutVeggie.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\ClientHandle.cs" />
      <Compile Include="Assets\Scripts\Debug\UpdateScoreText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\Scripts\Menu Views\ViewManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\Packet.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\Scripts\Menu Views\JoinLobbyWaitingView.cs" />
      <Compile Include="Assets\Scripts\Menu Views\MinigameView.cs" />
      <Compile Include="Assets\Scripts\Debug\UpdateText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
@@ -88,13 +93,16 @@
      <Compile Include="Assets\Scripts\Menu Views\MinigameSelectView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Menu Views\HostLobbyWaitingView.cs" />
      <Compile Include="Assets\Scripts\Testing\BeatSystem Animation Testing\HitDetection.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\ThreadManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\Air Slicer\Blade.cs" />
      <Compile Include="Assets\Scripts\BeatSystem\BeatSystem.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\Client.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Menu Views\ConfirmQuitView.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -111,6 +119,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+     <Compile Include="Assets\Scripts\Network\Server\ClientSend.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\Menu Views\PauseMenuView.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
