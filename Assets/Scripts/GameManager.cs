@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Minigame over!");
         Conductor.StopAndClear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+    }
 
     public void SwitchGame()
     {
