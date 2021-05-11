@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -93,14 +94,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1139206299447070060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d673fa39322f5164aab8a4362dfcf5a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b68ab0a50f360e47821de49571e537f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   noteTransform: {fileID: 5832350732709869286}
   wayPoints:
-  - {x: 3, y: 0, z: 0}
-  - {x: 2, y: 1, z: 0}
-  - {x: 1, y: 1.5, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   - {x: 0, y: 2.5, z: 0}
 --- !u!65 &1139206299447070058
 BoxCollider:

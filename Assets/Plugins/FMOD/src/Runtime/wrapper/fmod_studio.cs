@@ -1377,6 +1377,7 @@ namespace FMOD.Studio
         {
             return hasHandle() && FMOD_Studio_EventInstance_IsValid(this.handle);
         }
+
         #endregion
     }
 

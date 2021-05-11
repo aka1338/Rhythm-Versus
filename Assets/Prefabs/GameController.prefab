@@ -73,7 +73,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2473544309845676058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba9f860b994e694daca005ee199efea, type: 3}
+  m_Script: {fileID: 11500000, guid: 171f1f420f4aeb44ebe068bd4f597e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1418028021251968851
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2473544309845676058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4788b963ea38145b0040ad857945b1, type: 3}
+  m_Script: {fileID: 11500000, guid: cbbaf438cd5021d489af08db823b529b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2473544310656381810
@@ -128,7 +128,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2473544310656381810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b26a6f01671520e4e912b9f617819511, type: 3}
+  m_Script: {fileID: 11500000, guid: 683d2cb0845911c40acd5d815f858339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song: event:/Debugging/Monkey Watch - Rhythm Heaven Fever 2
+  localPlayerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  song: 
