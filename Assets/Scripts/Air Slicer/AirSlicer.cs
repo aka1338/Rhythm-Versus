@@ -8,6 +8,7 @@ public class AirSlicer : MonoBehaviour
     public Transform referencePoint;
     public GameObject[] prefab;
     public Collision collisionbox;
+    GameObject currentVeggieNote;
 
     public float offsetx = 10;
     public float offsety = 10;
@@ -49,16 +50,18 @@ public class AirSlicer : MonoBehaviour
 
     private void SpawnOnion()
     {
-        Instantiate(prefab[0], new Vector3(referencePoint.localPosition.x - offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
+        currentVeggieNote = Instantiate(prefab[2], new Vector3(referencePoint.localPosition.x, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
+        currentVeggieNote.transform.DOScale(new Vector3(.15f, .15f, .15f), animationDuration);
     }
     private void SpawnCarrot()
     {
-        Instantiate(prefab[1], new Vector3(4.9f, -6.03f, 0f), Quaternion.identity);
+        currentVeggieNote = Instantiate(prefab[1], new Vector3(referencePoint.localPosition.x + offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
     }
 
     private void SpawnPotato()
     {
-        Instantiate(prefab[2], new Vector3(-5.32f, -6.03f, 0f), Quaternion.identity);
+        currentVeggieNote = Instantiate(prefab[0], new Vector3(referencePoint.localPosition.x - offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
+
     }
 
     private void SuccessfulHit()
@@ -66,10 +69,24 @@ public class AirSlicer : MonoBehaviour
         // I don't know if this does anything lmfao 
         if (this != null)
         {
-            GameObject currentVeggieNote = GameObject.Find("VeggieNote(Clone)");
+            Debug.Log("currentVeggieNote.name: " + currentVeggieNote.name);
+
+            // currentVeggieNote = GameObject.Find("CarrotNote(Clone)");
             currentVeggieNote.SetActive(false);
             DeleteDelay(currentVeggieNote);
-            Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+
+            if (currentVeggieNote.name == "PotatoNote(Clone)")
+            {
+                Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+            }
+            else if (currentVeggieNote.name == "CarrotNote(Clone)")
+            {
+                Destroy(Instantiate(prefab[4], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+            }
+            else
+            {
+                Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+            }
         }
     }
 
