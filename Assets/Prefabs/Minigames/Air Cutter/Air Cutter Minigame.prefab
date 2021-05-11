@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 6343180512336036871}
   - component: {fileID: 6343180512336036864}
   - component: {fileID: 7933263874901239602}
+  - component: {fileID: 2198898545132721700}
   - component: {fileID: 6343180512336036865}
   - component: {fileID: 6343180512336036866}
-  - component: {fileID: 2198898545132721700}
   m_Layer: 0
   m_Name: Air Cutter Minigame
   m_TagString: Untagged
@@ -208,6 +208,28 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2198898545132721700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343180512336036870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a3b47d8ff587645b316ae8feeac658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referencePoint: {fileID: 6343180511521193014}
+  prefab:
+  - {fileID: 1379337776796580781, guid: 1b4f34a85498c804e9d942f418d7c20c, type: 3}
+  - {fileID: 4680180151563752421, guid: 7df163615f144084085905b63b083ba5, type: 3}
+  - {fileID: 3406727529396694929, guid: 8c65785ee48f6334aab7438dd56e7965, type: 3}
+  - {fileID: 1379337776796580781, guid: 1b4f34a85498c804e9d942f418d7c20c, type: 3}
+  - {fileID: 7074813452112573442, guid: ad4a2f6ef3c440144af24d981e23fbd9, type: 3}
+  - {fileID: 4336247175026678073, guid: 254449bfec674bb4b88803ba05adcaf5, type: 3}
+  offsetx: 9.5
+  offsety: 0
 --- !u!65 &6343180512336036865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -237,25 +259,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2198898545132721700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343180512336036870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9a3b47d8ff587645b316ae8feeac658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referencePoint: {fileID: 6343180511521193014}
-  prefab:
-  - {fileID: 1379337776796580781, guid: 1b4f34a85498c804e9d942f418d7c20c, type: 3}
-  - {fileID: 4680180151563752421, guid: 7df163615f144084085905b63b083ba5, type: 3}
-  - {fileID: 3406727529396694929, guid: 8c65785ee48f6334aab7438dd56e7965, type: 3}
-  - {fileID: 1379337776796580781, guid: 1b4f34a85498c804e9d942f418d7c20c, type: 3}
-  - {fileID: 7074813452112573442, guid: ad4a2f6ef3c440144af24d981e23fbd9, type: 3}
-  - {fileID: 4336247175026678073, guid: 254449bfec674bb4b88803ba05adcaf5, type: 3}
-  offsetx: 9.5
-  offsety: 0

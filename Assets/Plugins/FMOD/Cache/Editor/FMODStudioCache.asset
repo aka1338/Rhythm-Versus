@@ -46,6 +46,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &-8256517512437359382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/Music/ninja5_160BPM_4-4_time
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/Music/ninja5_160BPM_4-4_time
+  guid: 855e4355ffaec24bb0cf4025a3212c29
+  Banks:
+  - {fileID: 8970434473653037780}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108101
 --- !u!114 &-7593083503485866337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,11 +219,11 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637561039540000000
+  lastModified: 637563265424460923
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1514
+    Value: 1574
   Exists: 1
 --- !u!114 &-2216512158861419500
 MonoBehaviour:
@@ -278,13 +301,14 @@ MonoBehaviour:
   - {fileID: 4428925930655807319}
   - {fileID: -9202956078566161452}
   - {fileID: -4963177503555437921}
+  - {fileID: -8256517512437359382}
   EditorParameters:
   - {fileID: -5654776193164966248}
   MasterBanks:
   - {fileID: 8970434473653037780}
   StringsBanks:
   - {fileID: -2428962986286195175}
-  stringsBankWriteTime: 637561039540000000
+  stringsBankWriteTime: 637563265424460923
   cacheVersion: 6
 --- !u!114 &1992256488159281803
 MonoBehaviour:
@@ -393,7 +417,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637561039540000000
+  lastModified: 637563265424400911
   LoadResult: 0
   FileSizes: []
   Exists: 1

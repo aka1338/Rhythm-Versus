@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using TMPro.Examples;
 using UnityEngine;
 
 public class ClientHandle : MonoBehaviour
@@ -22,7 +23,7 @@ public class ClientHandle : MonoBehaviour
     {
         int _id = _packet.ReadInt();
         string _username = _packet.ReadString();
-
+        Debug.Log($"ID read: {_id}");
         Vector3 _position = _packet.ReadVector3();
         Quaternion _rotation = _packet.ReadQuaternion();
 
