@@ -95,20 +95,22 @@ public class GameManager : MonoBehaviour
     public static void CheckForValidHit()
     {
         keyDownTime = BeatSystem.timelinePosition;
-
-        // if marker is a note, then we can check for it's validity. 
-        if (BeatSystem.marker.Length > 5)
+        if (BeatSystem.marker != null)
         {
-            if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
+            // if marker is a note, then we can check for it's validity. 
+            if (BeatSystem.marker.Length > 5)
             {
-                // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
-                if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+                if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
                 {
-                    ValidHit?.Invoke();
-                }
-                else
-                {
-                    MissedHit?.Invoke();
+                    // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
+                    if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+                    {
+                        ValidHit?.Invoke();
+                    }
+                    else
+                    {
+                        MissedHit?.Invoke();
+                    }
                 }
             }
         }
