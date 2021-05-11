@@ -301,20 +301,20 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>D:/Unity/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="GitHub.Logging">
+ <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+ </Reference>
+ <Reference Include="GitHub.Unity.45">
+ <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+ </Reference>
  <Reference Include="DOTween">
  <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
  <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
- <Reference Include="GitHub.Logging">
- <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
- </Reference>
  <Reference Include="sfw.net">
  <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Unity.45">
- <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.UnityShim">
  <HintPath>G:/fixing area/Rhythm-Versus-main-05-10-21/Rhythm-Versus/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
