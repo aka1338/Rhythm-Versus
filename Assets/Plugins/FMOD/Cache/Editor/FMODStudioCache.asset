@@ -60,8 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Minigames/AirCutter/Music/ninja5_160BPM_4-4_time
   guid: 855e4355ffaec24bb0cf4025a3212c29
-  Banks:
-  - {fileID: 8970434473653037780}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -219,7 +218,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637563283430000000
+  lastModified: 637563415039255533
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -301,14 +300,14 @@ MonoBehaviour:
   - {fileID: 4428925930655807319}
   - {fileID: -9202956078566161452}
   - {fileID: -4963177503555437921}
-  - {fileID: -8256517512437359382}
+  - {fileID: 2509602065285811859}
   EditorParameters:
   - {fileID: -5654776193164966248}
   MasterBanks:
   - {fileID: 8970434473653037780}
   StringsBanks:
   - {fileID: -2428962986286195175}
-  stringsBankWriteTime: 637563283430000000
+  stringsBankWriteTime: 637563415039255533
   cacheVersion: 6
 --- !u!114 &1992256488159281803
 MonoBehaviour:
@@ -333,6 +332,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 12800
+--- !u!114 &2509602065285811859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Minigames/AirCutter/Music/ninja5_160BPM_4-4_time
+  m_EditorClassIdentifier: 
+  Path: event:/Minigames/AirCutter/Music/ninja5_160BPM_4-4_time
+  guid: 855e4355ffaec24bb0cf4025a3212c29
+  Banks:
+  - {fileID: 8970434473653037780}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108101
 --- !u!114 &4428925930655807319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +439,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Beat-Marker-System/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637563283430000000
+  lastModified: 637563415039195528
   LoadResult: 0
   FileSizes: []
   Exists: 1

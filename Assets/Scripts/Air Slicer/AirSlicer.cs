@@ -41,10 +41,19 @@ public class AirSlicer : MonoBehaviour
     {
         animationDuration = BeatSystem.secPerBeat;
         Debug.Log(animationDuration);
-        if (BeatSystem.marker.Substring(0, 5).Equals("Onion") || BeatSystem.marker.Substring(0, 4).Equals("Carrot") || BeatSystem.marker.Substring(0, 4).Equals("Potato"))
+        if (BeatSystem.marker.Substring(0, 5).Equals("Onion")) 
         {
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * .3f);
-            animationDuration = BeatSystem.secPerBeat;
+        }
+
+        if (BeatSystem.marker.Substring(0, 6).Equals("Carrot"))
+        {
+            Invoke("Spawn" + BeatSystem.marker.Substring(0, 6), animationDuration * .3f);
+        }
+
+        if (BeatSystem.marker.Substring(0, 6).Equals("Potato")) 
+        {
+            Invoke("Spawn" + BeatSystem.marker.Substring(0, 6), animationDuration * .3f);
         }
     }
 
@@ -61,13 +70,12 @@ public class AirSlicer : MonoBehaviour
     private void SpawnPotato()
     {
         currentVeggieNote = Instantiate(prefab[0], new Vector3(referencePoint.localPosition.x - offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
-
     }
 
     private void SuccessfulHit()
     {
         // I don't know if this does anything lmfao 
-        if (this != null)
+        if (currentVeggieNote != null)
         {
             Debug.Log("currentVeggieNote.name: " + currentVeggieNote.name);
 
