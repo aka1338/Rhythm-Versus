@@ -17,6 +17,8 @@ public enum ServerPackets
     playerCheck,
     playerInfo,
     playerEnable,
+    playerHit,
+    playerMiss,
     spawnLobby
 }
 
@@ -30,6 +32,8 @@ public enum ClientPackets
     playerCheck,
     playerInfo,
     playerEnable,
+    playerHit,
+    playerMiss,
     spawnLobby
 }
 

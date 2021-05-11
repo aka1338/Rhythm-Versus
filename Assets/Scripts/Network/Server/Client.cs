@@ -299,6 +299,8 @@ public class Client : MonoBehaviour
             { (int)ServerPackets.playerCheck, ClientHandle.PlayerCheck},
              { (int)ServerPackets.playerInfo, ClientHandle.PlayerInfo},
              { (int)ServerPackets.playerEnable, ClientHandle.PlayerEnable},
+             { (int)ServerPackets.playerHit, ClientHandle.PlayerHit},
+             { (int)ServerPackets.playerMiss, ClientHandle.PlayerMiss},
              { (int)ServerPackets.spawnLobby, ClientHandle.SpawnLobby}
         };
 

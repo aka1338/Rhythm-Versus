@@ -87,4 +87,16 @@ public class ClientHandle : MonoBehaviour
     {
         GameManager.EnableControl();
     }
+
+    public static void PlayerHit(Packet _packet)
+    {
+        int _id = _packet.ReadInt();
+        //TODO: call the metod to add code
+    }
+
+    public static void PlayerMiss(Packet _packet)
+    {
+        int _id = _packet.ReadInt();
+        //TODO: call the metod to add code
+    }
 }

@@ -87,6 +87,26 @@ public class ClientSend : MonoBehaviour
             SendTCPData(_packet);
         }
     }
+
+    public static void PlayerHit()
+    {
+        using (Packet _packet = new Packet((int)ClientPackets.playerHit))
+        {
+            _packet.Write(Client.instance.myId);
+
+            SendTCPData(_packet);
+        }
+    }
+
+    public static void Miss()
+    {
+        using (Packet _packet = new Packet((int)ClientPackets.playerMiss))
+        {
+            _packet.Write(Client.instance.myId);
+
+            SendTCPData(_packet);
+        }
+    }
     #endregion
 
 }
