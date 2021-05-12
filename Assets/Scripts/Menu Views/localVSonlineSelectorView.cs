@@ -10,6 +10,6 @@ public class localVSonlineSelectorView : View
     {
         _backScreenButton.onClick.AddListener(() => ViewManager.Show<PlayMenuView>());
         _onlineButton.onClick.AddListener(() => ViewManager.Show<LobbySelectMenu>());
-        _localButton.onClick.AddListener(() => ViewManager.Show<LobbySelectMenu>());
+        _localButton.onClick.AddListener(() => ViewManager.Show<MinigameSelectView>());
     }
 }

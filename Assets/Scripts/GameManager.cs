@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
 
     public static bool playerControl = false;//enable or disable player control to their character
+    public static bool isLocal = false;//enable or disable player control to their character
 
     //TODO: Events that fire off based on how well timed a player's input was checked against the BeatSystem. 
     //The events are: PerfectHit, EarlyHit, LateHit, and Missed.  
@@ -54,6 +55,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SetLocal()
+    {
+        isLocal = true; 
+    }
+
+    public void StartLocalGame() 
+    {
+        if (isLocal) 
+        {
+            SceneManager.LoadScene(1); 
+        }
+    }
     public void SpawnPlayer(int _id, string _username, Vector3 _position, Quaternion _rotation)
     {
         GameObject _player;
