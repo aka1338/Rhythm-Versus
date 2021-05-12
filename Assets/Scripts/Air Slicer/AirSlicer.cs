@@ -70,6 +70,7 @@ public class AirSlicer : MonoBehaviour
     private void SpawnPotato()
     {
         currentVeggieNote = Instantiate(prefab[0], new Vector3(referencePoint.localPosition.x - offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
+
     }
 
     private void SuccessfulHit()
