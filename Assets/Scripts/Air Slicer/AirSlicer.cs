@@ -61,16 +61,18 @@ public class AirSlicer : MonoBehaviour
     {
         currentVeggieNote = Instantiate(prefab[2], new Vector3(referencePoint.localPosition.x, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
         currentVeggieNote.transform.DOScale(new Vector3(.15f, .15f, .15f), animationDuration);
+        currentVeggieNote.transform.DORotate(new Vector3(0, 0, 360), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
     private void SpawnCarrot()
     {
         currentVeggieNote = Instantiate(prefab[1], new Vector3(referencePoint.localPosition.x + offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
+        currentVeggieNote.transform.DORotate(new Vector3(0, 0, 360), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
 
     private void SpawnPotato()
     {
         currentVeggieNote = Instantiate(prefab[0], new Vector3(referencePoint.localPosition.x - offsetx, referencePoint.localPosition.y - offsety, 0f), Quaternion.identity, referencePoint);
-
+        currentVeggieNote.transform.DORotate(new Vector3(0, 0, 360), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
 
     private void SuccessfulHit()
