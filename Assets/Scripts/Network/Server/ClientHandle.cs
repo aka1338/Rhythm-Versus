@@ -87,9 +87,12 @@ public class ClientHandle : MonoBehaviour
     public static void PlayerEnable(Packet _packet)
     {
         //Debug.Log($"Moving!!!!!!!!!!");
-        ViewManager.Show<MinigameSelectView>();
-        //ViewManager.Show<MinigameView>();
+        //ViewManager.Show<MinigameSelectView>();
+        ViewManager.Show<MinigameView>();
         GameManager.EnableControl();
+
+        //TODO: start the minigame, play music
+        GameManager.instance.StartMinigame();//maybe wrong
     }
 
     //Code for player hit the obj or miss
@@ -98,13 +101,22 @@ public class ClientHandle : MonoBehaviour
         int _id = _packet.ReadInt();
         Debug.Log($"Player {_id} hit!!!!!");
         //TODO: call a metod to do something
+        //if (GameManager.players[_id].id != _id)//check if it is the local player
+        //{
+            GameManager.players[_id].score++;
+        //}
+
+        //play the hit animeation?
+        //where is SuccessfulHit()
+        //GameManager.players[_id].SuccessfulHit();
     }
 
+    //Code for player miss the hit
     public static void PlayerMiss(Packet _packet)
     {
         int _id = _packet.ReadInt();
         Debug.Log($"Player {_id} miss!!!!!");
-        //TODO: call a metod to do something
+        //TODO: call a metod to do something, maybe play the miss animation
     }
 
 

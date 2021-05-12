@@ -67,6 +67,7 @@ public class ClientSend : MonoBehaviour
         }
     }
 
+    //test function to try spwan everyone as a lobby
     public static void LobbySpawn()
     {
         using (Packet _packet = new Packet((int)ClientPackets.spawnLobby))
