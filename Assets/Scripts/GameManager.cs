@@ -77,20 +77,6 @@ public class GameManager : MonoBehaviour
 
     public static bool isPaused = false;
 
-    private void Start()
-    {
-        InputController.ActionOnePressed += CheckForValidHit;
-        InputController.ActionTwoPressed += CheckForValidHit;
-        InputController.PausePressed += PauseGame;
-    }
-
-    private void OnDisable()
-    {
-        InputController.ActionOnePressed -= CheckForValidHit;
-        InputController.ActionTwoPressed -= CheckForValidHit;
-        InputController.PausePressed -= PauseGame;
-    }
-
     // Due to the nature of our GameManager, this actually calls during the Calibration Minigame. It's not that important, though. 
     public static void CheckForValidHit()
     {
