@@ -35,11 +35,23 @@ public class GameManager : MonoBehaviour
     public static event NoteTiming ValidHit;
     public static event NoteTiming MissedHit;
 
+    public static bool isLocal = false; 
     // For cool stuff later 
     //public static event NoteTiming EarlyHit;
     //public static event NoteTiming LateHit;
 
     // Pausing is disabled in multiplayer 
+
+    public void SetLocal() 
+    {
+        isLocal = true; 
+    }
+
+    public void PlayLocal()
+    {
+        if (isLocal)
+        SceneManager.LoadScene(1); 
+    }
 
     private void Awake()
     {
@@ -76,20 +88,6 @@ public class GameManager : MonoBehaviour
     }
 
     public static bool isPaused = false;
-
-    private void Start()
-    {
-        InputController.ActionOnePressed += CheckForValidHit;
-        InputController.ActionTwoPressed += CheckForValidHit;
-        InputController.PausePressed += PauseGame;
-    }
-
-    private void OnDisable()
-    {
-        InputController.ActionOnePressed -= CheckForValidHit;
-        InputController.ActionTwoPressed -= CheckForValidHit;
-        InputController.PausePressed -= PauseGame;
-    }
 
     // Due to the nature of our GameManager, this actually calls during the Calibration Minigame. It's not that important, though. 
     public static void CheckForValidHit()

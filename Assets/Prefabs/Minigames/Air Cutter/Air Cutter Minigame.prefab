@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6343180511521193014}
   - component: {fileID: 6343180511521193013}
   - component: {fileID: 6343180511521193012}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2198898545132721700}
   - component: {fileID: 6343180512336036865}
   - component: {fileID: 6343180512336036866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Air Cutter Minigame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,10 +222,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referencePoint: {fileID: 6343180511521193014}
   prefab:
-  - {fileID: 4680180151563752421, guid: b2eb1d3cd22e93045a073c396f29ea53, type: 3}
-  - {fileID: 3406727529396694929, guid: f6d25450603aa274490e50f62b0e4130, type: 3}
+  - {fileID: 4680180151563752421, guid: ae097074e437f0e4789ce0d612044a2c, type: 3}
+  - {fileID: 7074813452112573442, guid: c4f6435e4ba6817468bf4f22a6cef3a6, type: 3}
   - {fileID: 4151665326353369393, guid: f2ceb66422fef5140b9831cdc6977c35, type: 3}
-  - {fileID: 7074813452112573442, guid: b773cd8ba4ba63c4a943ec89065bce7b, type: 3}
+  - {fileID: 1379337776796580781, guid: e26df50d1ab012c4081d933922bca3ba, type: 3}
   - {fileID: 4336247175026678073, guid: a71da8c789c879a40a1dc38f2c9b3ff1, type: 3}
   - {fileID: 1379337776796580781, guid: e26df50d1ab012c4081d933922bca3ba, type: 3}
   offsetx: 9.5
