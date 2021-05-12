@@ -98,7 +98,7 @@ public class ClientSend : MonoBehaviour
         }
     }
 
-    public static void Miss()
+    public static void PlayerMiss()
     {
         using (Packet _packet = new Packet((int)ClientPackets.playerMiss))
         {
@@ -107,6 +107,8 @@ public class ClientSend : MonoBehaviour
             SendTCPData(_packet);
         }
     }
+
+
     #endregion
 
 }

@@ -223,6 +223,7 @@ namespace GameServer
             }
         }
 
+        //let everyother player enbale control
         public void PlayerEnable()
         {
             foreach (Client _client in Server.clients.Values)
@@ -233,6 +234,7 @@ namespace GameServer
                 }
             }
         }
+
 
         public void ConnecttoGame(string _playerName)
         {

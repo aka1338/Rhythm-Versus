@@ -72,5 +72,6 @@ namespace GameServer
             Console.WriteLine($"Control enable!!!!");
             Server.clients[_fromClient].PlayerEnable();
         }
+
     }
 }
