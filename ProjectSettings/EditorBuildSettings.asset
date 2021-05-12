@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 81111e3dbeed9e746acc605a96032d4a
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Air Slicer.unity
+    guid: 24819ec811334c949a5c261b0175f485
   m_configObjects: {}
