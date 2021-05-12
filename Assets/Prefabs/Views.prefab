@@ -7205,12 +7205,12 @@ GameObject:
   - component: {fileID: 8318240203094077721}
   - component: {fileID: 4167507334210862744}
   m_Layer: 0
-  m_Name: MinigameView
+  m_Name: Minigame View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8318240203094077721
 RectTransform:
   m_ObjectHideFlags: 0

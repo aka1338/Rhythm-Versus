@@ -35,11 +35,23 @@ public class GameManager : MonoBehaviour
     public static event NoteTiming ValidHit;
     public static event NoteTiming MissedHit;
 
+    public static bool isLocal = false; 
     // For cool stuff later 
     //public static event NoteTiming EarlyHit;
     //public static event NoteTiming LateHit;
 
     // Pausing is disabled in multiplayer 
+
+    public void SetLocal() 
+    {
+        isLocal = true; 
+    }
+
+    public void PlayLocal()
+    {
+        if (isLocal)
+        SceneManager.LoadScene(1); 
+    }
 
     private void Awake()
     {
