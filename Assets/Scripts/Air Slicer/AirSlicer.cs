@@ -46,12 +46,12 @@ public class AirSlicer : MonoBehaviour
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * .3f);
         }
 
-        if (BeatSystem.marker.Substring(0, 6).Equals("Carrot"))
+        else if (BeatSystem.marker.Substring(0, 6).Equals("Carrot"))
         {
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 6), animationDuration * .3f);
         }
 
-        if (BeatSystem.marker.Substring(0, 6).Equals("Potato")) 
+        else if (BeatSystem.marker.Substring(0, 6).Equals("Potato")) 
         {
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 6), animationDuration * .3f);
         }
