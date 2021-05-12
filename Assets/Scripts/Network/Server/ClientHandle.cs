@@ -92,17 +92,20 @@ public class ClientHandle : MonoBehaviour
         GameManager.EnableControl();
     }
 
-    //TODO finish coding to server ad clientsend
+    //Code for player hit the obj or miss
     public static void PlayerHit(Packet _packet)
     {
         int _id = _packet.ReadInt();
-        //TODO: call the metod to add code
+        Debug.Log($"Player {_id} hit!!!!!");
+        //TODO: call a metod to do something
     }
 
     public static void PlayerMiss(Packet _packet)
     {
         int _id = _packet.ReadInt();
-        //TODO: call the metod to add code
+        Debug.Log($"Player {_id} miss!!!!!");
+        //TODO: call a metod to do something
     }
+
 
 }

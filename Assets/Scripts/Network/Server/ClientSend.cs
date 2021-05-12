@@ -94,7 +94,7 @@ public class ClientSend : MonoBehaviour
         {
             _packet.Write(Client.instance.myId);
 
-            SendTCPData(_packet);
+            SendUDPData(_packet);
         }
     }
 
@@ -104,7 +104,7 @@ public class ClientSend : MonoBehaviour
         {
             _packet.Write(Client.instance.myId);
 
-            SendTCPData(_packet);
+            SendUDPData(_packet);
         }
     }
 

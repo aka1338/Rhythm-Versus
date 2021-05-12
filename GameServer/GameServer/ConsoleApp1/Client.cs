@@ -241,6 +241,7 @@ namespace GameServer
         }
 
 
+
         public void ConnecttoGame(string _playerName)
         {
             player = new Player(id, _playerName, new Vector3(0, 0, 0), score, check);
