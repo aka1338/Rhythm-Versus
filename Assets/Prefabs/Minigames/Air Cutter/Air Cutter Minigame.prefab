@@ -47,7 +47,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343180511521193018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -222,12 +222,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referencePoint: {fileID: 6343180511521193014}
   prefab:
-  - {fileID: 4680180151563752421, guid: ae097074e437f0e4789ce0d612044a2c, type: 3}
-  - {fileID: 7074813452112573442, guid: c4f6435e4ba6817468bf4f22a6cef3a6, type: 3}
   - {fileID: 4151665326353369393, guid: f2ceb66422fef5140b9831cdc6977c35, type: 3}
+  - {fileID: 4680180151563752421, guid: ae097074e437f0e4789ce0d612044a2c, type: 3}
+  - {fileID: 3406727529396694929, guid: 38aa0c7a3c5dd0f46b27c290d0e6151c, type: 3}
   - {fileID: 1379337776796580781, guid: e26df50d1ab012c4081d933922bca3ba, type: 3}
+  - {fileID: 7074813452112573442, guid: c4f6435e4ba6817468bf4f22a6cef3a6, type: 3}
   - {fileID: 4336247175026678073, guid: a71da8c789c879a40a1dc38f2c9b3ff1, type: 3}
-  - {fileID: 1379337776796580781, guid: e26df50d1ab012c4081d933922bca3ba, type: 3}
   offsetx: 9.5
   offsety: 0
 --- !u!65 &6343180512336036865
