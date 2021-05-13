@@ -611,6 +611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2473544310656381808, guid: 0e48ebd0d4312914d9857f88dffee45a,
         type: 3}
+      propertyPath: song
+      value: event:/Minigames/AirCutter/Music/ninja5_160BPM_4-4_time
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473544310656381808, guid: 0e48ebd0d4312914d9857f88dffee45a,
+        type: 3}
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 6343180512336036870, guid: 37982279ccff94b4fb7601faac1449c0,
