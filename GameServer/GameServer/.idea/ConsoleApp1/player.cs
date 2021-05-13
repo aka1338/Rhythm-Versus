@@ -99,17 +99,5 @@ namespace GameServer
             }
             ServerSend.PlayerCheck(this);
         }
-
-        public void PlayerHit(int id)
-        {
-            //save player score in server not sure if it work
-            score++;
-            ServerSend.PlayerHit(this);
-        }
-
-        public void PlayerMiss(int id)
-        {
-            ServerSend.PlayerMiss(this);
-        }
     }
 }

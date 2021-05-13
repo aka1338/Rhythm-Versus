@@ -161,25 +161,7 @@ namespace GameServer
             }
         }
 
-        public static void PlayerHit(Player _player)
-        {
-            using (Packet _packet = new Packet((int)ServerPackets.playerHit))
-            {
-                _packet.Write(_player.id);
-
-                SendUDPDataToAll(_packet);
-            }
-        }
-
-        public static void PlayerMiss(Player _player)
-        {
-            using (Packet _packet = new Packet((int)ServerPackets.playerMiss))
-            {
-                _packet.Write(_player.id);
-
-                SendUDPDataToAll(_packet);
-            }
-        }
+        
         #endregion
     }
 }

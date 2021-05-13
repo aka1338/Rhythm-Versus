@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using TMPro.Examples;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClientHandle : MonoBehaviour
 {
@@ -38,14 +39,14 @@ public class ClientHandle : MonoBehaviour
         int _id = _packet.ReadInt();
         Vector3 _position = _packet.ReadVector3();
 
-        GameManager.players[_id].transform.position = _position; 
+        //GameManager.players[_id].transform.position = _position; 
     }
         public static void PlayerRotation(Packet _packet)
     {
         int _id = _packet.ReadInt();
         Quaternion _rotation = _packet.ReadQuaternion();
 
-        GameManager.players[_id].transform.rotation = _rotation; 
+        //GameManager.players[_id].transform.rotation = _rotation; 
     }
 
     //project
@@ -85,18 +86,38 @@ public class ClientHandle : MonoBehaviour
     //when the serevr send singal to start game, this function should also make the game start to play
     public static void PlayerEnable(Packet _packet)
     {
+        //Debug.Log($"Moving!!!!!!!!!!");
+        //ViewManager.Show<MinigameSelectView>();
+        ViewManager.Show<MinigameView>();
         GameManager.EnableControl();
+
+        //TODO: start the minigame, play music
+        GameManager.instance.StartMinigame();//maybe wrong
     }
 
+    //Code for player hit the obj or miss
     public static void PlayerHit(Packet _packet)
     {
         int _id = _packet.ReadInt();
-        //TODO: call the metod to add code
+        Debug.Log($"Player {_id} hit!!!!!");
+        //TODO: call a metod to do something
+        //if (GameManager.players[_id].id != _id)//check if it is the local player
+        //{
+            GameManager.players[_id].score++;
+        //}
+
+        //play the hit animeation?
+        //where is SuccessfulHit()
+        //GameManager.players[_id].SuccessfulHit();
     }
 
+    //Code for player miss the hit
     public static void PlayerMiss(Packet _packet)
     {
         int _id = _packet.ReadInt();
-        //TODO: call the metod to add code
+        Debug.Log($"Player {_id} miss!!!!!");
+        //TODO: call a metod to do something, maybe play the miss animation
     }
+
+
 }
