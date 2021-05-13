@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Minigame over!");
         Conductor.StopAndClear();
-        //ViewManager.Show<ResultsView>(); 
+        ViewManager.Show<ResultsView>(); 
     }
 
     public void SwitchGame()
