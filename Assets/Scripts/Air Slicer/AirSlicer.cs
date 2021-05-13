@@ -84,7 +84,7 @@ public class AirSlicer : MonoBehaviour
 
     public void SuccessfulHit(bool sentFromServer)
     {
-        playerManagerInstance.SuccessfulHit(); 
+        playerManagerInstance.SendSuccessfulHit(); 
         // I don't know if this does anything lmfao 
         if (currentVeggieNote != null || sentFromServer)
         {

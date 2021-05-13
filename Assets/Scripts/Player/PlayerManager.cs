@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
     public static void AddScore() 
     {
         //score++;
-        SendScoreToServer();
+        //SendScoreToServer();
     }
 
     //test true server
@@ -49,7 +49,7 @@ public class PlayerManager : MonoBehaviour
 
 
     //Will be call when player hit the obj
-    private static void SendScoreToServer()
+    public void SendSuccessfulHit()
     {
         ClientSend.PlayerHit();
     }
