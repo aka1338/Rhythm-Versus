@@ -78,6 +78,6 @@ public class PlayerManager : MonoBehaviour
     public void SuccessfulHit()
     {
         //play animation
-        instance.SuccessfulHit(); 
+        instance.SuccessfulHit(true); 
     }
 }
