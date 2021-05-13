@@ -75,6 +75,11 @@ public class GameManager : MonoBehaviour
         players.Add(_id, _player.GetComponent<PlayerManager>());
     }
 
+    public void SuccessfulHit() 
+    {
+
+    }
+
     public static void EnableControl()
     {
         playerControl = true;
@@ -112,6 +117,7 @@ public class GameManager : MonoBehaviour
     {
         Conductor.CreateBeatInstance(song);
         Conductor.StartMusic();
+        AirSlicer.UpdatePlayers(players);
     }
 
     public void EndMinigame()

@@ -10,6 +10,7 @@ public class AirSlicer : MonoBehaviour
 
     public Collision collisionbox;
     public static GameObject currentVeggieNote;
+    public static Dictionary<int, PlayerManager> _players = new Dictionary<int, PlayerManager>();
 
     public float offsetx = 10;
     public float offsety = 10;
@@ -21,7 +22,10 @@ public class AirSlicer : MonoBehaviour
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
     public static float offset = 180;
-
+    public static void UpdatePlayers(Dictionary<int, PlayerManager> players) 
+    {
+        _players = players; 
+    }
     void Start()
     {
         BeatSystem.OnMarker += SpawnNote;
