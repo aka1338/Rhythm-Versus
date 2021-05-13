@@ -116,8 +116,7 @@ public class AirSlicer : MonoBehaviour
             
             else 
             {
-                Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
-                //Instantiate(prefab[5], new Vector3(referencePoint.transform.position.x, referencePoint.transform.position.y+2, 0f), Quaternion.identity, referencePoint);
+                Instantiate(prefab[5], new Vector3(referencePoint.transform.position.x, referencePoint.transform.position.y+2, 0f), Quaternion.identity, referencePoint);
             }
 
         }
