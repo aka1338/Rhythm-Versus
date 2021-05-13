@@ -127,7 +127,8 @@ namespace GameServer
                 {(int)ClientPackets.playerScore, ServerHandle.PlayerScore },
                 {(int)ClientPackets.playerCheck, ServerHandle.PlayerCheck },
                 {(int)ClientPackets.playerEnable, ServerHandle.PlayerEnable },
-                {(int)ClientPackets.spawnLobby, ServerHandle.SpawnLobby }
+                {(int)ClientPackets.spawnLobby, ServerHandle.SpawnLobby },
+                {(int)ClientPackets.playerHit, ServerHandle.PlayerHit },
             };
             Console.WriteLine("Initialized packets."); 
         }
