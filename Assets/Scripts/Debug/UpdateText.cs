@@ -6,14 +6,12 @@ using TMPro;
 public class UpdateText : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text beat, marker, position, positionInSeconds, positionInBeats;
+    private TMP_Text playerScore, player2Score, player3Score; 
 
     void Update()
     {
-        beat.SetText("Beat: " + BeatSystem.beat);
-        marker.SetText("Marker: " + BeatSystem.marker);
-        position.SetText("Position: " + BeatSystem.timelinePosition);
-        positionInSeconds.SetText("Position (Seconds): " + BeatSystem.Time);
-        positionInBeats.SetText("Pos: " + BeatSystem.songPosInBeats); 
+        playerScore.SetText("Your score: " + GameManager.players[0].score);
+        player2Score.SetText("Player 2's Score: " + GameManager.players[1].score);
+        player3Score.SetText("Player 3's Score: " + GameManager.players[2].score);
     }
 }
