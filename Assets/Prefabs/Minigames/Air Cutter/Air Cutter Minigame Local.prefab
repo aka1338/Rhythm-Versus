@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a3b47d8ff587645b316ae8feeac658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referencePoint: {fileID: 0}
+  referencePoint: {fileID: 7926110154323411780}
   prefab:
   - {fileID: 4151665326353369393, guid: f2ceb66422fef5140b9831cdc6977c35, type: 3}
   - {fileID: 4680180151563752421, guid: ae097074e437f0e4789ce0d612044a2c, type: 3}
