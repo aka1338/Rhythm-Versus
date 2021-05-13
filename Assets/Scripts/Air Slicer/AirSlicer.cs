@@ -16,8 +16,6 @@ public class AirSlicer : MonoBehaviour
     public float offsety = 10;
     public static float animationDuration;
 
-    public bool isInputPlayer = true; 
-
     public static float keyDownTime;
 
     public PlayerManager playerManagerInstance; 
@@ -94,8 +92,7 @@ public class AirSlicer : MonoBehaviour
             currentVeggieNote.SetActive(false);
             DeleteDelay(currentVeggieNote);
 
-            if (isInputPlayer) 
-            {
+            if (GameManager.isLocal) {
                 if (currentVeggieNote.name == "PotatoNote(Clone)")
                 {
 
