@@ -82,14 +82,13 @@ public class AirSlicer : MonoBehaviour
         currentVeggieNote.transform.DORotate(new Vector3(0, 0, 360), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
 
-    public void SuccessfulHit(bool sentFromServer)
+    public void SuccessfulHit()
     {
         playerManagerInstance.SendSuccessfulHit(); 
         // I don't know if this does anything lmfao 
-        if (currentVeggieNote != null || sentFromServer)
+        if (currentVeggieNote != null)
         {
             // currentVeggieNote = GameObject.Find("CarrotNote(Clone)");
-            if(!sentFromServer)
             currentVeggieNote.SetActive(false);
 
             DeleteDelay(currentVeggieNote);
@@ -105,11 +104,6 @@ public class AirSlicer : MonoBehaviour
             else
             {
                 Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
-            }
-
-            if (sentFromServer) 
-            {
-                Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint); 
             }
         }
     }
@@ -164,7 +158,7 @@ public class AirSlicer : MonoBehaviour
                     // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
                     if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
                     {
-                        SuccessfulHit(false); 
+                        SuccessfulHit(); 
                     }
                     else
                     {
