@@ -7,6 +7,13 @@ public class PlayerManager : MonoBehaviour
     public int id;
     public string username;
 
+    public AirSlicer instance; 
+
+    private void Start()
+    {
+        instance = GetComponent<AirSlicer>(); 
+    }
+
     public int score = 0;
 
     public bool check;
@@ -71,5 +78,6 @@ public class PlayerManager : MonoBehaviour
     public void SuccessfulHit()
     {
         //play animation
+        instance.SuccessfulHit(); 
     }
 }
