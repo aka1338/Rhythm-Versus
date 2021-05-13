@@ -92,26 +92,25 @@ public class AirSlicer : MonoBehaviour
             currentVeggieNote.SetActive(false);
             DeleteDelay(currentVeggieNote);
 
-            if (GameManager.isLocal) {
-                if (currentVeggieNote.name == "PotatoNote(Clone)")
-                {
+            if (currentVeggieNote.name == "PotatoNote(Clone)")
+            {
+                Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+                playerManagerInstance.SendSuccessfulHit();
+            }
+            else if (currentVeggieNote.name == "CarrotNote(Clone)")
+            {
+                Destroy(Instantiate(prefab[4], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+                playerManagerInstance.SendSuccessfulHit();
+            }
+            else
+            {
+                Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
+                playerManagerInstance.SendSuccessfulHit();
+            }
 
-                    Destroy(Instantiate(prefab[3], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
-                    playerManagerInstance.SendSuccessfulHit();
-                }
-                else if (currentVeggieNote.name == "CarrotNote(Clone)")
-                {
-                    Destroy(Instantiate(prefab[4], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
-                    playerManagerInstance.SendSuccessfulHit();
-                }
-                else
-                {
-                    Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
-                    playerManagerInstance.SendSuccessfulHit();
-                }
-            } 
-            
-            else 
+            Debug.Log(GameManager.isLocal); 
+
+            if (!GameManager.isLocal) 
             {
                 Instantiate(prefab[5], new Vector3(referencePoint.transform.position.x, referencePoint.transform.position.y+2, 0f), Quaternion.identity, referencePoint);
             }
