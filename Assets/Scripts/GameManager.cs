@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         AirSlicer.UpdatePlayers(players);
     }
 
-    public void EndMinigame()
+    public static void EndMinigame()
     {
         Debug.Log("Minigame over!");
         Conductor.StopAndClear();
