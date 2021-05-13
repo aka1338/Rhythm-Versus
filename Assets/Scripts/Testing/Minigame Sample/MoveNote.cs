@@ -53,14 +53,5 @@ public class MoveNote : MonoBehaviour
 
     private void CheckHit()
     {
-        if (InputController.CheckForValidHit(KeyCode.F))
-        {
-            SuccessfulHit();
-        }
-        else
-        {
-            UnSuccessfulHit(); 
-        }
-
     }
 }

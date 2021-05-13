@@ -7,16 +7,6 @@ public class CalibrationTest : MonoBehaviour
     private int i = 0;
     public static float finalOffset;
 
-    private void OnEnable()
-    {
-        InputController.ActionOnePressed += CalculateAudioLatency;
-    }
-
-    private void OnDisable()
-    {
-        InputController.ActionOnePressed += CalculateAudioLatency;
-    }
-
     private void CalculateAudioLatency()
     {
         if (i < indexLength)
@@ -27,11 +17,11 @@ public class CalibrationTest : MonoBehaviour
         {
             for (int j = 0; j < indexLength; j++)
             {
-                GameManager.offset += playerHits[j];
+              //  GameManager.offset += playerHits[j];
             }
 
-            GameManager.offset /= indexLength;
-            finalOffset = GameManager.offset;
+          //  GameManager.offset /= indexLength;
+            //finalOffset = GameManager.offset;
         }
     }
 

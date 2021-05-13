@@ -14,13 +14,10 @@ public class UpdateScoreText : MonoBehaviour
 
     void Start()
     {
-        GameManager.ValidHit += UpdateText;
     }
 
     private void OnDestroy()
     {
-        GameManager.ValidHit -= UpdateText;
-
     }
 
     // Update is called once per frame

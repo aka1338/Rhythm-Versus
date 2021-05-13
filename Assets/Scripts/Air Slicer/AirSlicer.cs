@@ -7,18 +7,22 @@ public class AirSlicer : MonoBehaviour
 {
     public Transform referencePoint;
     public GameObject[] prefab;
+
     public Collision collisionbox;
-    GameObject currentVeggieNote;
+    public static GameObject currentVeggieNote;
 
     public float offsetx = 10;
     public float offsety = 10;
     public static float animationDuration;
 
+    public static float keyDownTime;
+
+
+    // Should be set to a PlayerPref. For now, adjust in editor. 
+    public static float offset = 180;
+
     void Start()
     {
-        GameManager.ValidHit += SuccessfulHit;
-        GameManager.MissedHit += UnSuccessfulHit;
-
         BeatSystem.OnMarker += SpawnNote;
     }
 
@@ -31,17 +35,14 @@ public class AirSlicer : MonoBehaviour
     }
     private void OnDisable()
     {
-        GameManager.ValidHit -= SuccessfulHit;
-        GameManager.MissedHit -= UnSuccessfulHit;
         BeatSystem.OnMarker -= SpawnNote;
-
     }
 
     private void SpawnNote()
     {
         animationDuration = BeatSystem.secPerBeat;
         Debug.Log(animationDuration);
-        if (BeatSystem.marker.Substring(0, 5).Equals("Onion")) 
+        if (BeatSystem.marker.Substring(0, 5).Equals("Onion"))
         {
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * .3f);
         }
@@ -51,7 +52,7 @@ public class AirSlicer : MonoBehaviour
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 6), animationDuration * .3f);
         }
 
-        else if (BeatSystem.marker.Substring(0, 6).Equals("Potato")) 
+        else if (BeatSystem.marker.Substring(0, 6).Equals("Potato"))
         {
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 6), animationDuration * .3f);
         }
@@ -75,7 +76,7 @@ public class AirSlicer : MonoBehaviour
         currentVeggieNote.transform.DORotate(new Vector3(0, 0, 360), animationDuration, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
 
-    private void SuccessfulHit()
+    public void SuccessfulHit()
     {
         // I don't know if this does anything lmfao 
         if (currentVeggieNote != null)
@@ -118,7 +119,7 @@ public class AirSlicer : MonoBehaviour
     }
 
     // Waits a bit to ensure cube has reached it's final destination before being deleted, otherwise generates DOTween warnings. 
-    IEnumerator DeleteDelay(Collider other)
+    static IEnumerator DeleteDelay(Collider other)
     {
         yield return new WaitForSeconds(.4f);
         if (other != null)
@@ -129,7 +130,7 @@ public class AirSlicer : MonoBehaviour
         }
     }
 
-    IEnumerator DeleteDelay(GameObject gameObject)
+    static IEnumerator DeleteDelay(GameObject gameObject)
     {
         yield return new WaitForSeconds(.5f);
         if (gameObject != null)
@@ -138,5 +139,31 @@ public class AirSlicer : MonoBehaviour
             DOTween.Kill(gameObject);
             Destroy(gameObject);
         }
+    }
+
+    public bool CheckForValidHit()
+    {
+        keyDownTime = BeatSystem.timelinePosition;
+        if (BeatSystem.marker != null)
+        {
+            // if marker is a note, then we can check for it's validity. 
+            if (BeatSystem.marker.Length > 5)
+            {
+                if (BeatSystem.marker.Substring(0, 5).Equals("note-"))
+                {
+                    // if marker is note, remove "note-" from string so that when player calls BeatSystem.marker, they get the data they need. 
+                    if (keyDownTime >= BeatSystem.markerTimeLinePosition - offset && keyDownTime <= BeatSystem.markerTimeLinePosition + offset && BeatSystem.markerTimeLinePosition != 0)
+                    {
+                        SuccessfulHit(); 
+                    }
+                    else
+                    {
+                        UnSuccessfulHit(); 
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 }
