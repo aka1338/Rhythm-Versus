@@ -51,9 +51,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.2
     y: 0
-    width: 1
+    width: 0.7
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -321,6 +321,7 @@ MonoBehaviour:
   - {fileID: 4336247175026678073, guid: a71da8c789c879a40a1dc38f2c9b3ff1, type: 3}
   offsetx: 9.5
   offsety: 0
+  playerManagerInstance: {fileID: 0}
   instance: {fileID: 0}
 --- !u!65 &6343180512336036865
 BoxCollider:
@@ -365,5 +366,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   username: 
+  instance: {fileID: 0}
   score: 1
   check: 0
