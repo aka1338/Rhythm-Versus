@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   username: 
+  instance: {fileID: 0}
   score: 0
   check: 0
 --- !u!1 &969887856
@@ -219,6 +220,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1384240045, guid: cdc0eba80524d8a4cb02757fbaa8e933, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384240045, guid: cdc0eba80524d8a4cb02757fbaa8e933, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384240045, guid: cdc0eba80524d8a4cb02757fbaa8e933, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -575.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384240045, guid: cdc0eba80524d8a4cb02757fbaa8e933, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -269
+      objectReference: {fileID: 0}
     - target: {fileID: 4499385864978277116, guid: cdc0eba80524d8a4cb02757fbaa8e933,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -243,6 +260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Views
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538834486462040786, guid: cdc0eba80524d8a4cb02757fbaa8e933,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8674871484169088111, guid: cdc0eba80524d8a4cb02757fbaa8e933,
         type: 3}
@@ -396,7 +418,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1338641360}
   - component: {fileID: 1338641359}
-  - component: {fileID: 1338641358}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -404,14 +425,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1338641358
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338641357}
-  m_Enabled: 1
 --- !u!20 &1338641359
 Camera:
   m_ObjectHideFlags: 0
@@ -421,7 +434,7 @@ Camera:
   m_GameObject: {fileID: 1338641357}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.30588236, g: 0.10196079, b: 0.10980393, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
