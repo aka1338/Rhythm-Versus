@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6343180511521193014}
   - component: {fileID: 6343180511521193013}
   - component: {fileID: 6343180511521193012}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343180511521193018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 6343180512336036871}
@@ -47,7 +47,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343180511521193018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -93,8 +93,7 @@ GameObject:
   - component: {fileID: 2198898545132721700}
   - component: {fileID: 6343180512336036865}
   - component: {fileID: 6343180512336036866}
-  - component: {fileID: -8020317967649550177}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Air Cutter Minigame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,12 +129,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referencePoint: {fileID: 6343180511521193014}
   prefab:
-  - {fileID: 1379337776796580781, guid: 1b4f34a85498c804e9d942f418d7c20c, type: 3}
-  - {fileID: 4680180151563752421, guid: 7df163615f144084085905b63b083ba5, type: 3}
-  - {fileID: 3406727529396694929, guid: 8c65785ee48f6334aab7438dd56e7965, type: 3}
-  - {fileID: 1379337776796580781, guid: 1b4f34a85498c804e9d942f418d7c20c, type: 3}
-  - {fileID: 7074813452112573442, guid: ad4a2f6ef3c440144af24d981e23fbd9, type: 3}
-  - {fileID: 4336247175026678073, guid: 254449bfec674bb4b88803ba05adcaf5, type: 3}
+  - {fileID: 4151665326353369393, guid: f2ceb66422fef5140b9831cdc6977c35, type: 3}
+  - {fileID: 4680180151563752421, guid: ae097074e437f0e4789ce0d612044a2c, type: 3}
+  - {fileID: 3406727529396694929, guid: 38aa0c7a3c5dd0f46b27c290d0e6151c, type: 3}
+  - {fileID: 1379337776796580781, guid: e26df50d1ab012c4081d933922bca3ba, type: 3}
+  - {fileID: 7074813452112573442, guid: c4f6435e4ba6817468bf4f22a6cef3a6, type: 3}
+  - {fileID: 4336247175026678073, guid: a71da8c789c879a40a1dc38f2c9b3ff1, type: 3}
   offsetx: 9.5
   offsety: 0
 --- !u!65 &6343180512336036865

@@ -3,20 +3,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    public static AirSlicer instance;
+
+    private void Start()
+    {
+        instance = GetComponent<AirSlicer>(); 
+    }
     public void OnAction1(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            GameManager.CheckForValidHit();
+            instance.CheckForValidHit();
         }
-        Debug.Log("Action 1 pressed!");
     }
     public void OnAction2(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            GameManager.CheckForValidHit();
+            instance.CheckForValidHit();
         }
     }
     public void OnPause(InputAction.CallbackContext context)
