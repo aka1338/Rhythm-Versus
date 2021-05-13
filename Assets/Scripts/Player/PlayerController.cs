@@ -3,11 +3,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public static AirSlicer instance;
+    public static AirSlicerMultiplayer instance;
 
     private void Start()
     {
-        instance = GetComponent<AirSlicer>(); 
+        instance = GetComponent<AirSlicerMultiplayer>(); 
     }
     public void OnAction1(InputAction.CallbackContext context)
     {

@@ -228,7 +228,7 @@ MonoBehaviour:
   - {fileID: 4336247175026678073, guid: a71da8c789c879a40a1dc38f2c9b3ff1, type: 3}
   offsetx: 9.5
   offsety: 0
-  playerManagerInstance: {fileID: 0}
+  playerManagerInstance: {fileID: -8020317967649550177}
   instance: {fileID: 0}
 --- !u!65 &6343180512336036865
 BoxCollider:
@@ -273,6 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   username: 
-  instance: {fileID: 0}
+  instance: {fileID: 2198898545132721700}
   score: 1
   check: 0
