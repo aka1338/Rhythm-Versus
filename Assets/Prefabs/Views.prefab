@@ -1394,7 +1394,6 @@ GameObject:
   - component: {fileID: 8066896699361400318}
   - component: {fileID: 4312286210269535632}
   - component: {fileID: 114386510616792773}
-  - component: {fileID: 8004835810099134373}
   - component: {fileID: 2108732202958681121}
   m_Layer: 5
   m_Name: hostLobby
@@ -1473,33 +1472,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2108732202958681121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8004835810099134373}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ConnectToServer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8004835810099134373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327610723319055100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 036ad9a24832f794cb11fb39b8bfee3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startMenu: {fileID: 0}
-  usernameField: {fileID: 8733327557354036108}
+      m_Calls: []
 --- !u!114 &2108732202958681121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,7 +1634,6 @@ GameObject:
   - component: {fileID: 3738901719897066481}
   - component: {fileID: 4460401244133931438}
   - component: {fileID: 784606710643681611}
-  - component: {fileID: 815641422805823716}
   - component: {fileID: 9014197001413465901}
   m_Layer: 5
   m_Name: hostStartButton
@@ -1740,35 +1712,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9014197001413465901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 815641422805823716}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &815641422805823716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447124654794334812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ebda66cd45c7f47ad7bafe6553632f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  username: 
-  score: 1
-  check: 0
+      m_Calls: []
 --- !u!114 &9014197001413465901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,7 +2667,6 @@ GameObject:
   - component: {fileID: 421894281634825339}
   - component: {fileID: 7765224124682392626}
   - component: {fileID: 4828367350447043969}
-  - component: {fileID: 5873488238748049874}
   - component: {fileID: 8590688562797827626}
   m_Layer: 5
   m_Name: joinLobby
@@ -2802,33 +2745,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8590688562797827626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5873488238748049874}
-        m_TargetAssemblyTypeName: UIManager2, Assembly-CSharp
-        m_MethodName: ConnectToServer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5873488238748049874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2985024211658986362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7435ea51be979ad43a2017cb136a8d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startMenu: {fileID: 0}
-  usernameField: {fileID: 8733327557354036108}
+      m_Calls: []
 --- !u!114 &8590688562797827626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3716,7 +3633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8054797493291941957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6135,7 +6052,6 @@ GameObject:
   - component: {fileID: 6688296476202863146}
   - component: {fileID: 8847363380971157870}
   - component: {fileID: 8198133914133961619}
-  - component: {fileID: 7187849551127473826}
   m_Layer: 5
   m_Name: BackScreen
   m_TagString: Untagged
@@ -6213,19 +6129,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8198133914133961619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7187849551127473826}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: Disconnection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &8198133914133961619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6256,22 +6160,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7187849551127473826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6523558903192520594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ebda66cd45c7f47ad7bafe6553632f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  username: 
-  score: 1
-  check: 0
 --- !u!1 &6580890436927268759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7234,7 +7122,6 @@ GameObject:
   - component: {fileID: 804373988902511789}
   - component: {fileID: 5447824762523182992}
   - component: {fileID: 4505081581758788837}
-  - component: {fileID: 2244837106332802895}
   m_Layer: 5
   m_Name: BackScreen
   m_TagString: Untagged
@@ -7312,19 +7199,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4505081581758788837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2244837106332802895}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: Disconnection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &4505081581758788837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7355,22 +7230,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2244837106332802895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8402868539063312513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ebda66cd45c7f47ad7bafe6553632f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  username: 
-  score: 1
-  check: 0
 --- !u!1 &8538834486462040786
 GameObject:
   m_ObjectHideFlags: 0

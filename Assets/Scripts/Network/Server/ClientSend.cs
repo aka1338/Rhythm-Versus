@@ -67,7 +67,6 @@ public class ClientSend : MonoBehaviour
         }
     }
 
-    //test function to try spwan everyone as a lobby
     public static void LobbySpawn()
     {
         using (Packet _packet = new Packet((int)ClientPackets.spawnLobby))
@@ -95,21 +94,19 @@ public class ClientSend : MonoBehaviour
         {
             _packet.Write(Client.instance.myId);
 
-            SendUDPData(_packet);
+            SendTCPData(_packet);
         }
     }
 
-    public static void PlayerMiss()
+    public static void Miss()
     {
         using (Packet _packet = new Packet((int)ClientPackets.playerMiss))
         {
             _packet.Write(Client.instance.myId);
 
-            SendUDPData(_packet);
+            SendTCPData(_packet);
         }
     }
-
-
     #endregion
 
 }
