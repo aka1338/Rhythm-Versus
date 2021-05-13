@@ -1394,6 +1394,7 @@ GameObject:
   - component: {fileID: 8066896699361400318}
   - component: {fileID: 4312286210269535632}
   - component: {fileID: 114386510616792773}
+  - component: {fileID: 6475337663880390537}
   - component: {fileID: 2108732202958681121}
   m_Layer: 5
   m_Name: hostLobby
@@ -1472,7 +1473,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2108732202958681121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6475337663880390537}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ConnectToServer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6475337663880390537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327610723319055100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036ad9a24832f794cb11fb39b8bfee3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMenu: {fileID: 0}
+  usernameField: {fileID: 8733327557354036108}
 --- !u!114 &2108732202958681121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,8 +1659,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3738901719897066481}
-  - component: {fileID: 4460401244133931438}
   - component: {fileID: 784606710643681611}
+  - component: {fileID: 2581772905122214959}
+  - component: {fileID: 4460401244133931438}
   - component: {fileID: 9014197001413465901}
   m_Layer: 5
   m_Name: hostStartButton
@@ -1661,14 +1689,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -199.50102}
   m_SizeDelta: {x: 280, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4460401244133931438
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447124654794334812}
-  m_CullTransparentMesh: 0
 --- !u!114 &784606710643681611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,7 +1732,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9014197001413465901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2581772905122214959}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2581772905122214959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447124654794334812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebda66cd45c7f47ad7bafe6553632f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  username: 
+  score: 0
+  check: 0
+--- !u!222 &4460401244133931438
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447124654794334812}
+  m_CullTransparentMesh: 0
 --- !u!114 &9014197001413465901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,7 +1901,6 @@ RectTransform:
   - {fileID: 6328639268523378238}
   - {fileID: 5378470810444993355}
   - {fileID: 5803960116916704333}
-  - {fileID: 621030254008598191}
   m_Father: {fileID: 8054797493291941957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2445,7 +2500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b214983d54bc6b04ca729b365d0c5dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingView: {fileID: 5801483854817751034}
+  _startingView: {fileID: 884516002}
   _views:
   - {fileID: 6593342791291902128}
   - {fileID: 5801483854817751034}
@@ -2668,6 +2723,7 @@ GameObject:
   - component: {fileID: 7765224124682392626}
   - component: {fileID: 4828367350447043969}
   - component: {fileID: 8590688562797827626}
+  - component: {fileID: 7074369650721000333}
   m_Layer: 5
   m_Name: joinLobby
   m_TagString: Untagged
@@ -2745,7 +2801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8590688562797827626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7074369650721000333}
+        m_TargetAssemblyTypeName: UIManager2, Assembly-CSharp
+        m_MethodName: ConnectToServer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8590688562797827626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2776,6 +2844,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7074369650721000333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2985024211658986362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7435ea51be979ad43a2017cb136a8d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMenu: {fileID: 0}
+  usernameField: {fileID: 8733327557354036108}
 --- !u!1 &3272378789458922350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4135,7 +4217,6 @@ RectTransform:
   - {fileID: 8642837031287144068}
   - {fileID: 7217639594165972390}
   - {fileID: 3096804298562610185}
-  - {fileID: 4326986095062775087}
   m_Father: {fileID: 7878971866763150547}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4318,6 +4399,7 @@ RectTransform:
   m_Children:
   - {fileID: 1355880655760465457}
   - {fileID: 3738901719897066481}
+  - {fileID: 621030254008598191}
   m_Father: {fileID: 8054797493291941957}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4731,7 +4813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4834672085012681503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SetLocal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4834672085012681503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6052,6 +6146,7 @@ GameObject:
   - component: {fileID: 6688296476202863146}
   - component: {fileID: 8847363380971157870}
   - component: {fileID: 8198133914133961619}
+  - component: {fileID: 5752836137144044908}
   m_Layer: 5
   m_Name: BackScreen
   m_TagString: Untagged
@@ -6068,14 +6163,14 @@ RectTransform:
   m_GameObject: {fileID: 6523558903192520594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 4, y: 4, z: 0.8}
   m_Children: []
-  m_Father: {fileID: 4982078626298684626}
-  m_RootOrder: 3
+  m_Father: {fileID: 1727769046366978212}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -416, y: -201}
+  m_AnchoredPosition: {x: -2080, y: -370.00003}
   m_SizeDelta: {x: 130.2, y: 56.413895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6688296476202863146
@@ -6129,7 +6224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8198133914133961619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5752836137144044908}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Disconnection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8198133914133961619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6160,6 +6267,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5752836137144044908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523558903192520594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebda66cd45c7f47ad7bafe6553632f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  username: 
+  score: 0
+  check: 0
 --- !u!1 &6580890436927268759
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,7 +6595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8328922102834939039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayLocal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8328922102834939039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7122,6 +7257,7 @@ GameObject:
   - component: {fileID: 804373988902511789}
   - component: {fileID: 5447824762523182992}
   - component: {fileID: 4505081581758788837}
+  - component: {fileID: 5973827820512933192}
   m_Layer: 5
   m_Name: BackScreen
   m_TagString: Untagged
@@ -7138,14 +7274,14 @@ RectTransform:
   m_GameObject: {fileID: 8402868539063312513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 4, y: 4, z: 0.8}
   m_Children: []
-  m_Father: {fileID: 1521791833209852861}
-  m_RootOrder: 3
+  m_Father: {fileID: 4340668609568471140}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -416, y: -201}
+  m_AnchoredPosition: {x: -2080, y: -370.00003}
   m_SizeDelta: {x: 130.2, y: 56.413895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &804373988902511789
@@ -7199,7 +7335,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4505081581758788837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5973827820512933192}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Disconnection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4505081581758788837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7230,6 +7378,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5973827820512933192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402868539063312513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebda66cd45c7f47ad7bafe6553632f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  username: 
+  score: 0
+  check: 0
 --- !u!1 &8538834486462040786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,7 +7410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8318240203094077721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7417,6 +7581,7 @@ RectTransform:
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 1}
   m_Children:
   - {fileID: 4283213084216835027}
+  - {fileID: 4326986095062775087}
   m_Father: {fileID: 7878971866763150547}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
