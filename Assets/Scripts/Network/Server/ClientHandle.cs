@@ -105,10 +105,10 @@ public class ClientHandle : MonoBehaviour
         //{
             GameManager.players[_id].score++;
         //}
-
+        Debug.Log($"Player {_id} score : {GameManager.players[_id].score}!!!!!");
         //play the hit animeation?
         //where is SuccessfulHit()
-        GameManager.players[_id].SuccessfulHit();
+        //GameManager.players[_id].SuccessfulHit();
     }
 
     //Code for player miss the hit
