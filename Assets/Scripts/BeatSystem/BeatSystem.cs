@@ -157,7 +157,6 @@ class BeatSystem : MonoBehaviour
                         bpm = parameter.tempo;
                         secPerBeat = 60f / bpm;
 
-
                         // Event firing for on beat events. 
                         if (OnBeat != null)
                         {
@@ -183,6 +182,11 @@ class BeatSystem : MonoBehaviour
 
 
                         markerTimeLinePosition = timelinePosition;
+
+                        if (marker.Equals("ENDGAME"))
+                        {
+                            GameManager.EndMinigame(); 
+                        }
 
                         // Event firing for OnMarker events. 
                         OnMarker?.Invoke();
