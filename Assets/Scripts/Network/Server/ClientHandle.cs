@@ -108,7 +108,7 @@ public class ClientHandle : MonoBehaviour
 
         //play the hit animeation?
         //where is SuccessfulHit()
-        //GameManager.players[_id].SuccessfulHit();
+        GameManager.players[_id].SuccessfulHit();
     }
 
     //Code for player miss the hit

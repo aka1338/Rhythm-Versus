@@ -207,9 +207,17 @@ namespace GameServer
                 {
                     if (_client.id != id)
                     {
-                        player.position.X = a;
-                        ServerSend.SpawnPlayer(id, _client.player);
-                        a = a + 20;
+                        //player.position.X = a;
+                        if (player.id == 2)
+                        {
+                            player.position.X = 20;
+                            //a = a + 20;
+                        }
+                        else if (player.id == 3)
+                        {
+                            player.position.X = 40;
+                        }
+                            ServerSend.SpawnPlayer(id, _client.player);
                         //ServerSend.PlayerInfo(id, _client.player);
                     }
                 }
@@ -220,9 +228,18 @@ namespace GameServer
             {
                 if (_client.player != null)
                 {
-                    player.position.X = a;
+                    //player.position.X = a;
+                    if (player.id == 2)
+                    {
+                        player.position.X = 20;
+                        //a = a + 20;
+                    }
+                    else if (player.id == 3)
+                    {
+                        player.position.X = 40;
+                    }
                     ServerSend.SpawnPlayer(_client.id, player);
-                    a = a + 20;
+                    //a = a + 20;
                     //ServerSend.PlayerInfo(id, _client.player);
                 }
             }
