@@ -28,6 +28,7 @@
 		<relationship name="markerTracks">
 			<destination>{0b16d0e2-02c2-43a1-8073-00c10fb376c9}</destination>
 			<destination>{3e5930ea-7b83-4fdb-b547-e5aa10d721f2}</destination>
+			<destination>{3764184f-7f19-4a3a-ac48-095738a1675e}</destination>
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{d9135752-c89c-4520-bbfc-c68094625ef2}</destination>
@@ -66,6 +67,7 @@
 	<object class="EventAutomatableProperties" id="{c6d2f02e-9296-4aa6-86bc-24b55bc1edc8}" />
 	<object class="MarkerTrack" id="{0b16d0e2-02c2-43a1-8073-00c10fb376c9}" />
 	<object class="MarkerTrack" id="{3e5930ea-7b83-4fdb-b547-e5aa10d721f2}" />
+	<object class="MarkerTrack" id="{3764184f-7f19-4a3a-ac48-095738a1675e}" />
 	<object class="GroupTrack" id="{d9135752-c89c-4520-bbfc-c68094625ef2}">
 		<relationship name="modules">
 			<destination>{cc34070f-dee1-4ea0-b21f-baa65a16d08a}</destination>
@@ -649,6 +651,7 @@
 			<destination>{0a9f5aec-ede4-40ba-8840-e7f4807329fc}</destination>
 			<destination>{a31f5551-6cea-42e9-83db-ef2cfc8635a9}</destination>
 			<destination>{927b1c1d-6998-489b-8314-73c6a97b5380}</destination>
+			<destination>{cb9f7e68-b6b6-44db-b0bf-b921e41dabb0}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b48b3edb-7f68-4d54-bedf-56cf64be54c0}">
@@ -5282,6 +5285,20 @@
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{3e5930ea-7b83-4fdb-b547-e5aa10d721f2}</destination>
+		</relationship>
+	</object>
+	<object class="NamedMarker" id="{cb9f7e68-b6b6-44db-b0bf-b921e41dabb0}">
+		<property name="position">
+			<value>108.40000000000001</value>
+		</property>
+		<property name="name">
+			<value>ENDGAME</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{846d74dd-5648-4794-b675-2354f0caca39}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{3764184f-7f19-4a3a-ac48-095738a1675e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{28e531bc-a417-414b-85ba-09963ba32752}">
