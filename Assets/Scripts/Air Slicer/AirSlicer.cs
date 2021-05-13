@@ -105,13 +105,10 @@ public class AirSlicer : MonoBehaviour
                 Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
             }
 
-            Debug.Log("This should work!");
-            Debug.Log(GameManager.isLocal); 
-
             if (!GameManager.isLocal) 
             {
-                Instantiate(prefab[5], new Vector3(referencePoint.transform.position.x, referencePoint.transform.position.y+2, 0f), Quaternion.identity, referencePoint);
                 playerManagerInstance.SendSuccessfulHit();
+                Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint); 
             }
 
         }
