@@ -46,7 +46,6 @@ public class AirSlicer : MonoBehaviour
     private void SpawnNote()
     {
         animationDuration = BeatSystem.secPerBeat;
-        Debug.Log(animationDuration);
         if (BeatSystem.marker.Substring(0, 5).Equals("Onion"))
         {
             Invoke("Spawn" + BeatSystem.marker.Substring(0, 5), animationDuration * .3f);
@@ -86,8 +85,6 @@ public class AirSlicer : MonoBehaviour
         // I don't know if this does anything lmfao 
         if (currentVeggieNote != null)
         {
-            Debug.Log("currentVeggieNote.name: " + currentVeggieNote.name);
-
             // currentVeggieNote = GameObject.Find("CarrotNote(Clone)");
             currentVeggieNote.SetActive(false);
             DeleteDelay(currentVeggieNote);
@@ -129,7 +126,6 @@ public class AirSlicer : MonoBehaviour
         yield return new WaitForSeconds(.4f);
         if (other != null)
         {
-            Debug.Log(other.gameObject.name);
             DOTween.Kill(other.gameObject);
             Destroy(other.gameObject);
         }
@@ -140,7 +136,6 @@ public class AirSlicer : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         if (gameObject != null)
         {
-            Debug.Log(gameObject.name);
             DOTween.Kill(gameObject);
             Destroy(gameObject);
         }
