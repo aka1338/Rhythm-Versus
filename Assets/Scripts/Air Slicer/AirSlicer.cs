@@ -7,7 +7,7 @@ public class AirSlicer : MonoBehaviour
 {
     public Transform referencePoint;
     public GameObject[] prefab;
-
+    
     public Collision collisionbox;
     public static GameObject currentVeggieNote;
     public static Dictionary<int, PlayerManager> _players = new Dictionary<int, PlayerManager>();
@@ -18,6 +18,7 @@ public class AirSlicer : MonoBehaviour
 
     public static float keyDownTime;
 
+    public PlayerManager playerManagerInstance; 
     public GameManager instance; 
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
@@ -29,6 +30,7 @@ public class AirSlicer : MonoBehaviour
     void Start()
     {
         BeatSystem.OnMarker += SpawnNote;
+        playerManagerInstance = GetComponent<PlayerManager>(); 
     }
 
     void Update()
@@ -82,6 +84,7 @@ public class AirSlicer : MonoBehaviour
 
     public void SuccessfulHit(bool sentFromServer)
     {
+        playerManagerInstance.SuccessfulHit(); 
         // I don't know if this does anything lmfao 
         if (currentVeggieNote != null || sentFromServer)
         {
