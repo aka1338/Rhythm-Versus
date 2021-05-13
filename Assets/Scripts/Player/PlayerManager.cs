@@ -79,6 +79,6 @@ public class PlayerManager : MonoBehaviour
     {
         //play animation
         Debug.Log("Player pressed a button!"); 
-        instance.SuccessfulHit(true); 
+        instance.SuccessfulHit(); 
     }
 }
