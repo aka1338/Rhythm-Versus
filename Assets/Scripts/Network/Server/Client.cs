@@ -307,6 +307,8 @@ public class Client : MonoBehaviour
         Debug.Log("Initialized packets.");
     }
 
+
+
     public void Disconnect()
     {
         if (isConnected)

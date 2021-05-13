@@ -198,31 +198,37 @@ namespace GameServer
         //call from server handle, might want to create a similar
         public void SendIntoGame(string _playerName)
         {
-            player = new Player(id, _playerName, new Vector3(0, 0, 0), score, check);
+            int a = 0;
+            player = new Player(id, _playerName, new Vector3(a, 0, 0), score, check);
 
             foreach (Client _client in Server.clients.Values)
             {
                 if (_client.player != null) 
                 {
-                    if(_client.id != id)
+                    if (_client.id != id)
                     {
+                        player.position.X = a;
                         ServerSend.SpawnPlayer(id, _client.player);
+                        a = a + 20;
                         //ServerSend.PlayerInfo(id, _client.player);
                     }
                 }
             }
 
-
+            a = 0;
             foreach (Client _client in Server.clients.Values)
             {
                 if (_client.player != null)
                 {
+                    player.position.X = a;
                     ServerSend.SpawnPlayer(_client.id, player);
+                    a = a + 20;
                     //ServerSend.PlayerInfo(id, _client.player);
                 }
             }
         }
 
+        //let everyother player enbale control
         public void PlayerEnable()
         {
             foreach (Client _client in Server.clients.Values)
@@ -233,6 +239,8 @@ namespace GameServer
                 }
             }
         }
+
+
 
         public void ConnecttoGame(string _playerName)
         {

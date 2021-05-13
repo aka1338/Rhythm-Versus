@@ -17,6 +17,8 @@ namespace GameServer
         playerCheck,
         playerInfo,
         playerEnable,
+        playerHit,
+        playerMiss,
         spawnLobby
     }
 
@@ -30,6 +32,8 @@ namespace GameServer
         playerCheck,
         playerInfo,
         playerEnable,
+        playerHit,
+        playerMiss,
         spawnLobby
     }
 
