@@ -84,13 +84,12 @@ public class AirSlicer : MonoBehaviour
 
     public void SuccessfulHit()
     {
-        playerManagerInstance.SendSuccessfulHit(); 
         // I don't know if this does anything lmfao 
+        Debug.Log("Local test"); 
         if (currentVeggieNote != null)
         {
             // currentVeggieNote = GameObject.Find("CarrotNote(Clone)");
             currentVeggieNote.SetActive(false);
-
             DeleteDelay(currentVeggieNote);
 
             if (currentVeggieNote.name == "PotatoNote(Clone)")
@@ -105,6 +104,10 @@ public class AirSlicer : MonoBehaviour
             {
                 Destroy(Instantiate(prefab[5], new Vector3(currentVeggieNote.transform.position.x, currentVeggieNote.transform.position.y, 0f), Quaternion.identity, referencePoint), 1f);
             }
+
+            if(!GameManager.isLocal)
+            playerManagerInstance.SendSuccessfulHit();
+
         }
     }
 

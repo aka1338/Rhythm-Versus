@@ -51,6 +51,7 @@ public class PlayerManager : MonoBehaviour
     //Will be call when player hit the obj
     public void SendSuccessfulHit()
     {
+        Debug.Log("SendSuccessfulHit"); 
         ClientSend.PlayerHit();
     }
 
