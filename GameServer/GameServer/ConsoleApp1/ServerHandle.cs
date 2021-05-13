@@ -75,6 +75,7 @@ namespace GameServer
 
         public static void PlayerHit(int _fromClient, Packet _packet)
         {
+            Console.WriteLine($"Get Hit");
             int _clientIdCheck = _packet.ReadInt();
             Server.clients[_fromClient].player.PlayerHit(_clientIdCheck);
         }

@@ -93,6 +93,7 @@ public class ClientSend : MonoBehaviour
     {
         using (Packet _packet = new Packet((int)ClientPackets.playerHit))
         {
+            Debug.Log("Sending Hit!");
             _packet.Write(Client.instance.myId);
 
             SendUDPData(_packet);

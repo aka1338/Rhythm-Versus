@@ -166,7 +166,7 @@ namespace GameServer
             using (Packet _packet = new Packet((int)ServerPackets.playerHit))
             {
                 _packet.Write(_player.id);
-
+                Console.WriteLine($"(ID: {_player.id}) is hit!!!!!!!");
                 SendUDPDataToAll(_packet);
             }
         }
