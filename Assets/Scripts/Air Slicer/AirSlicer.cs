@@ -17,6 +17,7 @@ public class AirSlicer : MonoBehaviour
 
     public static float keyDownTime;
 
+    public GameManager instance; 
 
     // Should be set to a PlayerPref. For now, adjust in editor. 
     public static float offset = 180;
